@@ -1,1 +1,9 @@
-<p>project-card works!</p>
+<div class="project-card">
+    <img [src]="project.image" [alt]="project.title" class="preview" />
+    <h3 class="title">{{ project.title }}</h3>
+    <p class="description">{{ project.description }}</p>
+
+    <div class="tags">
+        <app-tag *ngFor="let tag of project.tags" [label]="tag"></app-tag>
+    </div>
+</div>

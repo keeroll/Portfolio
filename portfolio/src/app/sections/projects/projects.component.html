@@ -1,1 +1,5 @@
-<p>projects works!</p>
+<app-container>
+    <div class="projects-grid">
+        <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+    </div>
+</app-container>
