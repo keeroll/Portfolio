@@ -38,11 +38,11 @@
     .intro {
         font-size: 1.1rem;
         text-transform: uppercase;
-        color: var(--neon-teal);
+        color: var(--neon-emerald);
         margin: 0 0 var(--spacing-sm);
         font-weight: 500;
         letter-spacing: 2px;
-        text-shadow: 0 0 10px var(--neon-teal);
+        text-shadow: 0 0 10px var(--neon-emerald);
         animation: pulse 3s ease-in-out infinite;
     }
 
@@ -166,11 +166,11 @@
 
             // Email specific styling
             &.email:hover {
-                border-color: var(--neon-teal);
-                box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+                border-color: var(--neon-emerald);
+                box-shadow: 0 10px 25px rgba(0, 255, 136, 0.4);
                 
                 &::before {
-                    background: var(--gradient-secondary);
+                    background: var(--gradient-primary);
                 }
             }
         }

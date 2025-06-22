@@ -13,91 +13,67 @@
     border: 1px solid transparent;
     color: var(--text-secondary);
     
-    // Neon border effect
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: var(--radius-lg);
-        padding: 1px;
-        background: var(--gradient-secondary);
-        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        mask-composite: exclude;
-        opacity: 0;
-        transition: opacity var(--transition-normal);
-    }
-    
     &:hover {
         transform: translateY(-2px);
         color: var(--text-primary);
-        box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
-        
-        &::before {
-            opacity: 1;
-        }
+        border-color: var(--neon-emerald);
+        box-shadow: 
+            0 8px 25px rgba(0, 255, 136, 0.3),
+            0 0 0 1px var(--neon-emerald);
     }
     
     // Different color variations based on tag content
     &:has(:contains("#angular")) {
         &:hover {
-            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
-            
-            &::before {
-                background: var(--gradient-primary);
-            }
+            border-color: var(--neon-emerald);
+            box-shadow: 
+                0 8px 25px rgba(0, 255, 136, 0.3),
+                0 0 0 1px var(--neon-emerald);
         }
     }
     
     &:has(:contains("#dotnet")) {
         &:hover {
-            box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
-            
-            &::before {
-                background: linear-gradient(135deg, var(--neon-green), var(--neon-emerald));
-            }
+            border-color: var(--neon-green);
+            box-shadow: 
+                0 8px 25px rgba(0, 255, 0, 0.3),
+                0 0 0 1px var(--neon-green);
         }
     }
     
     &:has(:contains("#webdev")) {
         &:hover {
-            box-shadow: 0 8px 25px rgba(0, 255, 204, 0.3);
-            
-            &::before {
-                background: linear-gradient(135deg, var(--neon-cyan), var(--neon-teal));
-            }
+            border-color: var(--neon-emerald);
+            box-shadow: 
+                0 8px 25px rgba(0, 255, 136, 0.3),
+                0 0 0 1px var(--neon-emerald);
         }
     }
     
     &:has(:contains("#typescript")) {
         &:hover {
-            box-shadow: 0 8px 25px rgba(0, 136, 255, 0.3);
-            
-            &::before {
-                background: linear-gradient(135deg, var(--neon-blue), var(--neon-teal));
-            }
+            border-color: var(--neon-emerald);
+            box-shadow: 
+                0 8px 25px rgba(0, 255, 136, 0.3),
+                0 0 0 1px var(--neon-emerald);
         }
     }
     
     &:has(:contains("#unity")) {
         &:hover {
-            box-shadow: 0 8px 25px rgba(136, 0, 255, 0.3);
-            
-            &::before {
-                background: linear-gradient(135deg, var(--neon-purple), var(--neon-emerald));
-            }
+            border-color: var(--neon-purple);
+            box-shadow: 
+                0 8px 25px rgba(136, 0, 255, 0.3),
+                0 0 0 1px var(--neon-purple);
         }
     }
     
     &:has(:contains("#fullstack")) {
         &:hover {
-            box-shadow: 0 8px 25px rgba(136, 255, 0, 0.3);
-            
-            &::before {
-                background: linear-gradient(135deg, var(--neon-lime), var(--neon-green));
-            }
+            border-color: var(--neon-lime);
+            box-shadow: 
+                0 8px 25px rgba(136, 255, 0, 0.3),
+                0 0 0 1px var(--neon-lime);
         }
     }
 }
@@ -105,60 +81,54 @@
 // Alternative approach for different tag styles
 .tag-angular {
     &:hover {
-        box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
-        
-        &::before {
-            background: var(--gradient-primary);
-        }
+        border-color: var(--neon-emerald);
+        box-shadow: 
+            0 8px 25px rgba(0, 255, 136, 0.3),
+            0 0 0 1px var(--neon-emerald);
     }
 }
 
 .tag-dotnet {
     &:hover {
-        box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
-        
-        &::before {
-            background: linear-gradient(135deg, var(--neon-green), var(--neon-emerald));
-        }
+        border-color: var(--neon-green);
+        box-shadow: 
+            0 8px 25px rgba(0, 255, 0, 0.3),
+            0 0 0 1px var(--neon-green);
     }
 }
 
 .tag-webdev {
     &:hover {
-        box-shadow: 0 8px 25px rgba(0, 255, 204, 0.3);
-        
-        &::before {
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-teal));
-        }
+        border-color: var(--neon-emerald);
+        box-shadow: 
+            0 8px 25px rgba(0, 255, 136, 0.3),
+            0 0 0 1px var(--neon-emerald);
     }
 }
 
 .tag-typescript {
     &:hover {
-        box-shadow: 0 8px 25px rgba(0, 136, 255, 0.3);
-        
-        &::before {
-            background: linear-gradient(135deg, var(--neon-blue), var(--neon-teal));
-        }
+        border-color: var(--neon-emerald);
+        box-shadow: 
+            0 8px 25px rgba(0, 255, 136, 0.3),
+            0 0 0 1px var(--neon-emerald);
     }
 }
 
 .tag-unity {
     &:hover {
-        box-shadow: 0 8px 25px rgba(136, 0, 255, 0.3);
-        
-        &::before {
-            background: linear-gradient(135deg, var(--neon-purple), var(--neon-emerald));
-        }
+        border-color: var(--neon-purple);
+        box-shadow: 
+            0 8px 25px rgba(136, 0, 255, 0.3),
+            0 0 0 1px var(--neon-purple);
     }
 }
 
 .tag-fullstack {
     &:hover {
-        box-shadow: 0 8px 25px rgba(136, 255, 0, 0.3);
-        
-        &::before {
-            background: linear-gradient(135deg, var(--neon-lime), var(--neon-green));
-        }
+        border-color: var(--neon-lime);
+        box-shadow: 
+            0 8px 25px rgba(136, 255, 0, 0.3),
+            0 0 0 1px var(--neon-lime);
     }
 }
