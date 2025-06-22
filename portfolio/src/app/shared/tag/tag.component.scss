@@ -1,15 +1,164 @@
 .tag {
     display: inline-block;
-    padding: 0.4rem 0.75rem;
-    background-color: var(--color-bg-secondary, #f3f4f6);
-    border-radius: 999px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-lg);
     font-size: 0.85rem;
-    white-space: nowrap;
-    color: var(--color-text);
-    transition: background-color 0.2s ease;
-
+    font-weight: 500;
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    
+    // Neon border effect
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: var(--radius-lg);
+        padding: 1px;
+        background: var(--gradient-secondary);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity var(--transition-normal);
+    }
+    
     &:hover {
-        background-color: var(--color-primary);
-        color: var(--color-bg);
+        transform: translateY(-2px);
+        color: var(--text-primary);
+        box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+        
+        &::before {
+            opacity: 1;
+        }
+    }
+    
+    // Different color variations based on tag content
+    &:has(:contains("#angular")) {
+        &:hover {
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+            
+            &::before {
+                background: var(--gradient-primary);
+            }
+        }
+    }
+    
+    &:has(:contains("#dotnet")) {
+        &:hover {
+            box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
+            
+            &::before {
+                background: linear-gradient(135deg, var(--neon-green), var(--neon-emerald));
+            }
+        }
+    }
+    
+    &:has(:contains("#webdev")) {
+        &:hover {
+            box-shadow: 0 8px 25px rgba(0, 255, 204, 0.3);
+            
+            &::before {
+                background: linear-gradient(135deg, var(--neon-cyan), var(--neon-teal));
+            }
+        }
+    }
+    
+    &:has(:contains("#typescript")) {
+        &:hover {
+            box-shadow: 0 8px 25px rgba(0, 136, 255, 0.3);
+            
+            &::before {
+                background: linear-gradient(135deg, var(--neon-blue), var(--neon-teal));
+            }
+        }
+    }
+    
+    &:has(:contains("#unity")) {
+        &:hover {
+            box-shadow: 0 8px 25px rgba(136, 0, 255, 0.3);
+            
+            &::before {
+                background: linear-gradient(135deg, var(--neon-purple), var(--neon-emerald));
+            }
+        }
+    }
+    
+    &:has(:contains("#fullstack")) {
+        &:hover {
+            box-shadow: 0 8px 25px rgba(136, 255, 0, 0.3);
+            
+            &::before {
+                background: linear-gradient(135deg, var(--neon-lime), var(--neon-green));
+            }
+        }
+    }
+}
+
+// Alternative approach for different tag styles
+.tag-angular {
+    &:hover {
+        box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+        
+        &::before {
+            background: var(--gradient-primary);
+        }
+    }
+}
+
+.tag-dotnet {
+    &:hover {
+        box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
+        
+        &::before {
+            background: linear-gradient(135deg, var(--neon-green), var(--neon-emerald));
+        }
+    }
+}
+
+.tag-webdev {
+    &:hover {
+        box-shadow: 0 8px 25px rgba(0, 255, 204, 0.3);
+        
+        &::before {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-teal));
+        }
+    }
+}
+
+.tag-typescript {
+    &:hover {
+        box-shadow: 0 8px 25px rgba(0, 136, 255, 0.3);
+        
+        &::before {
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-teal));
+        }
+    }
+}
+
+.tag-unity {
+    &:hover {
+        box-shadow: 0 8px 25px rgba(136, 0, 255, 0.3);
+        
+        &::before {
+            background: linear-gradient(135deg, var(--neon-purple), var(--neon-emerald));
+        }
+    }
+}
+
+.tag-fullstack {
+    &:hover {
+        box-shadow: 0 8px 25px rgba(136, 255, 0, 0.3);
+        
+        &::before {
+            background: linear-gradient(135deg, var(--neon-lime), var(--neon-green));
+        }
     }
 }

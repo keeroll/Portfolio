@@ -5,3 +5,52 @@
     margin: 0 auto;
     padding: 2rem var(--horizontal-padding);
 }
+
+.container {
+    width: 100%;
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+    position: relative;
+    
+    // Subtle neon border effect
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: var(--radius-xl);
+        padding: 1px;
+        background: linear-gradient(135deg, 
+            transparent 0%, 
+            rgba(0, 255, 136, 0.1) 25%, 
+            rgba(0, 255, 255, 0.1) 50%, 
+            rgba(0, 255, 204, 0.1) 75%, 
+            transparent 100%);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+    
+    // Subtle background with grid pattern
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 255, 204, 0.02) 0%, transparent 50%),
+        var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    backdrop-filter: blur(10px);
+    
+    // Responsive padding
+    @media (max-width: 768px) {
+        padding: var(--spacing-lg);
+        margin: 0 var(--spacing-sm);
+    }
+    
+    @media (max-width: 480px) {
+        padding: var(--spacing-md);
+        margin: 0 var(--spacing-xs);
+    }
+}

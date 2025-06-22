@@ -1,3 +1,57 @@
-<header>
-    Header
+<header class="header">
+    <div class="header-content">
+        <!-- Logo/Home Button -->
+        <a routerLink="/" class="logo" aria-label="Home">
+            <span class="logo-text">keeroll</span>
+        </a>
+        
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a routerLink="/" 
+               routerLinkActive="active" 
+               [routerLinkActiveOptions]="{exact: true}" 
+               class="nav-link">
+                Home
+            </a>
+            <a routerLink="/certificates" 
+               routerLinkActive="active" 
+               class="nav-link">
+                Certificates
+            </a>
+            <a routerLink="/cv" 
+               routerLinkActive="active" 
+               class="nav-link">
+                CV
+            </a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+            <i class="fas fa-bars" *ngIf="!isMobileMenuOpen"></i>
+            <i class="fas fa-times" *ngIf="isMobileMenuOpen"></i>
+        </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" [class.open]="isMobileMenuOpen">
+        <a routerLink="/" 
+           routerLinkActive="active" 
+           [routerLinkActiveOptions]="{exact: true}" 
+           class="mobile-nav-link"
+           (click)="closeMobileMenu()">
+            Home
+        </a>
+        <a routerLink="/certificates" 
+           routerLinkActive="active" 
+           class="mobile-nav-link"
+           (click)="closeMobileMenu()">
+            Certificates
+        </a>
+        <a routerLink="/cv" 
+           routerLinkActive="active" 
+           class="mobile-nav-link"
+           (click)="closeMobileMenu()">
+            CV
+        </a>
+    </div>
 </header>
