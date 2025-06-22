@@ -1,1 +1,117 @@
-<p>project-details-page works!</p>
+<div>
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <button class="back-button" (click)="goBack()">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back</span>
+        </button>
+    </div>
+
+    <app-container>
+        <div class="project-details-content" *ngIf="project">
+            <!-- Left Section: Media, Tags, Links -->
+            <div class="left-section">
+                <!-- Media Section -->
+                <div class="media-section">
+                    <div class="youtube-player" *ngIf="project.youtubeUrl">
+                        <iframe 
+                            [src]="project.youtubeUrl | safe" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="project-image" *ngIf="!project.youtubeUrl && project.image">
+                        <img [src]="project.image" [alt]="project.title + ' preview'" />
+                    </div>
+                    <div class="placeholder-image" *ngIf="!project.youtubeUrl && !project.image">
+                        <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="600" height="400" fill="#1a1a1a"/>
+                            <defs>
+                                <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                                    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0, 255, 136, 0.1)" stroke-width="1"/>
+                                </pattern>
+                            </defs>
+                            <rect width="600" height="400" fill="url(#grid)"/>
+                            <g transform="translate(300, 200)">
+                                <rect x="-40" y="-30" width="80" height="60" rx="6" fill="none" stroke="rgba(0, 255, 136, 0.3)" stroke-width="3"/>
+                                <rect x="-35" y="-25" width="70" height="50" rx="4" fill="rgba(0, 255, 136, 0.1)"/>
+                                <rect x="-7" y="30" width="14" height="12" fill="rgba(0, 255, 136, 0.3)"/>
+                                <rect x="-25" y="42" width="50" height="5" fill="rgba(0, 255, 136, 0.3)"/>
+                                <rect x="-30" y="-15" width="18" height="3" fill="rgba(0, 255, 136, 0.4)" rx="1"/>
+                                <rect x="-30" y="-10" width="24" height="3" fill="rgba(0, 255, 136, 0.4)" rx="1"/>
+                                <rect x="-30" y="-5" width="21" height="3" fill="rgba(0, 255, 136, 0.4)" rx="1"/>
+                                <rect x="-30" y="0" width="27" height="3" fill="rgba(0, 255, 136, 0.4)" rx="1"/>
+                                <rect x="-30" y="5" width="15" height="3" fill="rgba(0, 255, 136, 0.4)" rx="1"/>
+                            </g>
+                            <circle cx="75" cy="75" r="4" fill="rgba(0, 255, 136, 0.2)"/>
+                            <circle cx="525" cy="75" r="4" fill="rgba(0, 255, 136, 0.2)"/>
+                            <circle cx="75" cy="325" r="4" fill="rgba(0, 255, 136, 0.2)"/>
+                            <circle cx="525" cy="325" r="4" fill="rgba(0, 255, 136, 0.2)"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Tags Section -->
+                <div class="tags-section">
+                    <h3>Technologies Used</h3>
+                    <div class="tags">
+                        <app-tag *ngFor="let tag of project.tags" [label]="tag"></app-tag>
+                    </div>
+                </div>
+
+                <!-- Links Section -->
+                <div class="links-section">
+                    <h3>Project Links</h3>
+                    <div class="project-links">
+                        <a *ngIf="project.sourceUrl" 
+                           [href]="project.sourceUrl" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="project-link source-link">
+                            <i class="fab fa-github"></i>
+                            <span>Source Code</span>
+                        </a>
+                        <a *ngIf="project.liveUrl" 
+                           [href]="project.liveUrl" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="project-link live-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                        <a *ngIf="project.downloadUrl" 
+                           [href]="project.downloadUrl" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="project-link download-link">
+                            <i class="fas fa-download"></i>
+                            <span>Download</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section: Description -->
+            <div class="right-section">
+                <div class="project-info">
+                    <h1 class="project-title">{{ project.title }}</h1>
+                    <p class="project-description">{{ project.description }}</p>
+                    
+                    <div class="project-details" *ngIf="project.detailedDescription">
+                        <div class="detail-section" *ngFor="let section of project.detailedDescription">
+                            <h3>{{ section.title }}</h3>
+                            <p>{{ section.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div class="loading-state" *ngIf="!project">
+            <div class="loading-spinner"></div>
+            <p>Loading project details...</p>
+        </div>
+    </app-container>
+</div>

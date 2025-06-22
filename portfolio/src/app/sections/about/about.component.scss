@@ -1,0 +1,223 @@
+.about-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-2xl);
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: var(--spacing-2xl) 0;
+    position: relative;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+        padding: var(--spacing-xl) 0;
+    }
+
+    // Subtle grid background effect
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+        pointer-events: none;
+        z-index: -1;
+    }
+}
+
+.about-left {
+    flex: 1;
+    min-width: 300px;
+
+    .intro {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: var(--neon-emerald);
+        margin: 0 0 var(--spacing-sm);
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px var(--neon-emerald);
+        animation: pulse 3s ease-in-out infinite;
+    }
+
+    .name {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        margin: 0 0 var(--spacing-lg);
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+        position: relative;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-primary);
+            box-shadow: 0 0 20px var(--neon-emerald);
+        }
+    }
+
+    .description {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        max-width: 45ch;
+        color: var(--text-secondary);
+        margin-bottom: var(--spacing-xl);
+        font-weight: 400;
+    }
+}
+
+.about-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+
+    .socials {
+        display: flex;
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-lg);
+            background: var(--bg-secondary);
+            border: 2px solid transparent;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: var(--gradient-primary);
+                transition: left var(--transition-normal);
+                z-index: -1;
+            }
+
+            &:hover {
+                border-color: var(--neon-emerald);
+                color: var(--text-primary);
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(0, 255, 136, 0.3);
+
+                &::before {
+                    left: 0;
+                }
+            }
+
+            i {
+                font-size: 1.5rem;
+                z-index: 1;
+            }
+
+            // GitHub specific styling
+            &.github:hover {
+                border-color: #333;
+                box-shadow: 0 10px 25px rgba(51, 51, 51, 0.4);
+                
+                &::before {
+                    background: linear-gradient(135deg, #333, #666);
+                }
+            }
+
+            // LinkedIn specific styling
+            &.linkedin:hover {
+                border-color: #0077b5;
+                box-shadow: 0 10px 25px rgba(0, 119, 181, 0.4);
+                
+                &::before {
+                    background: linear-gradient(135deg, #0077b5, #00a0dc);
+                }
+            }
+
+            // YouTube specific styling
+            &.youtube:hover {
+                border-color: #ff0000;
+                box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
+                
+                &::before {
+                    background: linear-gradient(135deg, #ff0000, #cc0000);
+                }
+            }
+
+            // Email specific styling
+            &.email:hover {
+                border-color: var(--neon-emerald);
+                box-shadow: 0 10px 25px rgba(0, 255, 136, 0.4);
+                
+                &::before {
+                    background: var(--gradient-primary);
+                }
+            }
+        }
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+
+        app-tag {
+            transition: all var(--transition-normal);
+            
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .about-wrapper {
+        text-align: center;
+    }
+
+    .about-left {
+        .name {
+            text-align: center;
+            
+            &::after {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+            }
+        }
+    }
+
+    .about-right {
+        align-items: center;
+        
+        .socials {
+            justify-content: center;
+        }
+        
+        .tags {
+            justify-content: center;
+        }
+    }
+}

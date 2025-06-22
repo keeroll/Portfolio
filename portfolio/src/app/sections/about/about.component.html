@@ -1,1 +1,38 @@
-<p>{{ 'about.title' | translate }}</p>
+<app-container>
+    <div class="about-wrapper">
+        <div class="about-left">
+            <p class="intro">what's up! i'm</p>
+            <h1 class="name">Keeroll</h1>
+            <p class="description">
+                Senior software engineer focused on building clean, scalable full-stack applications. 
+                I love creating innovative solutions and exploring new technologies.
+            </p>
+        </div>
+
+        <div class="about-right">
+            <div class="socials">
+                <a href="https://github.com/keeroll" target="_blank" aria-label="GitHub" class="github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/kirillakatov" target="_blank" aria-label="LinkedIn" class="linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/@KeeRoll" target="_blank" aria-label="YouTube" class="youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="mailto:kirillakatov@gmail.com" aria-label="Email" class="email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="tags">
+                <app-tag label="#angular"></app-tag>
+                <app-tag label="#dotnet"></app-tag>
+                <app-tag label="#webdev"></app-tag>
+                <app-tag label="#typescript"></app-tag>
+                <app-tag label="#unity"></app-tag>
+                <app-tag label="#fullstack"></app-tag>
+            </div>
+        </div>
+    </div>
+</app-container>
