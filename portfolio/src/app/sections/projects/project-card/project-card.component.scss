@@ -103,11 +103,13 @@
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
     margin-top: auto;
+    padding-top: var(--spacing-md);
     
     app-tag {
         transition: all var(--transition-normal);
+        margin-bottom: var(--spacing-xs);
         
         &:hover {
             transform: translateY(-2px);

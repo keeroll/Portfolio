@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Project } from '../../models';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ContainerComponent } from '../../shared';
@@ -12,6 +13,8 @@ import { NgForOf } from '@angular/common';
   standalone: true
 })
 export class ProjectsComponent {
+  constructor(private router: Router) {}
+
   public projects: Project[] = [
     {
       id: 'portfolio-app',
@@ -84,4 +87,8 @@ export class ProjectsComponent {
       tags: ['#csharp', '#winforms', '#mssql', '#database']
     }
   ];
+
+  onProjectClick(project: Project): void {
+    this.router.navigate(['/projects', project.id]);
+  }
 }
