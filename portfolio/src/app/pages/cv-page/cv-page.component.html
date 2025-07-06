@@ -1,21 +1,17 @@
 <app-container>
     <div class="cv-header">
-        <h1>Curriculum Vitae</h1>
-        <p>Professional experience, skills, and achievements in detail.</p>
+        <h1>CV</h1>
     </div>
     
     <div class="cv-content">
-        <div class="cv-placeholder">
-            <div class="placeholder-icon">
-                <i class="fas fa-file-alt"></i>
-            </div>
-            <h3>CV Coming Soon</h3>
-            <p>Detailed CV content will be displayed here soon.</p>
-            <div class="cv-actions">
-                <button class="btn-download">
-                    <i class="fas fa-download"></i>
-                    Download PDF
-                </button>
+        <div class="cv-preview-container">
+            <div class="pdf-container">
+                <iframe 
+                    src="/cv/cv.pdf"
+                    class="cv-pdf-viewer"
+                    title="CV PDF Preview"
+                    frameborder="0">
+                </iframe>
             </div>
         </div>
     </div>
