@@ -110,11 +110,27 @@
         justify-content: center;
         margin-bottom: var(--spacing-md);
         
-        svg {
+        .placeholder-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
             height: 100%;
-            max-width: 500px;
-            max-height: 300px;
+            
+            i {
+                font-size: 6rem;
+                color: var(--neon-emerald);
+                opacity: 0.4;
+                text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+                transition: all var(--transition-normal);
+            }
+        }
+        
+        &:hover {
+            .placeholder-icon i {
+                opacity: 0.6;
+                transform: scale(1.1);
+            }
         }
     }
 }

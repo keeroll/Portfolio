@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ContainerComponent } from '../../shared';
+import { ContainerComponent, CertificatesCarouselComponent } from '../../shared';
 
 @Component({
   selector: 'app-certificates-page',
-  imports: [ContainerComponent],
+  imports: [ContainerComponent, CertificatesCarouselComponent],
   templateUrl: './certificates-page.component.html',
   styleUrl: './certificates-page.component.scss',
   standalone: true

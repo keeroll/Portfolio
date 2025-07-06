@@ -1,0 +1,217 @@
+[
+    {
+      "id": "portfolio-app",
+      "title": "Portfolio App",
+      "description": "A modern Angular portfolio with retrowave styling, internationalization, and responsive design.",
+      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3401350/182c050b4b51b5a390b216ef79f2f2d1048eb2bf/header.jpg?t=1743976618",
+      "tags": ["Angular", "TypeScript", "Scss", "Responsive"],
+      "youtubeUrl": "",
+      "sourceUrl": "https://github.com/yourusername/portfolio",
+      "liveUrl": "https://yourportfolio.com",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Overview",
+          "content": "This portfolio showcases my skills and projects with a unique retrowave aesthetic inspired by pattybuilds.dev. Built with Angular 19, it features modern web technologies and responsive design principles."
+        },
+        {
+          "title": "Key Features",
+          "content": "Internationalization support for multiple languages, responsive design that works on all devices, smooth animations and transitions, and a modular component architecture for maintainability."
+        },
+        {
+          "title": "Technical Stack",
+          "content": "Angular 19, TypeScript, SCSS, Angular Router, and modern CSS features like CSS Grid and Flexbox for layout. The project follows Angular best practices and modern development workflows."
+        }
+      ]
+    },
+    {
+      "id": "clickoin",
+      "title": "Clickoin",
+      "description": "A clicker game with coin skins, drops, and Steam integration. Built with Unity and C#.",
+      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3401350/ss_1eb71bf7b4efeb4b75fd3992da419ce856eb57f9.1920x1080.jpg?t=1741462433",
+      "tags": ["Unity", "C#", "Steam", "Indie"],
+      "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "sourceUrl": "",
+      "liveUrl": "https://store.steampowered.com/app/yourgame",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Game Overview",
+          "content": "Clickoin is an addictive clicker game where players collect coins, unlock skins, and discover rare drops. The game features Steam integration for achievements and cloud saves."
+        },
+        {
+          "title": "Development Process",
+          "content": "Developed over 6 months using Unity 2022.3 LTS, the game went through multiple iterations based on player feedback. Steam integration was implemented using the Steamworks.NET library."
+        }
+      ]
+    },
+    {
+      "id": "leaf-me-be",
+      "title": "Leaf Me Be",
+      "description": "A meditative fall simulator with light story elements and beautiful particle effects.",
+      "image": "",
+      "tags": ["Unity", "Narrative", "Casual", "Particles"],
+      "youtubeUrl": "",
+      "sourceUrl": "",
+      "liveUrl": "",
+      "downloadUrl": "https://itch.io/yourgame",
+      "detailedDescription": [
+        {
+          "title": "Concept",
+          "content": "Leaf Me Be is a peaceful meditation game where players experience the beauty of autumn through falling leaves. The game focuses on relaxation and mindfulness."
+        },
+        {
+          "title": "Technical Implementation",
+          "content": "Built with Unity's particle system for realistic leaf physics, custom shaders for atmospheric effects, and ambient sound design for immersive experience."
+        }
+      ]
+    },
+    {
+      "id": "simple-smart-house",
+      "title": "Simple Smart House",
+      "description": "IoT smart home system using Arduino with sensors and Blynk integration for home automation.",
+      "image": "https://via.placeholder.com/400x200/1a1a1a/ff8800?text=Smart+House",
+      "tags": ["IoT", "Arduino", "C++", "Smart Home"],
+      "youtubeUrl": "",
+      "sourceUrl": "",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Project Overview",
+          "content": "A comprehensive IoT smart home system that integrates various sensors and actuators for home automation. The system provides real-time monitoring and control capabilities."
+        },
+        {
+          "title": "Technical Features",
+          "content": "Built with Arduino microcontrollers, various sensors (temperature, humidity, motion), and Blynk platform for mobile app integration. Features include automated lighting, climate control, and security monitoring."
+        }
+      ]
+    },
+    {
+      "id": "text-formatter",
+      "title": "Text Formatter",
+      "description": "C# WPF application for text formatting and manipulation with a modern desktop interface.",
+      "image": "https://via.placeholder.com/400x200/1a1a1a/8800ff?text=Text+Formatter",
+      "tags": ["C#", "WPF", ".NET", "Desktop"],
+      "youtubeUrl": "",
+      "sourceUrl": "",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Application Overview",
+          "content": "A desktop application built with C# WPF that provides advanced text formatting and manipulation capabilities. Features a modern, intuitive user interface."
+        },
+        {
+          "title": "Key Features",
+          "content": "Text case conversion, formatting options, find and replace functionality, syntax highlighting, and export capabilities. Built with MVVM pattern for maintainable code architecture."
+        }
+      ]
+    },
+    {
+      "id": "atm-system",
+      "title": "ATM System",
+      "description": "Complete ATM management system built with C# WinForms and MS SQL Server for banking operations.",
+      "image": "https://via.placeholder.com/400x200/1a1a1a/00aa44?text=ATM+System",
+      "tags": ["C#", "Win Forms", "MS SQL", "CRUD"],
+      "youtubeUrl": "",
+      "sourceUrl": "",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "System Overview",
+          "content": "A comprehensive ATM management system that simulates real banking operations including account management, transactions, and security features."
+        },
+        {
+          "title": "Technical Implementation",
+          "content": "Built with C# WinForms for the user interface and MS SQL Server for data persistence. Features include user authentication, transaction processing, account management, and detailed reporting."
+        }
+      ]
+    },
+    {
+      "id": "time-travel-unity",
+      "title": "Time Travel Unity Game",
+      "description": "Unity 5 game development project featuring time travel mechanics and innovative gameplay elements.",
+      "image": "https://via.placeholder.com/400x200/1a1a1a/ff0088?text=Time+Travel",
+      "tags": ["Unity", "C#", "Game Dev", "Time Travel"],
+      "youtubeUrl": "",
+      "sourceUrl": "",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Game Concept",
+          "content": "An innovative Unity 5 game that explores time travel mechanics, allowing players to manipulate time to solve puzzles and overcome challenges."
+        },
+        {
+          "title": "Development Highlights",
+          "content": "Features custom time manipulation systems, particle effects for temporal distortions, and innovative puzzle mechanics that require players to think across multiple time periods."
+        }
+      ]
+    },
+    {
+      "id": "little-rts-game",
+      "title": "Little RTS Game",
+      "description": "Real-time strategy game built in Unity 5 as a test task for Enixan, featuring strategic gameplay mechanics.",
+      "image": "https://via.placeholder.com/400x200/1a1a1a/00ffaa?text=RTS+Game",
+      "tags": ["Unity", "C#", "Game Dev", "Strategy"],
+      "youtubeUrl": "",
+      "sourceUrl": "",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Game Overview",
+          "content": "A real-time strategy game developed as a test task for Enixan, featuring classic RTS mechanics including resource management, unit production, and tactical combat."
+        },
+        {
+          "title": "Technical Features",
+          "content": "Built with Unity 5, featuring AI pathfinding, unit behavior systems, resource management, and multiplayer-ready architecture. Demonstrates strong game development fundamentals."
+        }
+      ]
+    },
+    {
+      "id": "barcode-scanner",
+      "title": "Barcode Scanner",
+      "description": "TypeScript-based barcode scanning application with modern web technologies for product identification.",
+      "image": "https://via.placeholder.com/400x200/1a1a1a/ffaa00?text=Barcode+Scanner",
+      "tags": ["TypeScript", "WebDev", "Barcode", "Scanner"],
+      "youtubeUrl": "",
+      "sourceUrl": "",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Application Overview",
+          "content": "A web-based barcode scanner built with TypeScript and modern web technologies, providing real-time product identification and information retrieval."
+        },
+        {
+          "title": "Technical Implementation",
+          "content": "Utilizes WebRTC for camera access, image processing algorithms for barcode detection, and integration with product databases for information lookup."
+        }
+      ]
+    },
+    {
+      "id": "student-exams-db",
+      "title": "Student Exams Score DB",
+      "description": "Database management system for tracking student exam scores using C# WinForms and MS SQL Server.",
+      "image": "https://via.placeholder.com/400x200/1a1a1a/aa00ff?text=Student+DB",
+      "tags": ["C#", "Win Forms", "MS SQL", "Database"],
+      "youtubeUrl": "",
+      "sourceUrl": "",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "System Overview",
+          "content": "A comprehensive database management system designed for educational institutions to track and manage student exam scores and academic performance."
+        },
+        {
+          "title": "Features",
+          "content": "Student registration, exam score tracking, grade calculation, performance analytics, and detailed reporting. Built with C# WinForms and MS SQL Server for robust data management."
+        }
+      ]
+    }
+  ]
+  

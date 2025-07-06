@@ -34,22 +34,22 @@
             0 20px 40px rgba(0, 255, 136, 0.2),
             0 0 0 1px var(--neon-emerald);
         
-        .project-image {
+        .preview {
             transform: scale(1.05);
         }
         
-        .project-title {
+        .title {
             color: var(--neon-emerald);
             text-shadow: 0 0 10px var(--neon-emerald);
         }
         
-        .project-description {
+        .description {
             color: var(--text-primary);
         }
     }
 }
 
-.project-image {
+.preview {
     width: 100%;
     height: 200px;
     border-radius: var(--radius-lg);
@@ -61,13 +61,7 @@
     transition: transform var(--transition-normal);
     position: relative;
     overflow: hidden;
-    
-    // Placeholder styling
-    &::before {
-        content: '📱';
-        font-size: 3rem;
-        opacity: 0.3;
-    }
+    border: 1px solid rgba(0, 255, 136, 0.1);
     
     img {
         width: 100%;
@@ -75,15 +69,32 @@
         object-fit: cover;
         border-radius: var(--radius-lg);
     }
+    
+    .placeholder-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        
+        i {
+            font-size: 4rem;
+            color: var(--neon-emerald);
+            opacity: 0.4;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+            transition: all var(--transition-normal);
+        }
+    }
+    
+    &:hover {
+        .placeholder-icon i {
+            opacity: 0.6;
+            transform: scale(1.1);
+        }
+    }
 }
 
-.project-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-title {
+.title {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: var(--spacing-md);
@@ -91,7 +102,7 @@
     transition: all var(--transition-normal);
 }
 
-.project-description {
+.description {
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--text-secondary);
@@ -169,7 +180,7 @@
         }
     }
     
-    .project-image {
+    .preview {
         height: 150px;
     }
 }
