@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent, CertificatesCarouselComponent } from '../../shared';
+import { ScrollPositionService } from '../../services/scroll-position.service';
 
 @Component({
   selector: 'app-certificates-page',
@@ -8,8 +9,11 @@ import { ContainerComponent, CertificatesCarouselComponent } from '../../shared'
   styleUrl: './certificates-page.component.scss',
   standalone: true
 })
-export class CertificatesPageComponent implements OnInit { 
+export class CertificatesPageComponent implements OnInit {
+  constructor(private scrollPositionService: ScrollPositionService) {}
+
   public ngOnInit(): void {
+    this.scrollPositionService.resetPosition();
     window.scrollTo(0, 0);
   }
 } 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutComponent, ProjectsComponent } from '../../sections';
+import { ScrollPositionService } from '../../services/scroll-position.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,7 +10,9 @@ import { AboutComponent, ProjectsComponent } from '../../sections';
   standalone: true
 })
 export class HomePageComponent implements OnInit {
+  constructor(private scrollPositionService: ScrollPositionService) {}
+
   public ngOnInit(): void {
-    window.scrollTo(0, 0);
+    this.scrollPositionService.restoreScrollPosition();
   }
 }

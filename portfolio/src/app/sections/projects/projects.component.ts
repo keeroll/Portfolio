@@ -5,6 +5,7 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { ContainerComponent } from '../../shared';
 import { NgForOf } from '@angular/common';
 import { ProjectsService } from '../../services/projects.service';
+import { ScrollPositionService } from '../../services/scroll-position.service';
 
 @Component({
   selector: 'app-projects',
@@ -18,7 +19,8 @@ export class ProjectsComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private projectsService: ProjectsService
+    private projectsService: ProjectsService,
+    private scrollPositionService: ScrollPositionService
   ) {}
 
   public ngOnInit(): void {
@@ -26,6 +28,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   public onProjectClick(project: Project): void {
+    this.scrollPositionService.saveCurrentPosition();
     this.router.navigate(['/projects', project.id]);
   }
   
@@ -36,7 +39,6 @@ export class ProjectsComponent implements OnInit {
       },
       error: (error) => {
         console.error('Error loading projects:', error);
-        // You might want to show an error message to the user here
       }
     });
   }
