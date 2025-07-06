@@ -40,7 +40,7 @@
                 </div>
 
                 <!-- Links Section -->
-                <div class="links-section">
+                <div *ngIf="hasProjectLinks" class="links-section">
                     <h3>Project Links</h3>
                     <div class="project-links">
                         <a *ngIf="project.sourceUrl" 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../shared';
 
 @Component({
@@ -8,6 +8,11 @@ import { ContainerComponent } from '../../shared';
   styleUrl: './cv-page.component.scss',
   standalone: true
 })
-export class CvPageComponent {
+export class CvPageComponent implements OnInit {
   // Future CV data will go here
+  
+  ngOnInit(): void {
+    // Scroll to top when page loads
+    window.scrollTo(0, 0);
+  }
 } 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Location } from '@angular/common';
+import { Location, NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../models';
 import { ContainerComponent, TagComponent } from '../../shared';
@@ -9,7 +9,7 @@ import { ProjectsService } from '../../services/projects.service';
 
 @Component({
   selector: 'app-project-details-page',
-  imports: [CommonModule, ContainerComponent, TagComponent, SafeUrlPipe],
+  imports: [CommonModule, ContainerComponent, TagComponent, SafeUrlPipe, NgIf],
   templateUrl: './project-details-page.component.html',
   styleUrl: './project-details-page.component.scss',
   standalone: true
@@ -23,6 +23,10 @@ export class ProjectDetailsPageComponent implements OnInit {
     private location: Location,
     private projectsService: ProjectsService
   ) {}
+
+  public get hasProjectLinks(): boolean {
+    return !!this.project?.sourceUrl || !!this.project?.liveUrl || !!this.project?.downloadUrl;
+  }
 
   public ngOnInit(): void {
     this.route.params.subscribe(params => {
