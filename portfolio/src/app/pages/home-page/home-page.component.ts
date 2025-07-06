@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AboutComponent, ProjectsComponent } from '../../sections';
 
 @Component({
@@ -8,6 +8,8 @@ import { AboutComponent, ProjectsComponent } from '../../sections';
   styleUrl: './home-page.component.scss',
   standalone: true
 })
-export class HomePageComponent {
-
+export class HomePageComponent implements OnInit {
+  public ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 }

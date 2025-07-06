@@ -8,11 +8,8 @@ import { ContainerComponent, CertificatesCarouselComponent } from '../../shared'
   styleUrl: './certificates-page.component.scss',
   standalone: true
 })
-export class CertificatesPageComponent implements OnInit {
-  // Future certificates data will go here
-  
-  ngOnInit(): void {
-    // Scroll to top when page loads
+export class CertificatesPageComponent implements OnInit { 
+  public ngOnInit(): void {
     window.scrollTo(0, 0);
   }
 } 

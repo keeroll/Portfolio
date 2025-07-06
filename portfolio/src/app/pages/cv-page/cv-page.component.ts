@@ -9,10 +9,7 @@ import { ContainerComponent } from '../../shared';
   standalone: true
 })
 export class CvPageComponent implements OnInit {
-  // Future CV data will go here
-  
-  ngOnInit(): void {
-    // Scroll to top when page loads
+  public ngOnInit(): void {
     window.scrollTo(0, 0);
   }
 } 
