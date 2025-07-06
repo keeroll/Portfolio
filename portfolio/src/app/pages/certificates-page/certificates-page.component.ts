@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
-import { ContainerComponent } from '../../shared';
+import { Component, OnInit } from '@angular/core';
+import { ContainerComponent, CertificatesCarouselComponent } from '../../shared';
+import { ScrollPositionService } from '../../services/scroll-position.service';
 
 @Component({
   selector: 'app-certificates-page',
-  imports: [ContainerComponent],
+  imports: [ContainerComponent, CertificatesCarouselComponent],
   templateUrl: './certificates-page.component.html',
   styleUrl: './certificates-page.component.scss',
   standalone: true
 })
-export class CertificatesPageComponent {
-  // Future certificates data will go here
+export class CertificatesPageComponent implements OnInit {
+  constructor(private scrollPositionService: ScrollPositionService) {}
+
+  public ngOnInit(): void {
+    this.scrollPositionService.resetPosition();
+    window.scrollTo(0, 0);
+  }
 } 

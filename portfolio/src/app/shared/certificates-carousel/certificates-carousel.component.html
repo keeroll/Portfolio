@@ -1,0 +1,43 @@
+<div class="certificates-carousel">
+  <div class="carousel-container">
+    <!-- Previous Button -->
+    <button class="nav-button prev-button" (click)="previous()" title="Previous Certificate">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Certificate PDF Display -->
+    <div class="certificate-display">
+      <div class="pdf-container">
+        <iframe 
+          [src]="pdfUrl | safe" 
+          class="pdf-viewer"
+          title="Certificate PDF"
+          frameborder="0">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Next Button -->
+    <button class="nav-button next-button" (click)="next()" title="Next Certificate">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Controls -->
+  <div class="carousel-controls">
+    <!-- Slide Indicators -->
+    <div class="slide-indicators">
+      <button 
+        *ngFor="let certificate of certificates; let i = index"
+        class="indicator-dot"
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)"
+        [title]="certificate.name">
+      </button>
+    </div>
+    <!-- Slide Counter -->
+    <div class="slide-counter">
+      {{ currentIndex + 1 }} / {{ certificates.length }}
+    </div>
+  </div>
+</div> 

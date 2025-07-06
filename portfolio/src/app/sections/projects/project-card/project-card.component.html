@@ -1,9 +1,14 @@
 <div class="project-card" (click)="onCardClick()">
-    <img [src]="project.image" [alt]="project.title" class="preview" />
+    <div class="preview">
+        <img *ngIf="project.image" [src]="project.image" [alt]="project.title" />
+        <div *ngIf="!project.image" class="placeholder-icon">
+            <i class="fas fa-code"></i>
+        </div>
+    </div>
     <h3 class="title">{{ project.title }}</h3>
     <p class="description">{{ project.description }}</p>
 
-    <div class="tags">
+    <div class="project-tags">
         <app-tag *ngFor="let tag of project.tags.slice(0, 3)" [label]="tag"></app-tag>
     </div>
 </div>

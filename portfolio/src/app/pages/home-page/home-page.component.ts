@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AboutComponent, ProjectsComponent } from '../../sections';
+import { ScrollPositionService } from '../../services/scroll-position.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,6 +9,10 @@ import { AboutComponent, ProjectsComponent } from '../../sections';
   styleUrl: './home-page.component.scss',
   standalone: true
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit {
+  constructor(private scrollPositionService: ScrollPositionService) {}
 
+  public ngOnInit(): void {
+    this.scrollPositionService.restoreScrollPosition();
+  }
 }
