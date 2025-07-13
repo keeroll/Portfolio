@@ -36,7 +36,7 @@
       "downloadUrl": "",
       "detailedDescription": [
         {
-          "title": "Game Overview",
+          "title": "Overview",
           "content": "Clickoin is a casual clicker game built with Unity where players earn coins, unlock skins, and receive time-based or achievement-based drops. Features include custom rarity logic, offline-safe drops, and full Steam integration."
         },
         {
@@ -57,7 +57,7 @@
         "downloadUrl": "",
         "detailedDescription": [
           {
-            "title": "Proof of Concept",
+            "title": "Overview",
             "content": "This PWA was a prototype project created to explore integration between Angular/Ionic and Honeywell Captuvo barcode scanners on iOS using Cordova plugins."
           },
           {
@@ -78,7 +78,7 @@
         "downloadUrl": "",
         "detailedDescription": [
           {
-            "title": "Project Overview",
+            "title": "Overview",
             "content": "A single-page Angular application displaying current weather conditions across cities in Ukraine. Built with Angular 7 and integrated with OpenWeatherMap API."
           },
           {
@@ -99,7 +99,7 @@
       "downloadUrl": "",
       "detailedDescription": [
         {
-          "title": "Project Overview",
+          "title": "Overview",
           "content": "My first IoT project built around Arduino Uno and various sensors to simulate a smart home. Used Blynk mobile app for remote control and monitoring."
         },
         {
@@ -120,7 +120,7 @@
       "downloadUrl": "https://github.com/keeroll/Time_Travel_Unity5/releases/tag/v0.0.1",
       "detailedDescription": [
         {
-          "title": "Prototype Overview",
+          "title": "Overview",
           "content": "Experimental Unity 5 game focused on simulating time travel. I tested various mechanics and effects for manipulating time within puzzles."
         },
         {
@@ -141,19 +141,19 @@
       "downloadUrl": "https://github.com/keeroll/Little_RTS_Game_Unity5/releases/tag/v.0.0.1",
       "detailedDescription": [
         {
-          "title": "Game Overview",
-          "content": "A real-time strategy game developed as a test task for Enixan, featuring classic RTS mechanics including resource management, unit production, and tactical combat."
+          "title": "Overview",
+          "content": "A real-time strategy game developed as a test task for Enixan. I didn't get a job back then :)"
         },
         {
           "title": "Technical Features",
-          "content": "Built with Unity 5, featuring AI pathfinding, unit behavior systems, resource management, and multiplayer-ready architecture. Demonstrates strong game development fundamentals."
+          "content": "Built with Unity 5, featuring grid for building, UI system to select different building types. Demonstrates good game development fundamentals."
         }
       ]
     },
     {
         "id": "fnaf-style-game",
         "title": "FNaF-Style Horror Game",
-        "description": "Unity 5 horror game inspired by Five Nights at Freddy’s. Built following tutorials but extended with custom camera and pathfinding systems.",
+        "description": "Unity 5 horror game inspired by Five Nights at Freddy’s. Built following tutorials.",
         "image": "project-img/fnaf-style-game.jpg",
         "tags": ["Unity", "C#", "Game Dev", "Horror", "Fnaf"],
         "youtubeUrl": "https://www.youtube.com/embed/tMhB2fMfOM8?si=sTg05PQAxVdDms8s",
@@ -162,7 +162,7 @@
         "downloadUrl": "https://github.com/keeroll/old-unity-projects/releases/tag/fnaf-build",
         "detailedDescription": [
           {
-            "title": "Learning Focus",
+            "title": "Overview",
             "content": "This project was inspired by the mechanics of FNaF and used primarily as a learning exercise to understand Unity’s camera system, scene management, and AI pathfinding."
           },
           {
@@ -183,7 +183,7 @@
         "downloadUrl": "https://github.com/keeroll/old-unity-projects/releases/tag/solar-system-build",
         "detailedDescription": [
           {
-            "title": "Project Summary",
+            "title": "Overview",
             "content": "Built as a space simulation sandbox where players can freely explore a simplified solar system with orbiting planets and rotation systems."
           },
           {
@@ -195,7 +195,7 @@
     {
         "id": "atm-system",
         "title": "ATM System",
-        "description": "Complete ATM management system built with C# WinForms and MS SQL Server for banking operations.",
+        "description": "ATM management system built with C# WinForms and MS SQL Server for banking operations.",
         "image": "project-img/atm-system.jpg",
         "tags": ["C#", "Win Forms", "MS SQL", "CRUD", "Desktop"],
         "youtubeUrl": "https://www.youtube.com/embed/6hgoXhEa3I8?si=BydYPtpPzUg5v3yk",
@@ -204,8 +204,8 @@
         "downloadUrl": "",
         "detailedDescription": [
           {
-            "title": "System Overview",
-            "content": "A comprehensive ATM management system that simulates real banking operations including account management, transactions, and security features."
+            "title": "Overview",
+            "content": "ATM management system that simulates real banking operations including account management, transactions, and security features."
           },
           {
             "title": "Technical Implementation",
@@ -225,8 +225,8 @@
       "downloadUrl": "",
       "detailedDescription": [
         {
-          "title": "System Overview",
-          "content": "A comprehensive database management system designed for educational institutions to track and manage student exam scores and academic performance."
+          "title": "Overview",
+          "content": "A database management system designed for educational institutions to track and manage student exam scores and academic performance."
         },
         {
           "title": "Features",
@@ -246,7 +246,7 @@
         "downloadUrl": "",
         "detailedDescription": [
           {
-            "title": "Application Overview",
+            "title": "Overview",
             "content": "A desktop application built with C# WPF that provides advanced text formatting and manipulation capabilities."
           },
           {
