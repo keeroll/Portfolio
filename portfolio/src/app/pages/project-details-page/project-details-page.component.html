@@ -3,7 +3,7 @@
     <div class="back-button-container">
         <button class="back-button" (click)="goBack()">
             <i class="fas fa-arrow-left"></i>
-            <span>Back</span>
+            <span>{{ 'projectDetails.back' | translate }}</span>
         </button>
     </div>
 
@@ -33,7 +33,7 @@
 
                 <!-- Tags Section -->
                 <div class="tags-section">
-                    <h3>Technologies Used</h3>
+                    <h3>{{ 'projects.technologies' | translate }}</h3>
                     <div class="tags">
                         <app-tag *ngFor="let tag of project.tags" [label]="tag"></app-tag>
                     </div>
@@ -41,7 +41,7 @@
 
                 <!-- Links Section -->
                 <div *ngIf="hasProjectLinks" class="links-section">
-                    <h3>Project Links</h3>
+                    <h3>{{ 'projects.projectLinks' | translate }}</h3>
                     <div class="project-links">
                         <a *ngIf="project.sourceUrl" 
                            [href]="project.sourceUrl" 
@@ -49,7 +49,7 @@
                            rel="noopener noreferrer"
                            class="project-link source-link">
                             <i class="fab fa-github"></i>
-                            <span>Source Code</span>
+                            <span>{{ 'projects.sourceCode' | translate }}</span>
                         </a>
                         <a *ngIf="project.liveUrl" 
                            [href]="project.liveUrl" 
@@ -57,7 +57,7 @@
                            rel="noopener noreferrer"
                            class="project-link live-link">
                             <i class="fas fa-external-link-alt"></i>
-                            <span>Live Demo</span>
+                            <span>{{ 'projects.demo' | translate }}</span>
                         </a>
                         <a *ngIf="project.downloadUrl" 
                            [href]="project.downloadUrl" 
@@ -65,7 +65,7 @@
                            rel="noopener noreferrer"
                            class="project-link download-link">
                             <i class="fas fa-download"></i>
-                            <span>Download</span>
+                            <span>{{ 'projects.donwload' | translate }}</span>
                         </a>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
         <!-- Loading State -->
         <div class="loading-state" *ngIf="!project">
             <div class="loading-spinner"></div>
-            <p>Loading project details...</p>
+            <p>{{ 'projectDetails.loading' | translate }}</p>
         </div>
     </app-container>
 </div>

@@ -1,9 +1,52 @@
 {
-    "about": {
-        "title": "What's up! I'm",
-        "nickname": "keeroll"
-    },
-    "project": {
-        "title": "Projects"
-    }
+  "about": {
+    "title": "What's up! I'm",
+    "description": "Senior software engineer passionate about building diverse projects and trying out new ideas."
+  },
+  "header": {
+    "home": "Home",
+    "certificates": "Certificates",
+    "cv": "CV"
+  },
+  "footer": {
+    "description": "Building cool stuff",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "certificates": "Certificates",
+    "cv": "CV",
+    "connect": "Connect",
+    "copyright": "All rights reserved."
+  },
+  "projects": {
+    "title": "What I've Built",
+    "subtitle": "Explore my projects, achievements, and creative ventures. Each project represents a unique challenge and learning experience.",
+    "technologies": "Technologies Used",
+    "empty": "No projects found. Something went wrong. Please try refreshing the page.",
+    "sourceCode": "Source Code",
+    "demo": "Demo",
+    "download": "Download",
+    "projectLinks": "Project Links"
+  },
+  "projectDetails": {
+    "back": "Back",
+    "loading": "Loading project details..."
+  },
+  "cv": {
+    "title": "CV",
+    "pdfPreview": "CV PDF Preview"
+  },
+  "certificates": {
+    "prev": "Previous Certificate",
+    "next": "Next Certificate",
+    "title": "Certificates & Achievements"
+  },
+  "error": {
+    "default": "An error occurred."
+  },
+  "links": {
+    "github": "GitHub Account",
+    "linkedin": "LinkedIn Account",
+    "youtube": "YouTube Channel",
+    "personalEmail": "E-mail"
+  }
 }

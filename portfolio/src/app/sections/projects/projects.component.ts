@@ -3,28 +3,45 @@ import { Router } from '@angular/router';
 import { Project } from '../../models';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ContainerComponent } from '../../shared';
-import { NgForOf } from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 import { ProjectsService } from '../../services/projects.service';
 import { ScrollPositionService } from '../../services/scroll-position.service';
+import { TranslatePipe } from '@ngx-translate/core';
+import { TranslationService } from '../../services/translation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
-  imports: [ContainerComponent, ProjectCardComponent, NgForOf],
+  imports: [TranslatePipe, ContainerComponent, ProjectCardComponent, NgForOf, NgIf],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
   standalone: true
 })
 export class ProjectsComponent implements OnInit {
   public projects: Project[] = [];
+  private langChangeSub?: Subscription;
 
   constructor(
     private router: Router,
     private projectsService: ProjectsService,
-    private scrollPositionService: ScrollPositionService
+    private scrollPositionService: ScrollPositionService,
+    private translationService: TranslationService
   ) {}
+
+  public get hasProjects(): boolean {
+    return !!this.projects && this.projects.length > 0;
+  }
 
   public ngOnInit(): void {
     this.loadProjects();
+    // Subscribe to language changes
+    this.langChangeSub = this.translationService.onLangChange.subscribe(() => {
+      this.loadProjects();
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.langChangeSub?.unsubscribe();
   }
 
   public onProjectClick(project: Project): void {

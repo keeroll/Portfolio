@@ -1,0 +1,331 @@
+[
+    {
+      "id": "portfolio-app",
+      "title": "Портфоліо",
+      "description": "Особисте портфоліо на Angular з локалізацією, сертифікатами та резюме. Дизайн у стилі ретровейв.",
+      "image": "",
+      "tags": [
+        "Angular",
+        "TypeScript",
+        "Scss",
+        "Responsive",
+        "Localization",
+        "Retrowave"
+      ],
+      "youtubeUrl": "",
+      "sourceUrl": "https://github.com/keeroll/Portfolio",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Моє особисте портфоліо, створене за допомогою Angular 20. Демонструє проєкти, сертифікати та містить резюме. Сайт виконаний у стилі ретровейв та повністю адаптивний."
+        },
+        {
+          "title": "Ключові можливості",
+          "content": "Підтримка інтернаціоналізації (i18n), адаптивний дизайн для всіх пристроїв, модульна архітектура та плавні візуальні переходи."
+        },
+        {
+          "title": "Технічний стек",
+          "content": "Angular 20, TypeScript, SCSS, Angular Router, сучасний CSS (Flexbox, Grid). Побудовано за найкращими практиками Angular для продакшн-деплойменту."
+        }
+      ]
+    },
+    {
+      "id": "clickoin",
+      "title": "Клікоїн",
+      "description": "Клікер-гра зі скінами, рідкісними дропами та інтеграцією зі Steam. Створена на Unity.",
+      "image": "project-img/clickoin.jpg",
+      "tags": [
+        "Unity",
+        "C#",
+        "Steam",
+        "Game Dev",
+        "Indie",
+        "Steamworks.NET",
+        "Game Design"
+      ],
+      "youtubeUrl": "https://www.youtube.com/embed/rMiqV9_fbdM?si=snhzmmDeY9I_9bom",
+      "sourceUrl": "",
+      "liveUrl": "https://store.steampowered.com/app/3401350/Clickoin/",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Клікоїн — це казуальна клікер-гра, створена в Unity, де гравці заробляють монети, відкривають скіни та отримують дропи за час або досягнення. Є система рідкісності, офлайн-дропи та повна інтеграція зі Steam."
+        },
+        {
+          "title": "Процес розробки",
+          "content": "Я працював над геймдизайном, програмуванням і тестуванням. Реалізував Steam Cloud, досягнення, інвентар та шифрування збережень. Ігровий цикл вдосконалювався на основі відгуків гравців під час тестів."
+        }
+      ]
+    },
+    {
+      "id": "barcode-scanner",
+      "title": "Сканер штрихкодів",
+      "description": "PWA-додаток на Angular для сканування штрихкодів через Honeywell Captuvo на iOS за допомогою Cordova.",
+      "image": "",
+      "tags": [
+        "Angular",
+        "Ionic",
+        "Cordova",
+        "PWA",
+        "Barcode",
+        "Scanner"
+      ],
+      "youtubeUrl": "",
+      "sourceUrl": "https://github.com/keeroll/barcode-scanner",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Це був прототип, створений для дослідження інтеграції між Angular/Ionic і сканерами штрихкодів Honeywell Captuvo на iOS за допомогою плагінів Cordova."
+        },
+        {
+          "title": "Технічні деталі",
+          "content": "Реалізовано базове виявлення сканера та отримання даних, досліджено варіанти інтерфейсів плагінів і протестовано можливості сканування в реальному часі з зовнішнім обладнанням."
+        }
+      ]
+    },
+    {
+      "id": "ukraine-weather-app",
+      "title": "Прогноз погоди в Україні",
+      "description": "Простий застосунок на Angular 7 з API OpenWeather та SVG-картою для відображення погодних умов по Україні.",
+      "image": "project-img/ukraine-weather-app.jpg",
+      "tags": [
+        "Angular",
+        "TypeScript",
+        "SVG",
+        "API",
+        "Weather"
+      ],
+      "youtubeUrl": "https://www.youtube.com/embed/D0GMRD8ANL4?si=7c6VDdBJ482KALw2",
+      "sourceUrl": "https://github.com/keeroll/web-systems-architecture-labs",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Веб-астосунок на Angular, що показує поточні погодні умови по містах України. Створений на Angular 7 з інтеграцією OpenWeatherMap API."
+        },
+        {
+          "title": "Ключові можливості",
+          "content": "Візуалізація даних на інтерактивній SVG-карті України, робота з API через HTTPClient."
+        }
+      ]
+    },
+    {
+      "id": "simple-smart-house",
+      "title": "Простий розумний дім",
+      "description": "IoT-система розумного дому на Arduino з сенсорами та інтеграцією з мобільним застосунком Blynk.",
+      "image": "project-img/simple-smart-house.jpg",
+      "tags": [
+        "IoT",
+        "Arduino",
+        "C++",
+        "Smart Home",
+        "Blynk"
+      ],
+      "youtubeUrl": "https://www.youtube.com/embed/ulaSbHANYgE?si=ifQLTKkfaKFN_gZr",
+      "sourceUrl": "https://github.com/keeroll/Simple-Smart-House",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Мій перший IoT-проєкт на базі Arduino Uno та різноманітних сенсорів для моделювання розумного дому. Для керування та моніторингу використовував мобільний застосунок Blynk."
+        },
+        {
+          "title": "Обладнання та функції",
+          "content": "Використані сенсори: DHT11, RFID (RC522), інфрачервоний датчик руху (HC-SR501), датчик освітленості (LDR), а також сервомотор. Застосовано світлодіоди та резистори для логіки освітлення та руху."
+        }
+      ]
+    },
+    {
+      "id": "time-travel-unity",
+      "title": "Unity гра з подорожами у часі",
+      "description": "Прототип гри на Unity 5 з механіками подорожей у часі та головоломками.",
+      "image": "project-img/time-travel-unity.jpg",
+      "tags": [
+        "Unity",
+        "C#",
+        "Game Dev",
+        "Time Travel"
+      ],
+      "youtubeUrl": "https://www.youtube.com/embed/-GHlKoqbr1c?si=IrrRtuqVIALIky_l",
+      "sourceUrl": "https://github.com/keeroll/Time_Travel_Unity5",
+      "liveUrl": "",
+      "downloadUrl": "https://github.com/keeroll/Time_Travel_Unity5/releases/tag/v0.0.1",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Експериментальна гра на Unity 5 з імітацією подорожей у часі. Я тестував різні механіки та ефекти для керування часом у головоломках."
+        },
+        {
+          "title": "Основні моменти розробки",
+          "content": "Використані безкоштовні 3D-моделі для створення прототипу ігрового процесу. Реалізовано перемотування часу та візуальні ефекти для передачі його змін."
+        }
+      ]
+    },
+    {
+      "id": "little-rts-game",
+      "title": "Міні RTS гра",
+      "description": "Стратегія в реальному часі на Unity 5, створена як тестове завдання для компанії Enixan, з класичними механіками RTS.",
+      "image": "project-img/little-rts-game.jpg",
+      "tags": [
+        "Unity",
+        "C#",
+        "Game Dev",
+        "Strategy"
+      ],
+      "youtubeUrl": "https://www.youtube.com/embed/Vlq5hsqTvvA?si=9fsObym6usx_k4b1",
+      "sourceUrl": "https://github.com/keeroll/Little_RTS_Game_Unity5",
+      "liveUrl": "",
+      "downloadUrl": "https://github.com/keeroll/Little_RTS_Game_Unity5/releases/tag/v.0.0.1",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "RTS-гра, створена як тестове завдання для Enixan. Роботу я не отримав тоді :)"
+        },
+        {
+          "title": "Технічні особливості",
+          "content": "Створена на Unity 5, включає сітку для побудови, інтерфейс для вибору будівель. Показує хороше володіння основами розробки ігор."
+        }
+      ]
+    },
+    {
+      "id": "fnaf-style-game",
+      "title": "Гра жахів у стилі FNaF",
+      "description": "Гра жахів на Unity 5, натхненна серією Five Nights at Freddy’s. Розроблена на основі туторіалів.",
+      "image": "project-img/fnaf-style-game.jpg",
+      "tags": [
+        "Unity",
+        "C#",
+        "Game Dev",
+        "Horror",
+        "Fnaf"
+      ],
+      "youtubeUrl": "https://www.youtube.com/embed/tMhB2fMfOM8?si=sTg05PQAxVdDms8s",
+      "sourceUrl": "",
+      "liveUrl": "",
+      "downloadUrl": "https://github.com/keeroll/old-unity-projects/releases/tag/fnaf-build",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Проєкт натхненний механіками FNaF і створений переважно з навчальною метою для розуміння системи камер, сцен і навігації Unity."
+        },
+        {
+          "title": "Ключові можливості",
+          "content": "Реалізовано базовий AI з переміщенням по сітці, логіку перемикання камер для імітації кімнати охорони та систему звуку й світла для нагнітання атмосфери."
+        }
+      ]
+    },
+    {
+      "id": "solar-system-unity",
+      "title": "Симулятор Сонячної системи Unity",
+      "description": "Інтерактивна 3D-симуляція Сонячної системи в Unity 5 з вільною камерою та орбітальними рухами планет.",
+      "image": "project-img/solar-system-unity.jpg",
+      "tags": [
+        "Unity",
+        "C#",
+        "Game Dev",
+        "Simulation",
+        "Space"
+      ],
+      "youtubeUrl": "https://www.youtube.com/embed/P_Ay0Ss23TQ?si=881YUPruOG6eC97P",
+      "sourceUrl": "",
+      "liveUrl": "",
+      "downloadUrl": "https://github.com/keeroll/old-unity-projects/releases/tag/solar-system-build",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Симулятор-космічна пісочниця, де користувач може вільно досліджувати спрощену Сонячну систему з орбітальним рухом планет."
+        },
+        {
+          "title": "Деталі реалізації",
+          "content": "Застосовано систему transform Unity для обертання планет, реалізовано базове керування камерою та використано текстури з публічного доступу."
+        }
+      ]
+    },
+    {
+      "id": "atm-system",
+      "title": "Система банкомату",
+      "description": "Система управління банкоматом, створена з використанням C# WinForms та MS SQL Server для банківських операцій.",
+      "image": "project-img/atm-system.jpg",
+      "tags": [
+        "C#",
+        "Win Forms",
+        "MS SQL",
+        "CRUD",
+        "Desktop"
+      ],
+      "youtubeUrl": "https://www.youtube.com/embed/6hgoXhEa3I8?si=BydYPtpPzUg5v3yk",
+      "sourceUrl": "https://github.com/keeroll/atm_system_cSharp",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Симуляція банківської системи з управлінням рахунками, транзакціями та елементами безпеки."
+        },
+        {
+          "title": "Технічна реалізація",
+          "content": "Побудовано на C# WinForms з базою даних на MS SQL Server. Є авторизація користувача, транзакції, управління рахунками та звітність."
+        }
+      ]
+    },
+    {
+      "id": "student-exams-db",
+      "title": "База оцінок студентів",
+      "description": "Система управління базою даних для обліку результатів студентських іспитів на C# WinForms з MS SQL Server.",
+      "image": "project-img/student-exams-db.jpg",
+      "tags": [
+        "C#",
+        "Win Forms",
+        "MS SQL",
+        "Database",
+        "Desktop"
+      ],
+      "youtubeUrl": "https://www.youtube.com/embed/RPXotjyF7gg?si=ZJmOM-iUEk_zWHzt",
+      "sourceUrl": "https://github.com/keeroll/Student_Exams_Score_DB_CSharp_WF",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Система бази даних для навчальних закладів для обліку результатів іспитів і успішності студентів."
+        },
+        {
+          "title": "Можливості",
+          "content": "Реєстрація студентів, облік оцінок, розрахунок балів, аналітика та звіти. Створена на C# WinForms та MS SQL Server."
+        }
+      ]
+    },
+    {
+      "id": "text-formatter",
+      "title": "Форматування тексту",
+      "description": "Додаток на C# WPF для форматування тексту зі зручним інтерфейсом.",
+      "image": "",
+      "tags": [
+        "C#",
+        "WPF",
+        ".NET",
+        "Desktop"
+      ],
+      "youtubeUrl": "",
+      "sourceUrl": "https://github.com/keeroll/Text-Formatter",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Опис",
+          "content": "Десктопний застосунок на C# WPF із розширеними можливостями форматування й обробки тексту."
+        },
+        {
+          "title": "Ключові можливості",
+          "content": "Зміна регістру, форматування, пошук і заміна, підсвітка синтаксису та експорт. Створено з використанням шаблону MVVM."
+        }
+      ]
+    }
+  ]

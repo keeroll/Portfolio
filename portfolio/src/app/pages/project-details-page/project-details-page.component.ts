@@ -6,22 +6,28 @@ import { Project } from '../../models';
 import { ContainerComponent, TagComponent } from '../../shared';
 import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
 import { ProjectsService } from '../../services/projects.service';
+import { TranslatePipe } from '@ngx-translate/core';
+import { TranslationService } from '../../services/translation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-project-details-page',
-  imports: [CommonModule, ContainerComponent, TagComponent, SafeUrlPipe, NgIf],
+  imports: [CommonModule, ContainerComponent, TagComponent, SafeUrlPipe, NgIf, TranslatePipe],
   templateUrl: './project-details-page.component.html',
   styleUrl: './project-details-page.component.scss',
   standalone: true
 })
 export class ProjectDetailsPageComponent implements OnInit {
   project: Project | null = null;
+  private langChangeSub?: Subscription;
+  private currentProjectId: string | null = null;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private location: Location,
-    private projectsService: ProjectsService
+    private projectsService: ProjectsService,
+    private translationService: TranslationService
   ) {}
 
   public get hasProjectLinks(): boolean {
@@ -31,8 +37,19 @@ export class ProjectDetailsPageComponent implements OnInit {
   public ngOnInit(): void {
     this.route.params.subscribe(params => {
       const projectId = params['id'];
+      this.currentProjectId = projectId;
       this.loadProject(projectId);
     });
+    // Subscribe to language changes
+    this.langChangeSub = this.translationService.onLangChange.subscribe(() => {
+      if (this.currentProjectId) {
+        this.loadProject(this.currentProjectId);
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.langChangeSub?.unsubscribe();
   }
 
   public goBack(): void {

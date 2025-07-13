@@ -1,26 +1,25 @@
 <app-container>
     <div class="about-wrapper">
         <div class="about-left">
-            <p class="intro">what's up! i'm</p>
+            <p class="intro">{{ 'about.title' | translate }}</p>
             <h1 class="name">Keeroll</h1>
             <p class="description">
-                Senior software engineer focused on building clean, scalable full-stack applications. 
-                I love creating innovative solutions and exploring new technologies.
+                {{ 'about.description' | translate }}
             </p>
         </div>
 
         <div class="about-right">
             <div class="socials">
-                <a href="https://github.com/keeroll" target="_blank" aria-label="GitHub" class="github">
+                <a href="https://github.com/keeroll" target="_blank" aria-label="GitHub" class="github" title="{{ 'links.github' | translate }}">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/kirillakatov" target="_blank" aria-label="LinkedIn" class="linkedin">
+                <a href="https://linkedin.com/in/kirillakatov" target="_blank" aria-label="LinkedIn" class="linkedin" title="{{ 'links.linkedin' | translate }}">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://youtube.com/@KeeRoll" target="_blank" aria-label="YouTube" class="youtube">
+                <a href="https://youtube.com/@KeeRoll" target="_blank" aria-label="YouTube" class="youtube" title="{{ 'links.youtube' | translate }}">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a href="mailto:kirillakatov@gmail.com" aria-label="Email" class="email">
+                <a href="mailto:kirillakatov@gmail.com" aria-label="Email" aria-label="E-mail" class="email" title="{{ 'links.personalEmail' | translate }}">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>

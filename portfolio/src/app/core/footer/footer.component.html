@@ -3,32 +3,26 @@
         <div class="footer-section">
             <h3 class="footer-title">keeroll</h3>
             <p class="footer-description">
-                Building innovative solutions and sharing knowledge
+                {{ 'footer.description' | translate }}
             </p>
         </div>
         
         <div class="footer-section">
-            <h4 class="footer-subtitle">Quick Links</h4>
+            <h4 class="footer-subtitle">{{ 'footer.quickLinks' | translate }}</h4>
             <nav class="footer-nav">
-                <a routerLink="/" class="footer-link">Home</a>
-                <a routerLink="/certificates" class="footer-link">Certificates</a>
-                <a routerLink="/cv" class="footer-link">CV</a>
+                <a routerLink="/" class="footer-link">{{ 'footer.home' | translate }}</a>
+                <a routerLink="/certificates" class="footer-link">{{ 'footer.certificates' | translate }}</a>
+                <a routerLink="/cv" class="footer-link">{{ 'footer.cv' | translate }}</a>
             </nav>
         </div>
         
         <div class="footer-section">
-            <h4 class="footer-subtitle">Connect</h4>
+            <h4 class="footer-subtitle">{{ 'footer.connect' | translate }}</h4>
             <div class="footer-socials">
-                <a href="https://github.com/keeroll" target="_blank" aria-label="GitHub" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/kirillakatov" target="_blank" aria-label="LinkedIn" class="social-link">
+                <a href="https://linkedin.com/in/kirillakatov" target="_blank" aria-label="LinkedIn" class="social-link" title="{{ 'links.linkedin' | translate }}">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://youtube.com/@KeeRoll" target="_blank" aria-label="YouTube" class="social-link">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="mailto:kirillakatov@gmail.com" aria-label="Email" class="social-link">
+                <a href="mailto:kirillakatov@gmail.com" aria-label="Email" class="social-link" title="{{ 'links.personalEmail' | translate }}">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -37,7 +31,7 @@
     
     <div class="footer-bottom">
         <p class="copyright">
-            © 2025 keeroll. All rights reserved.
+            © 2025 keeroll. {{ 'footer.copyright' | translate }}
         </p>
     </div>
 </footer>

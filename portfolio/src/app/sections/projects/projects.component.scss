@@ -36,3 +36,24 @@
         line-height: 1.6;
     }
 }
+
+// Empty state styling
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+    will-change: transform;
+    transform: translateZ(0);
+    
+    @media (max-width: 768px) {
+        padding: var(--spacing-xl) var(--spacing-md);
+        font-size: 1rem;
+    }
+}

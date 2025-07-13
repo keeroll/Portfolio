@@ -2,9 +2,9 @@
     {
       "id": "portfolio-app",
       "title": "Portfolio App",
-      "description": "A modern Angular portfolio with retrowave styling, internationalization, and responsive design.",
+      "description": "Personal Angular portfolio with localization, certificates, and CV. Designed with a retrowave aesthetic.",
       "image": "",
-      "tags": ["Angular", "TypeScript", "Scss", "Responsive"],
+      "tags": ["Angular", "TypeScript", "Scss", "Responsive", "Localization", "Retrowave"],
       "youtubeUrl": "",
       "sourceUrl": "https://github.com/keeroll/Portfolio",
       "liveUrl": "",
@@ -12,106 +12,106 @@
       "detailedDescription": [
         {
           "title": "Overview",
-          "content": "This portfolio showcases my skills and projects with a unique retrowave aesthetic inspired by pattybuilds.dev. Built with Angular 19, it features modern web technologies and responsive design principles."
+          "content": "My personal portfolio web app created using Angular 20. It showcases projects, certificates, and includes my CV in multiple languages. The site is styled with a retrowave-inspired theme and is fully responsive."
         },
         {
           "title": "Key Features",
-          "content": "Internationalization support for multiple languages, responsive design that works on all devices, smooth animations and transitions, and a modular component architecture for maintainability."
+          "content": "Supports internationalization (i18n) with multiple language options, responsive layout for all devices, modular and scalable architecture, and smooth visual transitions."
         },
         {
           "title": "Technical Stack",
-          "content": "Angular 19, TypeScript, SCSS, Angular Router, and modern CSS features like CSS Grid and Flexbox for layout. The project follows Angular best practices and modern development workflows."
+          "content": "Angular 20, TypeScript, SCSS, Angular Router, modern CSS (Flexbox, Grid). Built using Angular best practices for production-ready deployment."
         }
       ]
     },
     {
       "id": "clickoin",
       "title": "Clickoin",
-      "description": "A clicker game with coin skins, drops, and Steam integration. Built with Unity and C#.",
+      "description": "Clicker game with skins, rare drops, and Steam features. Built in Unity with full gamedev cycle.",
       "image": "project-img/clickoin.jpg",
-      "tags": ["Unity", "C#", "Steam", "Indie"],
+      "tags": ["Unity", "C#", "Steam", "Game Dev", "Indie", "Steamworks.NET", "Game Design"],
       "youtubeUrl": "https://www.youtube.com/embed/rMiqV9_fbdM?si=snhzmmDeY9I_9bom",
       "sourceUrl": "",
       "liveUrl": "https://store.steampowered.com/app/3401350/Clickoin/",
       "downloadUrl": "",
       "detailedDescription": [
         {
-          "title": "Game Overview",
-          "content": "Clickoin is an addictive clicker game where players collect coins, unlock skins, and discover rare drops. The game features Steam integration for achievements and cloud saves."
+          "title": "Overview",
+          "content": "Clickoin is a casual clicker game built with Unity where players earn coins, unlock skins, and receive time-based or achievement-based drops. Features include custom rarity logic, offline-safe drops, and full Steam integration."
         },
         {
           "title": "Development Process",
-          "content": "Developed over 6 months using Unity 2022.3 LTS, the game went through multiple iterations based on player feedback. Steam integration was implemented using the Steamworks.NET library."
+          "content": "I worked on game design, programming, and testing. Implemented Steam Cloud, Achievements, Inventory, and secure save encryption. Game loop iterated based on player feedback during playtests."
         }
       ]
     },
     {
         "id": "barcode-scanner",
         "title": "Barcode Scanner",
-        "description": "TypeScript-based barcode scanning application with modern web technologies for product identification.",
+        "description": "Angular-based PWA to scan barcodes via Honeywell Captuvo on iOS using Cordova.",
         "image": "",
-        "tags": ["TypeScript", "WebDev", "Barcode", "Scanner"],
+        "tags": ["Angular", "Ionic", "Cordova", "PWA", "Barcode", "Scanner"],
         "youtubeUrl": "",
         "sourceUrl": "https://github.com/keeroll/barcode-scanner",
         "liveUrl": "",
         "downloadUrl": "",
         "detailedDescription": [
           {
-            "title": "Application Overview",
-            "content": "A web-based barcode scanner built with TypeScript and modern web technologies, providing real-time product identification and information retrieval."
+            "title": "Overview",
+            "content": "This PWA was a prototype project created to explore integration between Angular/Ionic and Honeywell Captuvo barcode scanners on iOS using Cordova plugins."
           },
           {
-            "title": "Technical Implementation",
-            "content": "Utilizes WebRTC for camera access, image processing algorithms for barcode detection, and integration with product databases for information lookup."
+            "title": "Technical Insights",
+            "content": "Implemented basic scanner detection and data retrieval, explored plugin interface options, and tested real-time scanning capabilities with external hardware."
           }
         ]
       },
       {
         "id": "ukraine-weather-app",
         "title": "Ukraine Weather App",
-        "description": "Weather dashboard built with Angular 7 using OpenWeather API and an interactive SVG map of Ukraine.",
+        "description": "Simple Angular 7 app using OpenWeather API with SVG map to show conditions across Ukraine.",
         "image": "project-img/ukraine-weather-app.jpg",
-        "tags": ["Angular", "TypeScript", "Svg", "Api", "Weather"],
+        "tags": ["Angular", "TypeScript", "SVG", "API", "Weather"],
         "youtubeUrl": "https://www.youtube.com/embed/D0GMRD8ANL4?si=7c6VDdBJ482KALw2",
         "sourceUrl": "https://github.com/keeroll/web-systems-architecture-labs",
         "liveUrl": "",
         "downloadUrl": "",
         "detailedDescription": [
           {
-            "title": "Project Overview",
+            "title": "Overview",
             "content": "A single-page Angular application displaying current weather conditions across cities in Ukraine. Built with Angular 7 and integrated with OpenWeatherMap API."
           },
           {
             "title": "Key Features",
-            "content": "Data visualization on an interactive SVG map of Ukraine, API consumption with HTTPClient, dynamic city tooltips, and custom UI components for temperature, humidity, and conditions."
+            "content": "Data visualization on an interactive SVG map of Ukraine, API consumption with HTTPClient."
           }
         ]
       },
     {
       "id": "simple-smart-house",
       "title": "Simple Smart House",
-      "description": "IoT smart home system using Arduino with sensors and Blynk integration for home automation.",
+      "description": "Arduino-based IoT home system with sensors and Blynk mobile app integration.",
       "image": "project-img/simple-smart-house.jpg",
-      "tags": ["IoT", "Arduino", "C++", "Smart Home"],
+      "tags": ["IoT", "Arduino", "C++", "Smart Home", "Blynk"],
       "youtubeUrl": "https://www.youtube.com/embed/ulaSbHANYgE?si=ifQLTKkfaKFN_gZr",
       "sourceUrl": "https://github.com/keeroll/Simple-Smart-House",
       "liveUrl": "",
       "downloadUrl": "",
       "detailedDescription": [
         {
-          "title": "Project Overview",
-          "content": "A comprehensive IoT smart home system that integrates various sensors and actuators for home automation. The system provides real-time monitoring and control capabilities."
+          "title": "Overview",
+          "content": "My first IoT project built around Arduino Uno and various sensors to simulate a smart home. Used Blynk mobile app for remote control and monitoring."
         },
         {
-          "title": "Technical Features",
-          "content": "Built with Arduino microcontrollers, various sensors (temperature, humidity, motion), and Blynk platform for mobile app integration. Features include automated lighting, climate control, and security monitoring."
+          "title": "Hardware & Features",
+          "content": "Included sensors: DHT11, RFID (RC522), infrared motion (HC-SR501), light sensor (LDR), and a servomotor. Used LEDs and resistors for interaction with lighting and movement logic."
         }
       ]
     },
     {
       "id": "time-travel-unity",
       "title": "Time Travel Unity Game",
-      "description": "Unity 5 game development project featuring time travel mechanics and innovative gameplay elements.",
+      "description": "Unity 5 prototype game exploring time travel mechanics and puzzle interaction.",
       "image": "project-img/time-travel-unity.jpg",
       "tags": ["Unity", "C#", "Game Dev", "Time Travel"],
       "youtubeUrl": "https://www.youtube.com/embed/-GHlKoqbr1c?si=IrrRtuqVIALIky_l",
@@ -120,12 +120,12 @@
       "downloadUrl": "https://github.com/keeroll/Time_Travel_Unity5/releases/tag/v0.0.1",
       "detailedDescription": [
         {
-          "title": "Game Concept",
-          "content": "An innovative Unity 5 game that explores time travel mechanics, allowing players to manipulate time to solve puzzles and overcome challenges."
+          "title": "Overview",
+          "content": "Experimental Unity 5 game focused on simulating time travel. I tested various mechanics and effects for manipulating time within puzzles."
         },
         {
           "title": "Development Highlights",
-          "content": "Features custom time manipulation systems, particle effects for temporal distortions, and innovative puzzle mechanics that require players to think across multiple time periods."
+          "content": "Used free 3D assets to prototype basic gameplay. Implemented time-rewind mechanics and visual distortion to reflect time shifts."
         }
       ]
     },
@@ -141,28 +141,28 @@
       "downloadUrl": "https://github.com/keeroll/Little_RTS_Game_Unity5/releases/tag/v.0.0.1",
       "detailedDescription": [
         {
-          "title": "Game Overview",
-          "content": "A real-time strategy game developed as a test task for Enixan, featuring classic RTS mechanics including resource management, unit production, and tactical combat."
+          "title": "Overview",
+          "content": "A real-time strategy game developed as a test task for Enixan. I didn't get a job back then :)"
         },
         {
           "title": "Technical Features",
-          "content": "Built with Unity 5, featuring AI pathfinding, unit behavior systems, resource management, and multiplayer-ready architecture. Demonstrates strong game development fundamentals."
+          "content": "Built with Unity 5, featuring grid for building, UI system to select different building types. Demonstrates good game development fundamentals."
         }
       ]
     },
     {
         "id": "fnaf-style-game",
         "title": "FNaF-Style Horror Game",
-        "description": "Unity 5 horror game inspired by Five Nights at Freddy’s. Built following tutorials but extended with custom camera and pathfinding systems.",
+        "description": "Unity 5 horror game inspired by Five Nights at Freddy’s. Built following tutorials.",
         "image": "project-img/fnaf-style-game.jpg",
-        "tags": ["Unity", "C#", "Horror", "Fnaf"],
+        "tags": ["Unity", "C#", "Game Dev", "Horror", "Fnaf"],
         "youtubeUrl": "https://www.youtube.com/embed/tMhB2fMfOM8?si=sTg05PQAxVdDms8s",
         "sourceUrl": "",
         "liveUrl": "",
         "downloadUrl": "https://github.com/keeroll/old-unity-projects/releases/tag/fnaf-build",
         "detailedDescription": [
           {
-            "title": "Learning Focus",
+            "title": "Overview",
             "content": "This project was inspired by the mechanics of FNaF and used primarily as a learning exercise to understand Unity’s camera system, scene management, and AI pathfinding."
           },
           {
@@ -176,36 +176,36 @@
         "title": "Unity Solar System Explorer",
         "description": "An interactive 3D solar system simulation created in Unity 5, allowing free camera movement and orbiting planets.",
         "image": "project-img/solar-system-unity.jpg",
-        "tags": ["Unity", "C#", "Simulation", "Space"],
+        "tags": ["Unity", "C#", "Game Dev", "Simulation", "Space"],
         "youtubeUrl": "https://www.youtube.com/embed/P_Ay0Ss23TQ?si=881YUPruOG6eC97P",
         "sourceUrl": "",
         "liveUrl": "",
         "downloadUrl": "https://github.com/keeroll/old-unity-projects/releases/tag/solar-system-build",
         "detailedDescription": [
           {
-            "title": "Project Summary",
+            "title": "Overview",
             "content": "Built as a space simulation sandbox where players can freely explore a simplified solar system with orbiting planets and rotation systems."
           },
           {
             "title": "Implementation Details",
-            "content": "Used Unity’s transform system to simulate orbital rotation, added basic camera control to fly through space, and styled planets with public domain textures."
+            "content": "Used Unity's transform system to simulate orbital rotation, added basic camera control to fly through space, and styled planets with public domain textures."
           }
         ]
       },
     {
         "id": "atm-system",
         "title": "ATM System",
-        "description": "Complete ATM management system built with C# WinForms and MS SQL Server for banking operations.",
+        "description": "ATM management system built with C# WinForms and MS SQL Server for banking operations.",
         "image": "project-img/atm-system.jpg",
-        "tags": ["C#", "Win Forms", "MS SQL", "CRUD"],
+        "tags": ["C#", "Win Forms", "MS SQL", "CRUD", "Desktop"],
         "youtubeUrl": "https://www.youtube.com/embed/6hgoXhEa3I8?si=BydYPtpPzUg5v3yk",
         "sourceUrl": "https://github.com/keeroll/atm_system_cSharp",
         "liveUrl": "",
         "downloadUrl": "",
         "detailedDescription": [
           {
-            "title": "System Overview",
-            "content": "A comprehensive ATM management system that simulates real banking operations including account management, transactions, and security features."
+            "title": "Overview",
+            "content": "ATM management system that simulates real banking operations including account management, transactions, and security features."
           },
           {
             "title": "Technical Implementation",
@@ -218,15 +218,15 @@
       "title": "Student Exams Score DB",
       "description": "Database management system for tracking student exam scores using C# WinForms and MS SQL Server.",
       "image": "project-img/student-exams-db.jpg",
-      "tags": ["C#", "Win Forms", "MS SQL", "Database"],
+      "tags": ["C#", "Win Forms", "MS SQL", "Database", "Desktop"],
       "youtubeUrl": "https://www.youtube.com/embed/RPXotjyF7gg?si=ZJmOM-iUEk_zWHzt",
       "sourceUrl": "https://github.com/keeroll/Student_Exams_Score_DB_CSharp_WF",
       "liveUrl": "",
       "downloadUrl": "",
       "detailedDescription": [
         {
-          "title": "System Overview",
-          "content": "A comprehensive database management system designed for educational institutions to track and manage student exam scores and academic performance."
+          "title": "Overview",
+          "content": "A database management system designed for educational institutions to track and manage student exam scores and academic performance."
         },
         {
           "title": "Features",
@@ -246,7 +246,7 @@
         "downloadUrl": "",
         "detailedDescription": [
           {
-            "title": "Application Overview",
+            "title": "Overview",
             "content": "A desktop application built with C# WPF that provides advanced text formatting and manipulation capabilities."
           },
           {

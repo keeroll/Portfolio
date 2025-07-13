@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Certificate {
   id: string;
@@ -11,7 +12,7 @@ interface Certificate {
 
 @Component({
   selector: 'app-certificates-carousel',
-  imports: [CommonModule, SafeUrlPipe],
+  imports: [CommonModule, SafeUrlPipe, TranslatePipe],
   templateUrl: './certificates-carousel.component.html',
   styleUrl: './certificates-carousel.component.scss',
   standalone: true
