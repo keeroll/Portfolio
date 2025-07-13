@@ -24,6 +24,17 @@
                 CV
             </a>
         </nav>
+
+        <!-- Localization Selector (desktop) -->
+        <div class="locale-selector">
+            <button *ngFor="let lang of languages"
+                    [ngClass]="{'active': currentLang === lang.code}"
+                    (click)="switchLanguage(lang.code)"
+                    class="locale-btn"
+                    [attr.aria-label]="lang.label + ' language'">
+                {{ lang.label }}
+            </button>
+        </div>
         
         <!-- Mobile Menu Button -->
         <button class="mobile-menu-btn" (click)="toggleMobileMenu()" aria-label="Toggle menu">
@@ -53,5 +64,15 @@
            (click)="closeMobileMenu()">
             CV
         </a>
+        <!-- Localization Selector (mobile) -->
+        <div class="locale-selector mobile-locale">
+            <button *ngFor="let lang of languages"
+                    [ngClass]="{'active': currentLang === lang.code}"
+                    (click)="switchLanguage(lang.code); closeMobileMenu()"
+                    class="locale-btn"
+                    [attr.aria-label]="lang.label + ' language'">
+                {{ lang.label }}
+            </button>
+        </div>
     </div>
 </header>
