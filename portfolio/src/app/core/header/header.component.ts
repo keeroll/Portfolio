@@ -4,6 +4,7 @@ import { NgIf, NgFor, NgClass } from '@angular/common';
 import { TranslationService } from '../../services/translation.service';
 import { Language } from '../../enums/language.enum';
 import { TranslatePipe } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,8 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class HeaderComponent {
   isMobileMenuOpen = false;
+  currentLang: string = Language.EN;
+  private langChangeSub?: Subscription;
 
   languages = [
     { code: Language.EN, label: 'EN' },
@@ -21,10 +24,15 @@ export class HeaderComponent {
     { code: Language.HR, label: 'HR' }
   ];
 
-  constructor(public translationService: TranslationService) {}
+  constructor(public translationService: TranslationService) {
+    this.currentLang = this.translationService.currentLang;
+    this.langChangeSub = this.translationService.onLangChange.subscribe(() => {
+      this.currentLang = this.translationService.currentLang;
+    });
+  }
 
-  get currentLang(): string {
-    return this.translationService.currentLang;
+  ngOnDestroy(): void {
+    this.langChangeSub?.unsubscribe();
   }
 
   switchLanguage(lang: string): void {

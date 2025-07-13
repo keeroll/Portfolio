@@ -13,10 +13,14 @@ export class TranslationService {
     ) {
         this.translate.addLangs([Language.EN, Language.UA, Language.HR]);
         this.translate.setDefaultLang(Language.EN);
-        this.loadTranslations(Language.EN);
+        
+        // Load saved language preference or use default
+        const savedLang = this.getSavedLanguage();
+        this.loadTranslations(savedLang);
     }
 
     public switchLanguage(lang: string): void {
+        this.saveLanguage(lang);
         this.loadTranslations(lang);
     }
 
@@ -36,5 +40,18 @@ export class TranslationService {
             this.translate.setTranslation(lang, translations, true);
             this.translate.use(lang);
         });
+    }
+
+    private getSavedLanguage(): string {
+        return localStorage.getItem('preferred-language') || Language.EN;
+    }
+
+    private saveLanguage(lang: string): void {
+        try {
+            localStorage.setItem('preferred-language', lang);
+        } catch {
+            // Silently fail if localStorage is not available
+            console.warn('Could not save language preference to localStorage');
+        }
     }
 }
