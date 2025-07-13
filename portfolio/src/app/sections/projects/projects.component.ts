@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Project } from '../../models';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ContainerComponent } from '../../shared';
-import { NgForOf, NgIf } from '@angular/common';
+
 import { ProjectsService } from '../../services/projects.service';
 import { ScrollPositionService } from '../../services/scroll-position.service';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
-  imports: [TranslatePipe, ContainerComponent, ProjectCardComponent, NgForOf, NgIf],
+  imports: [TranslatePipe, ContainerComponent, ProjectCardComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
   standalone: true

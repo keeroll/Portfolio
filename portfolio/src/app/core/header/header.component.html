@@ -1,78 +1,86 @@
 <header class="header">
-    <div class="header-content">
-        <!-- Logo/Home Button -->
-        <a routerLink="/" class="logo" aria-label="Home">
-            <span class="logo-text">keeroll</span>
-        </a>
-        
-        <!-- Navigation Links -->
-        <nav class="nav-links">
-            <a routerLink="/" 
-               routerLinkActive="active" 
-               [routerLinkActiveOptions]="{exact: true}" 
-               class="nav-link">
-                {{ 'header.home' | translate }}
-            </a>
-            <a routerLink="/certificates" 
-               routerLinkActive="active" 
-               class="nav-link">
-                {{ 'header.certificates' | translate }}
-            </a>
-            <a routerLink="/cv" 
-               routerLinkActive="active" 
-               class="nav-link">
-                {{ 'header.cv' | translate }}
-            </a>
-        </nav>
+  <div class="header-content">
+    <!-- Logo/Home Button -->
+    <a routerLink="/" class="logo" aria-label="Home">
+      <span class="logo-text">keeroll</span>
+    </a>
 
-        <!-- Localization Selector (desktop) -->
-        <div class="locale-selector">
-            <button *ngFor="let lang of languages"
-                    [ngClass]="{'active': currentLang === lang.code}"
-                    (click)="switchLanguage(lang.code)"
-                    class="locale-btn"
-                    [attr.aria-label]="lang.label + ' language'">
-                {{ lang.label }}
-            </button>
-        </div>
-        
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn" (click)="toggleMobileMenu()" aria-label="Toggle menu">
-            <i class="fas fa-bars" *ngIf="!isMobileMenuOpen"></i>
-            <i class="fas fa-times" *ngIf="isMobileMenuOpen"></i>
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <a routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="nav-link">
+        {{ 'header.home' | translate }}
+      </a>
+      <a routerLink="/certificates"
+        routerLinkActive="active"
+        class="nav-link">
+        {{ 'header.certificates' | translate }}
+      </a>
+      <a routerLink="/cv"
+        routerLinkActive="active"
+        class="nav-link">
+        {{ 'header.cv' | translate }}
+      </a>
+    </nav>
+
+    <!-- Localization Selector (desktop) -->
+    <div class="locale-selector">
+      @for (lang of languages; track lang) {
+        <button
+          [ngClass]="{'active': currentLang === lang.code}"
+          (click)="switchLanguage(lang.code)"
+          class="locale-btn"
+          [attr.aria-label]="lang.label + ' language'">
+          {{ lang.label }}
         </button>
+      }
     </div>
-    
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" [class.open]="isMobileMenuOpen">
-        <a routerLink="/" 
-           routerLinkActive="active" 
-           [routerLinkActiveOptions]="{exact: true}" 
-           class="mobile-nav-link"
-           (click)="closeMobileMenu()">
-            {{ 'header.home' | translate }}
-        </a>
-        <a routerLink="/certificates" 
-           routerLinkActive="active" 
-           class="mobile-nav-link"
-           (click)="closeMobileMenu()">
-            {{ 'header.certificates' | translate }}
-        </a>
-        <a routerLink="/cv" 
-           routerLinkActive="active" 
-           class="mobile-nav-link"
-           (click)="closeMobileMenu()">
-            {{ 'header.cv' | translate }}
-        </a>
-        <!-- Localization Selector (mobile) -->
-        <div class="locale-selector mobile-locale">
-            <button *ngFor="let lang of languages"
-                    [ngClass]="{'active': currentLang === lang.code}"
-                    (click)="switchLanguage(lang.code); closeMobileMenu()"
-                    class="locale-btn"
-                    [attr.aria-label]="lang.label + ' language'">
-                {{ lang.label }}
-            </button>
-        </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+      @if (!isMobileMenuOpen) {
+        <i class="fas fa-bars"></i>
+      }
+      @if (isMobileMenuOpen) {
+        <i class="fas fa-times"></i>
+      }
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="isMobileMenuOpen">
+    <a routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}"
+      class="mobile-nav-link"
+      (click)="closeMobileMenu()">
+      {{ 'header.home' | translate }}
+    </a>
+    <a routerLink="/certificates"
+      routerLinkActive="active"
+      class="mobile-nav-link"
+      (click)="closeMobileMenu()">
+      {{ 'header.certificates' | translate }}
+    </a>
+    <a routerLink="/cv"
+      routerLinkActive="active"
+      class="mobile-nav-link"
+      (click)="closeMobileMenu()">
+      {{ 'header.cv' | translate }}
+    </a>
+    <!-- Localization Selector (mobile) -->
+    <div class="locale-selector mobile-locale">
+      @for (lang of languages; track lang) {
+        <button
+          [ngClass]="{'active': currentLang === lang.code}"
+          (click)="switchLanguage(lang.code); closeMobileMenu()"
+          class="locale-btn"
+          [attr.aria-label]="lang.label + ' language'">
+          {{ lang.label }}
+        </button>
+      }
     </div>
+  </div>
 </header>

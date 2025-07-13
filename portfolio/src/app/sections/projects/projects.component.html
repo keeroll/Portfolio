@@ -1,17 +1,20 @@
 <app-container>
-    <div class="projects-header">
-        <h2>{{ 'projects.title' | translate }}</h2>
-        <p>{{ 'projects.subtitle' | translate }}</p>
-    </div>
-    
-    <div class="projects-grid">
-        <app-project-card 
-            *ngFor="let project of projects" 
-            [project]="project"
-            (cardClick)="onProjectClick($event)">
-        </app-project-card>
-        <div *ngIf="!hasProjects" class="empty-state">
-            {{ 'projects.empty' | translate }}
-        </div>
-    </div>
+  <div class="projects-header">
+    <h2>{{ 'projects.title' | translate }}</h2>
+    <p>{{ 'projects.subtitle' | translate }}</p>
+  </div>
+
+  <div class="projects-grid">
+    @for (project of projects; track project) {
+      <app-project-card
+        [project]="project"
+        (cardClick)="onProjectClick($event)">
+      </app-project-card>
+    }
+    @if (!hasProjects) {
+      <div class="empty-state">
+        {{ 'projects.empty' | translate }}
+      </div>
+    }
+  </div>
 </app-container>

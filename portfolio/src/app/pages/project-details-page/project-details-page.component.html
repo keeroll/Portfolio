@@ -1,96 +1,116 @@
 <div>
-    <!-- Back Button -->
-    <div class="back-button-container">
-        <button class="back-button" (click)="goBack()">
-            <i class="fas fa-arrow-left"></i>
-            <span>{{ 'projectDetails.back' | translate }}</span>
-        </button>
-    </div>
+  <!-- Back Button -->
+  <div class="back-button-container">
+    <button class="back-button" (click)="goBack()">
+      <i class="fas fa-arrow-left"></i>
+      <span>{{ 'projectDetails.back' | translate }}</span>
+    </button>
+  </div>
 
-    <app-container>
-        <div class="project-details-content" *ngIf="project">
-            <!-- Left Section: Media, Tags, Links -->
-            <div class="left-section">
-                <!-- Media Section -->
-                <div class="media-section">
-                    <div class="youtube-player" *ngIf="project.youtubeUrl">
-                        <iframe 
-                            [src]="project.youtubeUrl | safe" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="project-image" *ngIf="!project.youtubeUrl && project.image">
-                        <img [src]="project.image" [alt]="project.title + ' preview'" />
-                    </div>
-                    <div class="placeholder-image" *ngIf="!project.youtubeUrl && !project.image">
-                        <div class="placeholder-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                    </div>
+  <app-container>
+    @if (project) {
+      <div class="project-details-content">
+        <!-- Left Section: Media, Tags, Links -->
+        <div class="left-section">
+          <!-- Media Section -->
+          <div class="media-section">
+            @if (project.youtubeUrl) {
+              <div class="youtube-player">
+                <iframe
+                  [src]="project.youtubeUrl | safe"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            }
+            @if (!project.youtubeUrl && project.image) {
+              <div class="project-image">
+                <img [src]="project.image" [alt]="project.title + ' preview'" />
+              </div>
+            }
+            @if (!project.youtubeUrl && !project.image) {
+              <div class="placeholder-image">
+                <div class="placeholder-icon">
+                  <i class="fas fa-code"></i>
                 </div>
-
-                <!-- Tags Section -->
-                <div class="tags-section">
-                    <h3>{{ 'projects.technologies' | translate }}</h3>
-                    <div class="tags">
-                        <app-tag *ngFor="let tag of project.tags" [label]="tag"></app-tag>
-                    </div>
-                </div>
-
-                <!-- Links Section -->
-                <div *ngIf="hasProjectLinks" class="links-section">
-                    <h3>{{ 'projects.projectLinks' | translate }}</h3>
-                    <div class="project-links">
-                        <a *ngIf="project.sourceUrl" 
-                           [href]="project.sourceUrl" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           class="project-link source-link">
-                            <i class="fab fa-github"></i>
-                            <span>{{ 'projects.sourceCode' | translate }}</span>
-                        </a>
-                        <a *ngIf="project.liveUrl" 
-                           [href]="project.liveUrl" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           class="project-link live-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>{{ 'projects.demo' | translate }}</span>
-                        </a>
-                        <a *ngIf="project.downloadUrl" 
-                           [href]="project.downloadUrl" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           class="project-link download-link">
-                            <i class="fas fa-download"></i>
-                            <span>{{ 'projects.donwload' | translate }}</span>
-                        </a>
-                    </div>
-                </div>
+              </div>
+            }
+          </div>
+          <!-- Tags Section -->
+          <div class="tags-section">
+            <h3>{{ 'projects.technologies' | translate }}</h3>
+            <div class="tags">
+              @for (tag of project.tags; track tag) {
+                <app-tag [label]="tag"></app-tag>
+              }
             </div>
-
-            <!-- Right Section: Description -->
-            <div class="right-section">
-                <div class="project-info">
-                    <h1 class="project-title">{{ project.title }}</h1>
-                    <p class="project-description">{{ project.description }}</p>
-                    
-                    <div class="project-details" *ngIf="project.detailedDescription">
-                        <div class="detail-section" *ngFor="let section of project.detailedDescription">
-                            <h3>{{ section.title }}</h3>
-                            <p>{{ section.content }}</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <!-- Links Section -->
+          @if (hasProjectLinks) {
+            <div class="links-section">
+              <h3>{{ 'projects.projectLinks' | translate }}</h3>
+              <div class="project-links">
+                @if (project.sourceUrl) {
+                  <a
+                    [href]="project.sourceUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link source-link">
+                    <i class="fab fa-github"></i>
+                    <span>{{ 'projects.sourceCode' | translate }}</span>
+                  </a>
+                }
+                @if (project.liveUrl) {
+                  <a
+                    [href]="project.liveUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link live-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>{{ 'projects.demo' | translate }}</span>
+                  </a>
+                }
+                @if (project.downloadUrl) {
+                  <a
+                    [href]="project.downloadUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link download-link">
+                    <i class="fas fa-download"></i>
+                    <span>{{ 'projects.donwload' | translate }}</span>
+                  </a>
+                }
+              </div>
             </div>
+          }
         </div>
+        <!-- Right Section: Description -->
+        <div class="right-section">
+          <div class="project-info">
+            <h1 class="project-title">{{ project.title }}</h1>
+            <p class="project-description">{{ project.description }}</p>
+            @if (project.detailedDescription) {
+              <div class="project-details">
+                @for (section of project.detailedDescription; track section) {
+                  <div class="detail-section">
+                    <h3>{{ section.title }}</h3>
+                    <p>{{ section.content }}</p>
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    }
 
-        <!-- Loading State -->
-        <div class="loading-state" *ngIf="!project">
-            <div class="loading-spinner"></div>
-            <p>{{ 'projectDetails.loading' | translate }}</p>
-        </div>
-    </app-container>
+    <!-- Loading State -->
+    @if (!project) {
+      <div class="loading-state">
+        <div class="loading-spinner"></div>
+        <p>{{ 'projectDetails.loading' | translate }}</p>
+      </div>
+    }
+  </app-container>
 </div>
