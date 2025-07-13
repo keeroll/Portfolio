@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "What's up! I'm",
-    "description": "Senior software engineer focused on building clean, scalable full-stack applications. I love creating innovative solutions and exploring new technologies."
+    "description": "Senior software engineer passionate about building diverse projects and trying out new ideas."
   },
   "header": {
     "home": "Home",
@@ -9,7 +9,7 @@
     "cv": "CV"
   },
   "footer": {
-    "description": "Building innovative solutions and sharing knowledge",
+    "description": "Building cool stuff",
     "quickLinks": "Quick Links",
     "home": "Home",
     "certificates": "Certificates",
@@ -21,7 +21,11 @@
     "title": "What I've Built",
     "subtitle": "Explore my projects, achievements, and creative ventures. Each project represents a unique challenge and learning experience.",
     "technologies": "Technologies Used",
-    "empty": "No projects found. Something went wrong. Please try refreshing the page."
+    "empty": "No projects found. Something went wrong. Please try refreshing the page.",
+    "sourceCode": "Source Code",
+    "demo": "Demo",
+    "download": "Download",
+    "projectLinks": "Project Links"
   },
   "projectDetails": {
     "back": "Back",
@@ -33,9 +37,16 @@
   },
   "certificates": {
     "prev": "Previous Certificate",
-    "next": "Next Certificate"
+    "next": "Next Certificate",
+    "title": "Certificates & Achievements"
   },
   "error": {
     "default": "An error occurred."
+  },
+  "links": {
+    "github": "GitHub Account",
+    "linkedin": "LinkedIn Account",
+    "youtube": "YouTube Channel",
+    "personalEmail": "E-mail"
   }
 }

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent, CertificatesCarouselComponent } from '../../shared';
 import { ScrollPositionService } from '../../services/scroll-position.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-certificates-page',
-  imports: [ContainerComponent, CertificatesCarouselComponent],
+  imports: [ContainerComponent, CertificatesCarouselComponent, TranslatePipe],
   templateUrl: './certificates-page.component.html',
   styleUrl: './certificates-page.component.scss',
   standalone: true

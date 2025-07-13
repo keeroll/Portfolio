@@ -1,40 +1,53 @@
 {
     "about": {
-      "title": "Суп Суп",
-      "description": "Senior software engineer focused on building clean, scalable full-stack applications. I love creating innovative solutions and exploring new technologies."
+      "title": "Привіт! Я",
+      "description": "Сеньйор-розробник, захоплений створенням різноманітних проектів та новими ідеями."
     },
     "header": {
-      "home": "Home",
-      "certificates": "Certificates",
-      "cv": "CV"
+      "home": "Головна",
+      "certificates": "Сертифікати",
+      "cv": "Резюме"
     },
     "footer": {
-      "description": "Building innovative solutions and sharing knowledge",
-      "quickLinks": "Quick Links",
-      "home": "Home",
-      "certificates": "Certificates",
-      "cv": "CV",
-      "connect": "Connect",
-      "copyright": "All rights reserved."
+      "description": "Створення прикольниї штук",
+      "quickLinks": "Посилання",
+      "home": "Головна",
+      "certificates": "Сертифікати",
+      "cv": "Резюме",
+      "connect": "Зв’язатися",
+      "copyright": "Всі права захищено."
     },
     "projects": {
-      "title": "What I've Built",
-      "subtitle": "Explore my projects, achievements, and creative ventures. Each project represents a unique challenge and learning experience.",
-      "technologies": "Technologies Used"
+      "title": "Що я створив",
+      "subtitle": "Ознайомтеся з моїми проектами, досягненнями та творчими ідеями. Кожен проект — це унікальний виклик і досвід.",
+      "technologies": "Використані технології",
+      "empty": "Проекти не знайдено. Щось пішло не так. Спробуйте оновити сторінку.",
+      "sourceCode": "Код",
+        "demo": "Демо",
+        "download": "Завантажити",
+        "projectLinks": "Посилання"
     },
     "projectDetails": {
-      "back": "Back",
-      "loading": "Loading project details..."
+      "back": "Назад",
+      "loading": "Завантаження деталей проекту..."
     },
     "cv": {
-      "title": "CV",
-      "pdfPreview": "CV PDF Preview"
+      "title": "Резюме",
+      "pdfPreview": "Попередній перегляд PDF-резюме"
     },
     "certificates": {
-      "prev": "Previous Certificate",
-      "next": "Next Certificate"
+      "prev": "Попередній сертифікат",
+      "next": "Наступний сертифікат",
+      "title": "Сертифікати та Досягнення"
     },
     "error": {
-      "default": "An error occurred."
-    }
+      "default": "Сталася помилка."
+    },
+    "links": {
+    "github": "ГітХаб аккаунт",
+    "linkedin": "Лінкедин аккаунт",
+    "youtube": "Канал на юутбі",
+    "personalEmail": "Електронна пошта"
   }
+  }
+  
