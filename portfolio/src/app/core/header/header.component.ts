@@ -16,7 +16,8 @@ export class HeaderComponent {
 
   languages = [
     { code: Language.EN, label: 'EN' },
-    { code: Language.UA, label: 'UA' }
+    { code: Language.UA, label: 'UA' },
+    { code: Language.HR, label: 'HR' }
   ];
 
   constructor(public translationService: TranslationService) {}

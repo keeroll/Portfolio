@@ -11,7 +11,7 @@ export class TranslationService {
         private readonly translate: TranslateService,
         private readonly http: HttpClient
     ) {
-        this.translate.addLangs([Language.EN, Language.UA]);
+        this.translate.addLangs([Language.EN, Language.UA, Language.HR]);
         this.translate.setDefaultLang(Language.EN);
         this.loadTranslations(Language.EN);
     }

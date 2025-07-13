@@ -7,7 +7,7 @@ import { Project } from '../models';
   providedIn: 'root'
 })
 export class ProjectsService {
-  private readonly projectsUrl = '/data/projects.json';
+  private readonly projectsUrl = '/projects/en.json';
 
   constructor(private http: HttpClient) {}
 
