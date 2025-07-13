@@ -10,5 +10,8 @@
             [project]="project"
             (cardClick)="onProjectClick($event)">
         </app-project-card>
+        <div *ngIf="!hasProjects" class="empty-state">
+            {{ 'projects.empty' | translate }}
+        </div>
     </div>
 </app-container>

@@ -20,7 +20,8 @@
   "projects": {
     "title": "What I've Built",
     "subtitle": "Explore my projects, achievements, and creative ventures. Each project represents a unique challenge and learning experience.",
-    "technologies": "Technologies Used"
+    "technologies": "Technologies Used",
+    "empty": "No projects found. Something went wrong. Please try refreshing the page."
   },
   "projectDetails": {
     "back": "Back",
