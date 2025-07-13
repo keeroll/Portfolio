@@ -1,12 +1,12 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { ContainerComponent } from '../../shared';
 import { ScrollPositionService, CvPageService } from '../../services';
+import { ContainerComponent, FadeInDirective } from '../../shared';
 import { TranslatePipe } from '@ngx-translate/core';
 import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
 
 @Component({
   selector: 'app-cv-page',
-  imports: [TranslatePipe, ContainerComponent, SafeUrlPipe],
+  imports: [TranslatePipe, ContainerComponent, FadeInDirective, SafeUrlPipe],
   templateUrl: './cv-page.component.html',
   styleUrl: './cv-page.component.scss',
   standalone: true

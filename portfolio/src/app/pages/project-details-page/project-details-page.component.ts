@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 
 import { Project } from '../../models';
-import { ContainerComponent, TagComponent } from '../../shared';
+import { ContainerComponent, TagComponent, FadeInDirective } from '../../shared';
 import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
 import { ProjectsService } from '../../services/projects.service';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -12,7 +13,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-project-details-page',
-  imports: [ContainerComponent, TagComponent, SafeUrlPipe, TranslatePipe],
+  imports: [CommonModule, ContainerComponent, TagComponent, SafeUrlPipe, NgIf, TranslatePipe, FadeInDirective],
   templateUrl: './project-details-page.component.html',
   styleUrl: './project-details-page.component.scss',
   standalone: true

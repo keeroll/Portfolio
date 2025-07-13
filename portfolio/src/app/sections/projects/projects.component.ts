@@ -9,10 +9,11 @@ import { ScrollPositionService } from '../../services/scroll-position.service';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TranslationService } from '../../services/translation.service';
 import { Subscription } from 'rxjs';
+import { FadeInDirective } from '../../shared';
 
 @Component({
   selector: 'app-projects',
-  imports: [TranslatePipe, ContainerComponent, ProjectCardComponent],
+  imports: [TranslatePipe, ContainerComponent, ProjectCardComponent, FadeInDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
   standalone: true

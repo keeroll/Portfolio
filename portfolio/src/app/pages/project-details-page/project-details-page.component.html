@@ -1,6 +1,6 @@
 <div>
   <!-- Back Button -->
-  <div class="back-button-container">
+  <div class="back-button-container" appFadeIn [delay]="0">
     <button class="back-button" (click)="goBack()">
       <i class="fas fa-arrow-left"></i>
       <span>{{ 'projectDetails.back' | translate }}</span>
@@ -11,9 +11,9 @@
     @if (project) {
       <div class="project-details-content">
         <!-- Left Section: Media, Tags, Links -->
-        <div class="left-section">
+        <div class="left-section" appFadeIn [delay]="200">
           <!-- Media Section -->
-          <div class="media-section">
+          <div class="media-section" appFadeIn [delay]="400">
             @if (project.youtubeUrl) {
               <div class="youtube-player">
                 <iframe
@@ -38,7 +38,7 @@
             }
           </div>
           <!-- Tags Section -->
-          <div class="tags-section">
+          <div class="tags-section" appFadeIn [delay]="600">
             <h3>{{ 'projects.technologies' | translate }}</h3>
             <div class="tags">
               @for (tag of project.tags; track tag) {
@@ -48,7 +48,7 @@
           </div>
           <!-- Links Section -->
           @if (hasProjectLinks) {
-            <div class="links-section">
+            <div class="links-section" appFadeIn [delay]="800">
               <h3>{{ 'projects.projectLinks' | translate }}</h3>
               <div class="project-links">
                 @if (project.sourceUrl) {
@@ -86,12 +86,12 @@
           }
         </div>
         <!-- Right Section: Description -->
-        <div class="right-section">
+        <div class="right-section" appFadeIn [delay]="400">
           <div class="project-info">
-            <h1 class="project-title">{{ project.title }}</h1>
-            <p class="project-description">{{ project.description }}</p>
+            <h1 class="project-title" appFadeIn [delay]="600">{{ project.title }}</h1>
+            <p class="project-description" appFadeIn [delay]="800">{{ project.description }}</p>
             @if (project.detailedDescription) {
-              <div class="project-details">
+              <div class="project-details" appFadeIn [delay]="1000">
                 @for (section of project.detailedDescription; track section) {
                   <div class="detail-section">
                     <h3>{{ section.title }}</h3>
@@ -107,7 +107,7 @@
 
     <!-- Loading State -->
     @if (!project) {
-      <div class="loading-state">
+      <div class="loading-state" appFadeIn [delay]="200">
         <div class="loading-spinner"></div>
         <p>{{ 'projectDetails.loading' | translate }}</p>
       </div>

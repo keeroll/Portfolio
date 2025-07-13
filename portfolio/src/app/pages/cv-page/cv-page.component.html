@@ -1,10 +1,10 @@
 <app-container>
-    <div class="cv-header">
-        <h1>{{ 'cv.title' | translate }}</h1>
+    <div class="cv-header" appFadeIn [delay]="0">
+        <h1 appFadeIn [delay]="200">{{ 'cv.title' | translate }}</h1>
     </div>
     
-    <div class="cv-content">
-        <div class="cv-preview-container">
+    <div class="cv-content" appFadeIn [delay]="400">
+        <div class="cv-preview-container" appFadeIn [delay]="600">
             @if (cvAvailable()) {
                 <div class="pdf-container">
                     <iframe 
