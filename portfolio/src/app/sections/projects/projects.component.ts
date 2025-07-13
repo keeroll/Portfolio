@@ -48,6 +48,10 @@ export class ProjectsComponent implements OnInit {
     this.scrollPositionService.saveCurrentPosition();
     this.router.navigate(['/projects', project.id]);
   }
+
+  public trackByProject(index: number, project: Project): string {
+    return project.id;
+  }
   
   private loadProjects(): void {
     this.projectsService.getProjects().subscribe({

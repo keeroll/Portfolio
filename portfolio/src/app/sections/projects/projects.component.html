@@ -5,7 +5,7 @@
   </div>
 
   <div class="projects-grid">
-    @for (project of projects; track project) {
+    @for (project of projects; track trackByProject($index, project)) {
       <app-project-card
         [project]="project"
         (cardClick)="onProjectClick($event)">
