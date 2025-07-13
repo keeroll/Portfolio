@@ -1,9 +1,40 @@
 {
     "about": {
-        "title": "What's up! I'm",
-        "nickname": "keeroll"
+      "title": "Суп Суп",
+      "description": "Senior software engineer focused on building clean, scalable full-stack applications. I love creating innovative solutions and exploring new technologies."
     },
-    "project": {
-        "title": "Projects"
+    "header": {
+      "home": "Home",
+      "certificates": "Certificates",
+      "cv": "CV"
+    },
+    "footer": {
+      "description": "Building innovative solutions and sharing knowledge",
+      "quickLinks": "Quick Links",
+      "home": "Home",
+      "certificates": "Certificates",
+      "cv": "CV",
+      "connect": "Connect",
+      "copyright": "All rights reserved."
+    },
+    "projects": {
+      "title": "What I've Built",
+      "subtitle": "Explore my projects, achievements, and creative ventures. Each project represents a unique challenge and learning experience.",
+      "technologies": "Technologies Used"
+    },
+    "projectDetails": {
+      "back": "Back",
+      "loading": "Loading project details..."
+    },
+    "cv": {
+      "title": "CV",
+      "pdfPreview": "CV PDF Preview"
+    },
+    "certificates": {
+      "prev": "Previous Certificate",
+      "next": "Next Certificate"
+    },
+    "error": {
+      "default": "An error occurred."
     }
-}
+  }

@@ -3,7 +3,7 @@
     <div class="back-button-container">
         <button class="back-button" (click)="goBack()">
             <i class="fas fa-arrow-left"></i>
-            <span>Back</span>
+            <span>{{ 'projectDetails.back' | translate }}</span>
         </button>
     </div>
 
@@ -33,7 +33,7 @@
 
                 <!-- Tags Section -->
                 <div class="tags-section">
-                    <h3>Technologies Used</h3>
+                    <h3>{{ 'projects.technologies' | translate }}</h3>
                     <div class="tags">
                         <app-tag *ngFor="let tag of project.tags" [label]="tag"></app-tag>
                     </div>
@@ -90,7 +90,7 @@
         <!-- Loading State -->
         <div class="loading-state" *ngIf="!project">
             <div class="loading-spinner"></div>
-            <p>Loading project details...</p>
+            <p>{{ 'projectDetails.loading' | translate }}</p>
         </div>
     </app-container>
 </div>

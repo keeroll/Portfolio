@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../shared';
 import { ScrollPositionService } from '../../services/scroll-position.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cv-page',
-  imports: [ContainerComponent],
+  imports: [TranslatePipe, ContainerComponent],
   templateUrl: './cv-page.component.html',
   styleUrl: './cv-page.component.scss',
   standalone: true

@@ -1,0 +1,259 @@
+[
+    {
+      "id": "portfolio-app",
+      "title": "Portfolio App",
+      "description": "A modern Angular portfolio with retrowave styling, internationalization, and responsive design.",
+      "image": "",
+      "tags": ["Angular", "TypeScript", "Scss", "Responsive"],
+      "youtubeUrl": "",
+      "sourceUrl": "https://github.com/keeroll/Portfolio",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Overview",
+          "content": "This portfolio showcases my skills and projects with a unique retrowave aesthetic inspired by pattybuilds.dev. Built with Angular 19, it features modern web technologies and responsive design principles."
+        },
+        {
+          "title": "Key Features",
+          "content": "Internationalization support for multiple languages, responsive design that works on all devices, smooth animations and transitions, and a modular component architecture for maintainability."
+        },
+        {
+          "title": "Technical Stack",
+          "content": "Angular 19, TypeScript, SCSS, Angular Router, and modern CSS features like CSS Grid and Flexbox for layout. The project follows Angular best practices and modern development workflows."
+        }
+      ]
+    },
+    {
+      "id": "clickoin",
+      "title": "Clickoin",
+      "description": "A clicker game with coin skins, drops, and Steam integration. Built with Unity and C#.",
+      "image": "project-img/clickoin.jpg",
+      "tags": ["Unity", "C#", "Steam", "Indie"],
+      "youtubeUrl": "https://www.youtube.com/embed/rMiqV9_fbdM?si=snhzmmDeY9I_9bom",
+      "sourceUrl": "",
+      "liveUrl": "https://store.steampowered.com/app/3401350/Clickoin/",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Game Overview",
+          "content": "Clickoin is an addictive clicker game where players collect coins, unlock skins, and discover rare drops. The game features Steam integration for achievements and cloud saves."
+        },
+        {
+          "title": "Development Process",
+          "content": "Developed over 6 months using Unity 2022.3 LTS, the game went through multiple iterations based on player feedback. Steam integration was implemented using the Steamworks.NET library."
+        }
+      ]
+    },
+    {
+        "id": "barcode-scanner",
+        "title": "Barcode Scanner",
+        "description": "TypeScript-based barcode scanning application with modern web technologies for product identification.",
+        "image": "",
+        "tags": ["TypeScript", "WebDev", "Barcode", "Scanner"],
+        "youtubeUrl": "",
+        "sourceUrl": "https://github.com/keeroll/barcode-scanner",
+        "liveUrl": "",
+        "downloadUrl": "",
+        "detailedDescription": [
+          {
+            "title": "Application Overview",
+            "content": "A web-based barcode scanner built with TypeScript and modern web technologies, providing real-time product identification and information retrieval."
+          },
+          {
+            "title": "Technical Implementation",
+            "content": "Utilizes WebRTC for camera access, image processing algorithms for barcode detection, and integration with product databases for information lookup."
+          }
+        ]
+      },
+      {
+        "id": "ukraine-weather-app",
+        "title": "Ukraine Weather App",
+        "description": "Weather dashboard built with Angular 7 using OpenWeather API and an interactive SVG map of Ukraine.",
+        "image": "project-img/ukraine-weather-app.jpg",
+        "tags": ["Angular", "TypeScript", "Svg", "Api", "Weather"],
+        "youtubeUrl": "https://www.youtube.com/embed/D0GMRD8ANL4?si=7c6VDdBJ482KALw2",
+        "sourceUrl": "https://github.com/keeroll/web-systems-architecture-labs",
+        "liveUrl": "",
+        "downloadUrl": "",
+        "detailedDescription": [
+          {
+            "title": "Project Overview",
+            "content": "A single-page Angular application displaying current weather conditions across cities in Ukraine. Built with Angular 7 and integrated with OpenWeatherMap API."
+          },
+          {
+            "title": "Key Features",
+            "content": "Data visualization on an interactive SVG map of Ukraine, API consumption with HTTPClient, dynamic city tooltips, and custom UI components for temperature, humidity, and conditions."
+          }
+        ]
+      },
+    {
+      "id": "simple-smart-house",
+      "title": "Simple Smart House",
+      "description": "IoT smart home system using Arduino with sensors and Blynk integration for home automation.",
+      "image": "project-img/simple-smart-house.jpg",
+      "tags": ["IoT", "Arduino", "C++", "Smart Home"],
+      "youtubeUrl": "https://www.youtube.com/embed/ulaSbHANYgE?si=ifQLTKkfaKFN_gZr",
+      "sourceUrl": "https://github.com/keeroll/Simple-Smart-House",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "Project Overview",
+          "content": "A comprehensive IoT smart home system that integrates various sensors and actuators for home automation. The system provides real-time monitoring and control capabilities."
+        },
+        {
+          "title": "Technical Features",
+          "content": "Built with Arduino microcontrollers, various sensors (temperature, humidity, motion), and Blynk platform for mobile app integration. Features include automated lighting, climate control, and security monitoring."
+        }
+      ]
+    },
+    {
+      "id": "time-travel-unity",
+      "title": "Time Travel Unity Game",
+      "description": "Unity 5 game development project featuring time travel mechanics and innovative gameplay elements.",
+      "image": "project-img/time-travel-unity.jpg",
+      "tags": ["Unity", "C#", "Game Dev", "Time Travel"],
+      "youtubeUrl": "https://www.youtube.com/embed/-GHlKoqbr1c?si=IrrRtuqVIALIky_l",
+      "sourceUrl": "https://github.com/keeroll/Time_Travel_Unity5",
+      "liveUrl": "",
+      "downloadUrl": "https://github.com/keeroll/Time_Travel_Unity5/releases/tag/v0.0.1",
+      "detailedDescription": [
+        {
+          "title": "Game Concept",
+          "content": "An innovative Unity 5 game that explores time travel mechanics, allowing players to manipulate time to solve puzzles and overcome challenges."
+        },
+        {
+          "title": "Development Highlights",
+          "content": "Features custom time manipulation systems, particle effects for temporal distortions, and innovative puzzle mechanics that require players to think across multiple time periods."
+        }
+      ]
+    },
+    {
+      "id": "little-rts-game",
+      "title": "Little RTS Game",
+      "description": "Real-time strategy game built in Unity 5 as a test task for Enixan, featuring strategic gameplay mechanics.",
+      "image": "project-img/little-rts-game.jpg",
+      "tags": ["Unity", "C#", "Game Dev", "Strategy"],
+      "youtubeUrl": "https://www.youtube.com/embed/Vlq5hsqTvvA?si=9fsObym6usx_k4b1",
+      "sourceUrl": "https://github.com/keeroll/Little_RTS_Game_Unity5",
+      "liveUrl": "",
+      "downloadUrl": "https://github.com/keeroll/Little_RTS_Game_Unity5/releases/tag/v.0.0.1",
+      "detailedDescription": [
+        {
+          "title": "Game Overview",
+          "content": "A real-time strategy game developed as a test task for Enixan, featuring classic RTS mechanics including resource management, unit production, and tactical combat."
+        },
+        {
+          "title": "Technical Features",
+          "content": "Built with Unity 5, featuring AI pathfinding, unit behavior systems, resource management, and multiplayer-ready architecture. Demonstrates strong game development fundamentals."
+        }
+      ]
+    },
+    {
+        "id": "fnaf-style-game",
+        "title": "FNaF-Style Horror Game",
+        "description": "Unity 5 horror game inspired by Five Nights at Freddy’s. Built following tutorials but extended with custom camera and pathfinding systems.",
+        "image": "project-img/fnaf-style-game.jpg",
+        "tags": ["Unity", "C#", "Horror", "Fnaf"],
+        "youtubeUrl": "https://www.youtube.com/embed/tMhB2fMfOM8?si=sTg05PQAxVdDms8s",
+        "sourceUrl": "",
+        "liveUrl": "",
+        "downloadUrl": "https://github.com/keeroll/old-unity-projects/releases/tag/fnaf-build",
+        "detailedDescription": [
+          {
+            "title": "Learning Focus",
+            "content": "This project was inspired by the mechanics of FNaF and used primarily as a learning exercise to understand Unity’s camera system, scene management, and AI pathfinding."
+          },
+          {
+            "title": "Key Features",
+            "content": "Implemented basic AI that roams the environment based on a grid-based pathfinding system, camera switching logic for a security room simulation, and tension-building audio and light control."
+          }
+        ]
+      },
+      {
+        "id": "solar-system-unity",
+        "title": "Unity Solar System Explorer",
+        "description": "An interactive 3D solar system simulation created in Unity 5, allowing free camera movement and orbiting planets.",
+        "image": "project-img/solar-system-unity.jpg",
+        "tags": ["Unity", "C#", "Simulation", "Space"],
+        "youtubeUrl": "https://www.youtube.com/embed/P_Ay0Ss23TQ?si=881YUPruOG6eC97P",
+        "sourceUrl": "",
+        "liveUrl": "",
+        "downloadUrl": "https://github.com/keeroll/old-unity-projects/releases/tag/solar-system-build",
+        "detailedDescription": [
+          {
+            "title": "Project Summary",
+            "content": "Built as a space simulation sandbox where players can freely explore a simplified solar system with orbiting planets and rotation systems."
+          },
+          {
+            "title": "Implementation Details",
+            "content": "Used Unity’s transform system to simulate orbital rotation, added basic camera control to fly through space, and styled planets with public domain textures."
+          }
+        ]
+      },
+    {
+        "id": "atm-system",
+        "title": "ATM System",
+        "description": "Complete ATM management system built with C# WinForms and MS SQL Server for banking operations.",
+        "image": "project-img/atm-system.jpg",
+        "tags": ["C#", "Win Forms", "MS SQL", "CRUD"],
+        "youtubeUrl": "https://www.youtube.com/embed/6hgoXhEa3I8?si=BydYPtpPzUg5v3yk",
+        "sourceUrl": "https://github.com/keeroll/atm_system_cSharp",
+        "liveUrl": "",
+        "downloadUrl": "",
+        "detailedDescription": [
+          {
+            "title": "System Overview",
+            "content": "A comprehensive ATM management system that simulates real banking operations including account management, transactions, and security features."
+          },
+          {
+            "title": "Technical Implementation",
+            "content": "Built with C# WinForms for the user interface and MS SQL Server for data persistence. Features include user authentication, transaction processing, account management, and detailed reporting."
+          }
+        ]
+      },
+    {
+      "id": "student-exams-db",
+      "title": "суп суп",
+      "description": "Database management system for tracking student exam scores using C# WinForms and MS SQL Server.",
+      "image": "project-img/student-exams-db.jpg",
+      "tags": ["C#", "Win Forms", "MS SQL", "Database"],
+      "youtubeUrl": "https://www.youtube.com/embed/RPXotjyF7gg?si=ZJmOM-iUEk_zWHzt",
+      "sourceUrl": "https://github.com/keeroll/Student_Exams_Score_DB_CSharp_WF",
+      "liveUrl": "",
+      "downloadUrl": "",
+      "detailedDescription": [
+        {
+          "title": "System Overview",
+          "content": "A comprehensive database management system designed for educational institutions to track and manage student exam scores and academic performance."
+        },
+        {
+          "title": "Features",
+          "content": "Student registration, exam score tracking, grade calculation, performance analytics, and detailed reporting. Built with C# WinForms and MS SQL Server for robust data management."
+        }
+      ]
+    },
+    {
+        "id": "text-formatter",
+        "title": "Text Formatter",
+        "description": "C# WPF application for text formatting and manipulation with a modern desktop interface.",
+        "image": "",
+        "tags": ["C#", "WPF", ".NET", "Desktop"],
+        "youtubeUrl": "",
+        "sourceUrl": "https://github.com/keeroll/Text-Formatter",
+        "liveUrl": "",
+        "downloadUrl": "",
+        "detailedDescription": [
+          {
+            "title": "Application Overview",
+            "content": "A desktop application built with C# WPF that provides advanced text formatting and manipulation capabilities."
+          },
+          {
+            "title": "Key Features",
+            "content": "Text case conversion, formatting options, find and replace functionality, syntax highlighting, and export capabilities. Built with MVVM pattern for maintainable code architecture."
+          }
+        ]
+      }
+  ]
+  

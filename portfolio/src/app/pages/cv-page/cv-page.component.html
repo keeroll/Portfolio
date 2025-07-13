@@ -1,6 +1,6 @@
 <app-container>
     <div class="cv-header">
-        <h1>CV</h1>
+        <h1>{{ 'cv.title' | translate }}</h1>
     </div>
     
     <div class="cv-content">
@@ -9,7 +9,7 @@
                 <iframe 
                     src="/cv/cv.pdf"
                     class="cv-pdf-viewer"
-                    title="CV PDF Preview"
+                    title="{{ 'cv.pdfPreview' | translate }}"
                     frameborder="0">
                 </iframe>
             </div>

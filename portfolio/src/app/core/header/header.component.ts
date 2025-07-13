@@ -3,10 +3,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgIf, NgFor, NgClass } from '@angular/common';
 import { TranslationService } from '../../services/translation.service';
 import { Language } from '../../enums/language.enum';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, RouterLinkActive, NgIf, NgFor, NgClass],
+  imports: [RouterLink, RouterLinkActive, NgIf, NgFor, NgClass, TranslatePipe],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   standalone: true

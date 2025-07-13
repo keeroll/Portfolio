@@ -24,6 +24,10 @@ export class TranslationService {
         return this.translate.currentLang;
     }
 
+    public get onLangChange() {
+        return this.translate.onLangChange;
+    }
+
     private loadTranslations(lang: string): void {
         console.log("init localization loading")
         this.http.get(`/i18n/${lang}.json`).subscribe((translations) => {

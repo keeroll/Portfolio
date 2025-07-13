@@ -11,17 +11,17 @@
                routerLinkActive="active" 
                [routerLinkActiveOptions]="{exact: true}" 
                class="nav-link">
-                Home
+                {{ 'header.home' | translate }}
             </a>
             <a routerLink="/certificates" 
                routerLinkActive="active" 
                class="nav-link">
-                Certificates
+                {{ 'header.certificates' | translate }}
             </a>
             <a routerLink="/cv" 
                routerLinkActive="active" 
                class="nav-link">
-                CV
+                {{ 'header.cv' | translate }}
             </a>
         </nav>
 
@@ -50,19 +50,19 @@
            [routerLinkActiveOptions]="{exact: true}" 
            class="mobile-nav-link"
            (click)="closeMobileMenu()">
-            Home
+            {{ 'header.home' | translate }}
         </a>
         <a routerLink="/certificates" 
            routerLinkActive="active" 
            class="mobile-nav-link"
            (click)="closeMobileMenu()">
-            Certificates
+            {{ 'header.certificates' | translate }}
         </a>
         <a routerLink="/cv" 
            routerLinkActive="active" 
            class="mobile-nav-link"
            (click)="closeMobileMenu()">
-            CV
+            {{ 'header.cv' | translate }}
         </a>
         <!-- Localization Selector (mobile) -->
         <div class="locale-selector mobile-locale">
