@@ -38,7 +38,8 @@
   "certificates": {
     "prev": "Previous Certificate",
     "next": "Next Certificate",
-    "title": "Certificates & Achievements"
+    "title": "Certificates & Achievements",
+    "none": "Failed to load certificates or the certificates are unavailable."
   },
   "error": {
     "default": "An error occurred."
