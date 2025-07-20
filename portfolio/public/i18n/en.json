@@ -42,7 +42,10 @@
     "none": "Failed to load certificates or the certificates are unavailable."
   },
   "error": {
-    "default": "An error occurred."
+    "default": "An error occurred.",
+    "title": "Oops! Something went wrong.",
+    "goHome": "Go to Home Page",
+    "goBack": "Go Back"
   },
   "links": {
     "github": "GitHub Account",
