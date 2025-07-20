@@ -33,7 +33,8 @@
   },
   "cv": {
     "title": "CV",
-    "pdfPreview": "CV PDF Preview"
+    "pdfPreview": "CV PDF Preview",
+    "none": "Failed to load CV or the CV is unavailable."
   },
   "certificates": {
     "prev": "Previous Certificate",

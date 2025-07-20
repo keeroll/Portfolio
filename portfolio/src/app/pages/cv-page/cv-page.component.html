@@ -5,14 +5,22 @@
     
     <div class="cv-content">
         <div class="cv-preview-container">
-            <div class="pdf-container">
-                <iframe 
-                    src="/cv/cv.pdf"
-                    class="cv-pdf-viewer"
-                    title="{{ 'cv.pdfPreview' | translate }}"
-                    frameborder="0">
-                </iframe>
-            </div>
+            @if (cvAvailable()) {
+                <div class="pdf-container">
+                    <iframe 
+                        [src]="cvPath()! | safe"
+                        class="cv-pdf-viewer"
+                        title="{{ 'cv.pdfPreview' | translate }}"
+                        frameborder="0"
+                        (error)="onPdfError()">
+                    </iframe>
+                </div>
+            } @else {
+                <div class="no-cv-placeholder">
+                    <i class="fas fa-exclamation-triangle fa-4x"></i>
+                    <p>{{ 'cv.none' | translate }}</p>
+                </div>
+            }
         </div>
     </div>
 </app-container> 
