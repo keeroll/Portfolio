@@ -3,6 +3,7 @@ import { SafeUrlPipe } from '../pipes/safe-url.pipe';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CertificatesService } from '../../services/certificates.service';
 import { take } from 'rxjs';
+import { Util } from '../../enums';
 
 @Component({
   selector: 'app-certificates-carousel',
@@ -12,7 +13,6 @@ import { take } from 'rxjs';
   standalone: true
 })
 export class CertificatesCarouselComponent implements OnInit {
-  private readonly defaultTake: number = 1;
   public certificates = signal<string[]>([]);
   public currentIndex = signal(0);
 
@@ -28,7 +28,7 @@ export class CertificatesCarouselComponent implements OnInit {
 
   public ngOnInit(): void {
     this.certificatesService.getCertificates()
-    .pipe(take(this.defaultTake))
+    .pipe(take(Util.DEFAULT_TAKE))
     .subscribe((filenames: string[]) => {
       this.certificates.set(filenames);
       this.currentIndex.set(0);

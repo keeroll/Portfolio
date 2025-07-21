@@ -8,7 +8,7 @@
   </div>
 
   <app-container>
-    @if (project) {
+    @if (projectSignal(); as project) {
       <div class="project-details-content">
         <!-- Left Section: Media, Tags, Links -->
         <div class="left-section" appFadeIn [delay]="200">
@@ -106,7 +106,7 @@
     }
 
     <!-- Loading State -->
-    @if (!project) {
+    @if (!projectSignal()) {
       <div class="loading-state" appFadeIn [delay]="200">
         <div class="loading-spinner"></div>
         <p>{{ 'projectDetails.loading' | translate }}</p>

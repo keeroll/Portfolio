@@ -10,6 +10,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { TranslationService } from '../../services/translation.service';
 import { Subscription, take } from 'rxjs';
 import { FadeInDirective } from '../../shared';
+import { Util } from '../../enums';
 
 @Component({
   selector: 'app-projects',
@@ -19,7 +20,6 @@ import { FadeInDirective } from '../../shared';
   standalone: true
 })
 export class ProjectsComponent implements OnInit {
-  private readonly defaultTake: number = 1;
   public projects: Project[] = [];
   private langChangeSub?: Subscription;
 
@@ -57,7 +57,7 @@ export class ProjectsComponent implements OnInit {
   
   private loadProjects(): void {
     this.projectsService.getProjects()
-    .pipe(take(this.defaultTake))
+    .pipe(take(Util.DEFAULT_TAKE))
     .subscribe({
       next: (projects) => {
         this.projects = projects;

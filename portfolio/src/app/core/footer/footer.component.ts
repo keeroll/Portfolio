@@ -9,6 +9,4 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './footer.component.scss',
   standalone: true
 })
-export class FooterComponent {
-  // Footer component logic can be added here
-}
+export class FooterComponent { }

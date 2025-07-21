@@ -4,6 +4,7 @@ import { ContainerComponent, FadeInDirective } from '../../shared';
 import { TranslatePipe } from '@ngx-translate/core';
 import { SafeUrlPipe } from '../../shared/pipes/safe-url.pipe';
 import { take } from 'rxjs';
+import { Util } from '../../enums';
 
 @Component({
   selector: 'app-cv-page',
@@ -13,7 +14,6 @@ import { take } from 'rxjs';
   standalone: true
 })
 export class CvPageComponent implements OnInit {
-  private readonly defaultTake: number = 1;
   public cvPath = signal<string | null>(null);
   public cvAvailable = signal(true);
 
@@ -26,7 +26,7 @@ export class CvPageComponent implements OnInit {
     this.scrollPositionService.resetPosition();
     window.scrollTo(0, 0);
     this.cvPageService.getCvFilename()
-    .pipe(take(this.defaultTake))
+    .pipe(take(Util.DEFAULT_TAKE))
     .subscribe({
       next: (data) => {
         this.cvPath.set(`/cv/${data.filename}`);

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable, take } from 'rxjs';
 import { Project } from '../models';
 import { TranslationService } from './translation.service';
-import { Language } from '../enums/language.enum';
+import { Language, Util } from '../enums';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class ProjectsService {
    * Get the correct projects file path based on the current language
    */
   private get projectsUrl(): string {
-    const lang = this.translationService.currentLang || Language.EN;
+    const lang = this.translationService.currentLangValue || Language.EN;
     return `/projects/${lang}.json`;
   }
 
@@ -32,17 +32,9 @@ export class ProjectsService {
    * Fetch a specific project by ID
    */
   public getProjectById(id: string): Observable<Project | undefined> {
-    return new Observable(observer => {
-      this.getProjects().subscribe({
-        next: (projects) => {
-          const project = projects.find(p => p.id === id);
-          observer.next(project);
-          observer.complete();
-        },
-        error: (error) => {
-          observer.error(error);
-        }
-      });
-    });
+    return this.getProjects().pipe(
+      take(Util.DEFAULT_TAKE),
+      map(projects => projects.find(p => p.id === id))
+    );
   }
 } 
