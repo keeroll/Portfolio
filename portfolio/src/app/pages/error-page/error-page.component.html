@@ -1,9 +1,9 @@
 <app-container>
-  <div class="error-content">
-    <h1>{{ 'error.title' | translate }}</h1>
+  <div class="error-content" appFadeIn [delay]="100">
+    <h1 appFadeIn [delay]="200">{{ 'error.title' | translate }}</h1>
     <div class="error-actions">
-      <button class="error-btn" (click)="goHome()">{{ 'error.goHome' | translate }}</button>
-      <button class="error-btn secondary" (click)="goBack()">{{ 'error.goBack' | translate }}</button>
+      <button class="error-btn" (click)="goHome()" appFadeIn [delay]="300">{{ 'error.goHome' | translate }}</button>
+      <button class="error-btn secondary" (click)="goBack()" appFadeIn [delay]="400">{{ 'error.goBack' | translate }}</button>
     </div>
   </div>
 </app-container>

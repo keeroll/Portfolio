@@ -1,5 +1,5 @@
 import { Component, computed, effect, signal } from '@angular/core';
-import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
+import { SafeUrlPipe } from '../pipes/safe-url.pipe';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CertificatesService } from '../../services/certificates.service';
 

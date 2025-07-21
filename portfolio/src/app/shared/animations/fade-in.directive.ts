@@ -18,7 +18,7 @@ export class FadeInDirective implements OnInit {
     // Set initial state
     this.renderer.setStyle(this.element.nativeElement, 'opacity', '0');
     this.renderer.setStyle(this.element.nativeElement, 'transform', `translateY(${this.distance})`);
-    this.renderer.setStyle(this.element.nativeElement, 'transition', `all ${this.duration}ms ease-out ${this.delay}ms`);
+    this.renderer.setStyle(this.element.nativeElement, 'transition', `opacity ${this.duration}ms ease-out ${this.delay}ms, transform ${this.duration}ms ease-out ${this.delay}ms`);
 
     // Create intersection observer
     const observer = new IntersectionObserver(

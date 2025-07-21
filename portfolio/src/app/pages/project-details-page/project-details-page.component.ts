@@ -5,7 +5,7 @@ import { CommonModule, NgIf } from '@angular/common';
 
 import { Project } from '../../models';
 import { ContainerComponent, TagComponent, FadeInDirective } from '../../shared';
-import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
+import { SafeUrlPipe } from '../../shared/pipes/safe-url.pipe';
 import { ProjectsService } from '../../services/projects.service';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TranslationService } from '../../services/translation.service';
