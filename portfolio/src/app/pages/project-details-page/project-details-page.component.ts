@@ -9,7 +9,7 @@ import { SafeUrlPipe } from '../../shared/pipes/safe-url.pipe';
 import { ProjectsService } from '../../services/projects.service';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TranslationService } from '../../services/translation.service';
-import { Subscription } from 'rxjs';
+import { Subscription, take } from 'rxjs';
 
 @Component({
   selector: 'app-project-details-page',
@@ -19,6 +19,7 @@ import { Subscription } from 'rxjs';
   standalone: true
 })
 export class ProjectDetailsPageComponent implements OnInit {
+  private readonly defaultTake: number = 1;
   project: Project | null = null;
   private langChangeSub?: Subscription;
   private currentProjectId: string | null = null;
@@ -36,7 +37,9 @@ export class ProjectDetailsPageComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.route.params.subscribe(params => {
+    this.route.params
+    .pipe(take(this.defaultTake))
+    .subscribe(params => {
       const projectId = params['id'];
       this.currentProjectId = projectId;
       this.loadProject(projectId);
@@ -58,7 +61,9 @@ export class ProjectDetailsPageComponent implements OnInit {
   }
 
   private loadProject(projectId: string): void {
-    this.projectsService.getProjectById(projectId).subscribe({
+    this.projectsService.getProjectById(projectId)
+    .pipe(take(this.defaultTake))
+    .subscribe({
       next: (project) => {
         if (project) {
           this.project = project;

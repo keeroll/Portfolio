@@ -1,7 +1,8 @@
-import { Component, computed, effect, signal } from '@angular/core';
+import { Component, computed, OnInit, signal } from '@angular/core';
 import { SafeUrlPipe } from '../pipes/safe-url.pipe';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CertificatesService } from '../../services/certificates.service';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-certificates-carousel',
@@ -10,7 +11,8 @@ import { CertificatesService } from '../../services/certificates.service';
   styleUrl: './certificates-carousel.component.scss',
   standalone: true
 })
-export class CertificatesCarouselComponent {
+export class CertificatesCarouselComponent implements OnInit {
+  private readonly defaultTake: number = 1;
   public certificates = signal<string[]>([]);
   public currentIndex = signal(0);
 
@@ -22,14 +24,16 @@ export class CertificatesCarouselComponent {
 
   public pdfUrl = computed(() => `/certificates/${this.currentCertificate()}`);
 
-  public readonly loadCertificatesEffect = effect(() => {
-    this.certificatesService.getCertificates().subscribe((filenames: string[]) => {
+  constructor(private certificatesService: CertificatesService) {}
+
+  public ngOnInit(): void {
+    this.certificatesService.getCertificates()
+    .pipe(take(this.defaultTake))
+    .subscribe((filenames: string[]) => {
       this.certificates.set(filenames);
       this.currentIndex.set(0);
     });
-  });
-
-  constructor(private certificatesService: CertificatesService) {}
+  }
 
   public next(): void {
     const certs = this.certificates();

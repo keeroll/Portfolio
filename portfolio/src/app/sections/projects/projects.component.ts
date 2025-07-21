@@ -8,7 +8,7 @@ import { ProjectsService } from '../../services/projects.service';
 import { ScrollPositionService } from '../../services/scroll-position.service';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TranslationService } from '../../services/translation.service';
-import { Subscription } from 'rxjs';
+import { Subscription, take } from 'rxjs';
 import { FadeInDirective } from '../../shared';
 
 @Component({
@@ -19,6 +19,7 @@ import { FadeInDirective } from '../../shared';
   standalone: true
 })
 export class ProjectsComponent implements OnInit {
+  private readonly defaultTake: number = 1;
   public projects: Project[] = [];
   private langChangeSub?: Subscription;
 
@@ -55,7 +56,9 @@ export class ProjectsComponent implements OnInit {
   }
   
   private loadProjects(): void {
-    this.projectsService.getProjects().subscribe({
+    this.projectsService.getProjects()
+    .pipe(take(this.defaultTake))
+    .subscribe({
       next: (projects) => {
         this.projects = projects;
       },
