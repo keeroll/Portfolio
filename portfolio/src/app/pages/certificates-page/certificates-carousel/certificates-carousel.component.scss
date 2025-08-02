@@ -1,4 +1,4 @@
-@use '../../../styles/utilities' as *;
+@use '../../../../styles/utilities' as *;
 
 .certificates-carousel {
   width: 100%;
@@ -9,6 +9,8 @@
   overflow: hidden;
   box-shadow: 0 10px 30px var(--black-30);
 }
+
+
 
 .carousel-container {
   position: relative;

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ContainerComponent, CertificatesCarouselComponent, FadeInDirective } from '../../shared';
+import { ContainerComponent, FadeInDirective } from '../../shared';
 import { ScrollPositionService } from '../../services/scroll-position.service';
 import { TranslatePipe } from '@ngx-translate/core';
+import { CertificatesCarouselComponent } from './certificates-carousel/certificates-carousel.component';
 
 @Component({
   selector: 'app-certificates-page',

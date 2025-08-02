@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Project } from '../../models';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ContainerComponent } from '../../shared';
-
 import { ProjectsService } from '../../services/projects.service';
 import { ScrollPositionService } from '../../services/scroll-position.service';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -20,9 +19,10 @@ import { Util } from '../../enums';
   standalone: true
 })
 export class ProjectsComponent implements OnInit {
-  public projects: Project[] = [];
   private langChangeSub?: Subscription;
 
+  public projects: Project[] = [];
+  
   constructor(
     private router: Router,
     private projectsService: ProjectsService,
@@ -36,7 +36,6 @@ export class ProjectsComponent implements OnInit {
 
   public ngOnInit(): void {
     this.loadProjects();
-    // Subscribe to language changes
     this.langChangeSub = this.translationService.onLangChange.subscribe(() => {
       this.loadProjects();
     });

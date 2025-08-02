@@ -1,5 +1,10 @@
 <div class="certificates-carousel">
-  @if (certificates().length > 0) {
+  @if (certificates().length === 0 && !loading()) {
+    <div class="no-certificates-placeholder">
+      <i class="fas fa-exclamation-triangle fa-4x"></i>
+      <p>{{ 'certificates.none' | translate }}</p>
+    </div>
+  } @else {
     <div class="carousel-container">
       <!-- Previous Button -->
       <button class="nav-button prev-button" (click)="previous()" title="{{ 'certificates.prev' | translate }}">
@@ -30,11 +35,6 @@
       <div class="slide-counter">
         {{ currentIndex() + 1 }} / {{ certificates().length }}
       </div>
-    </div>
-  } @else {
-    <div class="no-certificates-placeholder">
-      <i class="fas fa-exclamation-triangle fa-4x"></i>
-      <p>{{ 'certificates.none' | translate }}</p>
     </div>
   }
 </div>

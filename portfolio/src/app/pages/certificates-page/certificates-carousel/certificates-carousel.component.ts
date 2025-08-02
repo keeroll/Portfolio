@@ -1,9 +1,9 @@
 import { Component, computed, OnInit, signal } from '@angular/core';
-import { SafeUrlPipe } from '../pipes/safe-url.pipe';
+import { SafeUrlPipe } from '../../../shared';
 import { TranslatePipe } from '@ngx-translate/core';
-import { CertificatesService } from '../../services/certificates.service';
-import { take } from 'rxjs';
-import { Util } from '../../enums';
+import { CertificatesService } from '../../../services';
+import { take, finalize } from 'rxjs';
+import { Util } from '../../../enums';
 
 @Component({
   selector: 'app-certificates-carousel',
@@ -15,6 +15,7 @@ import { Util } from '../../enums';
 export class CertificatesCarouselComponent implements OnInit {
   public certificates = signal<string[]>([]);
   public currentIndex = signal(0);
+  public loading = signal(true);
 
   public currentCertificate = computed(() => {
     const certs = this.certificates();
@@ -27,8 +28,12 @@ export class CertificatesCarouselComponent implements OnInit {
   constructor(private certificatesService: CertificatesService) { }
 
   public ngOnInit(): void {
+    this.loading.set(true);
     this.certificatesService.getCertificates()
-      .pipe(take(Util.DEFAULT_TAKE))
+      .pipe(
+        take(Util.DEFAULT_TAKE),
+        finalize(() => this.loading.set(false))
+      )
       .subscribe((filenames: string[]) => {
         this.certificates.set(filenames);
         this.currentIndex.set(0);
