@@ -1,3 +1,5 @@
+@use '../../../styles/utilities' as *;
+
 .error-content {
   display: flex;
   flex-direction: column;
@@ -36,45 +38,27 @@
 }
 
 .error-btn {
-  background: var(--neon-emerald-10);
-  border: 1px solid var(--neon-emerald-30);
-  color: var(--neon-emerald);
-  border-radius: var(--radius-md);
+  @extend .btn-primary;
   padding: 0.85rem 2.25rem;
   font-size: 1.1rem;
-  font-family: var(--font-primary);
   font-weight: 700;
   letter-spacing: 0.03em;
-  cursor: pointer;
   box-shadow: none;
-  transition: all var(--transition-normal);
   outline: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .error-btn:hover,
 .error-btn:focus {
-  background: var(--neon-emerald-20);
-  border-color: var(--neon-emerald);
-  color: var(--neon-emerald);
-  box-shadow: 0 0 10px var(--neon-emerald-20);
   transform: scale(1.05);
 }
 
 .error-btn.secondary {
-  background: none;
-  color: var(--neon-emerald);
-  border: 1.5px solid var(--neon-emerald);
+  @extend .btn-secondary;
   box-shadow: none;
 }
 
 .error-btn.secondary:hover,
 .error-btn.secondary:focus {
-  background: var(--neon-emerald-10);
-  color: var(--neon-emerald);
-  border-color: var(--neon-emerald);
   box-shadow: 0 0 6px var(--neon-emerald-15);
 }
 

@@ -1,3 +1,5 @@
+@use 'styles/utilities';
+
 :root {
     /* Layout */
     --header-height: 60px;
@@ -26,7 +28,6 @@
     --gradient-primary: linear-gradient(135deg, var(--neon-emerald), var(--neon-teal));
     --gradient-secondary: linear-gradient(135deg, var(--neon-green), var(--neon-emerald));
     --gradient-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
-
     
     /* RGBA Color Variants - Neon Emerald */
     --neon-emerald-50: rgba(0, 255, 136, 0.5);
@@ -194,5 +195,9 @@ a:focus:not(.nav-link):not(.mobile-nav-link):not(.logo) {
     
     .main-content {
         padding: var(--spacing-lg) var(--horizontal-padding);
+    }
+    
+    .hover-lift-large:hover {
+        transform: translateY(-4px);
     }
 }

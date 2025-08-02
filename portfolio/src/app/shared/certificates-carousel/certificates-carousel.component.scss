@@ -1,3 +1,5 @@
+@use '../../../styles/utilities' as *;
+
 .certificates-carousel {
   width: 100%;
   margin: 0 auto;
@@ -207,10 +209,8 @@
 } 
 
 .no-certificates-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @extend .flex-column;
+  @extend .flex-center;
   height: 100%;
   width: 100%;
   min-height: 320px;
@@ -232,7 +232,7 @@
   i {
     color: var(--neon-emerald);
     margin-bottom: 1.25rem;
-    text-shadow: 0 0 2px var(--neon-emerald), 0 0 4px var(--neon-emerald, #00ff88);
+    @extend .text-shadow-emerald-small;
     filter: none;
     animation: none;
     opacity: 0.85;
@@ -244,6 +244,6 @@
     font-size: 1.15rem;
     font-weight: 500;
     line-height: 1.5;
-    text-shadow: 0 0 2px var(--neon-emerald, #00ff88);
+    @extend .text-shadow-emerald-small;
   }
 } 

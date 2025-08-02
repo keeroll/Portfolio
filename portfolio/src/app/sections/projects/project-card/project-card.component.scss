@@ -1,12 +1,10 @@
+@use '../../../../styles/utilities' as *;
+
 .project-card {
-    background: var(--bg-secondary);
-    border-radius: var(--radius-xl);
+    @extend .card-hover;
     padding: var(--spacing-xl);
-    transition: all var(--transition-normal);
-    cursor: pointer;
     position: relative;
     overflow: hidden;
-    border: 1px solid transparent;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -18,28 +16,18 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: 
-            linear-gradient(var(--neon-emerald-02) 1px, transparent 1px),
-            linear-gradient(90deg, var(--neon-emerald-02) 1px, transparent 1px);
-        background-size: 30px 30px;
-        pointer-events: none;
+        @extend .bg-pattern-grid;
         z-index: -1;
     }
     
     &:hover {
-        transform: translateY(-8px);
-        border-color: var(--neon-emerald);
-        box-shadow: 
-            0 20px 40px var(--neon-emerald-20),
-            0 0 0 1px var(--neon-emerald);
-        
         .preview {
             transform: scale(1.05);
         }
         
         .title {
             color: var(--neon-emerald);
-            text-shadow: 0 0 10px var(--neon-emerald);
+            @extend .text-shadow-emerald-small;
         }
         
         .description {
@@ -70,26 +58,7 @@
     }
     
     .placeholder-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        
-        i {
-            font-size: 4rem;
-            color: var(--neon-emerald);
-            opacity: 0.4;
-            text-shadow: 0 0 10px var(--neon-emerald-30);
-            transition: all var(--transition-normal);
-        }
-    }
-    
-    &:hover {
-        .placeholder-icon i {
-            opacity: 0.6;
-            transform: scale(1.1);
-        }
+        @extend .placeholder-icon;
     }
 }
 
@@ -118,12 +87,8 @@
     padding-top: var(--spacing-md);
     
     app-tag {
-        transition: all var(--transition-normal);
+        @extend .hover-lift;
         margin-bottom: var(--spacing-xs);
-        
-        &:hover {
-            transform: translateY(-2px);
-        }
     }
 }
 
@@ -140,31 +105,19 @@
     z-index: 2;
     
     &.status-live {
-        background: var(--neon-green-20);
-        color: var(--neon-green);
-        border: 1px solid var(--neon-green);
-        box-shadow: 0 0 10px var(--neon-green-30);
+        @extend .status-live;
     }
     
     &.status-wip {
-        background: var(--neon-lime-20);
-        color: var(--neon-lime);
-        border: 1px solid var(--neon-lime);
-        box-shadow: 0 0 10px var(--neon-lime-30);
+        @extend .status-wip;
     }
     
     &.status-paused {
-        background: var(--red-20);
-        color: var(--red-color);
-        border: 1px solid var(--red-color);
-        box-shadow: 0 0 10px var(--red-30);
+        @extend .status-paused;
     }
     
     &.status-profitable {
-        background: var(--neon-emerald-20);
-        color: var(--neon-emerald);
-        border: 1px solid var(--neon-emerald);
-        box-shadow: 0 0 10px var(--neon-emerald-30);
+        @extend .status-profitable;
     }
 }
 

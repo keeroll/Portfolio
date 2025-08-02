@@ -1,3 +1,5 @@
+@use '../../../styles/utilities' as *;
+
 .back-button-container {
     position: absolute;
     top: calc(var(--header-height) + var(--spacing-md));
@@ -283,12 +285,7 @@
     min-height: 60vh;
     
     .loading-spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid var(--neon-emerald-10);
-        border-top: 3px solid var(--neon-emerald);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
+        @extend .loading-spinner;
         margin-bottom: var(--spacing-md);
     }
     
@@ -298,10 +295,7 @@
     }
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+
 
 @media (max-width: 768px) {
     .project-details-page {
