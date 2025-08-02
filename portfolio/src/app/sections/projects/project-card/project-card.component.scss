@@ -19,8 +19,8 @@
         right: 0;
         bottom: 0;
         background-image: 
-            linear-gradient(rgba(0, 255, 136, 0.02) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 255, 136, 0.02) 1px, transparent 1px);
+            linear-gradient(var(--neon-emerald-02) 1px, transparent 1px),
+            linear-gradient(90deg, var(--neon-emerald-02) 1px, transparent 1px);
         background-size: 30px 30px;
         pointer-events: none;
         z-index: -1;
@@ -30,7 +30,7 @@
         transform: translateY(-8px);
         border-color: var(--neon-emerald);
         box-shadow: 
-            0 20px 40px rgba(0, 255, 136, 0.2),
+            0 20px 40px var(--neon-emerald-20),
             0 0 0 1px var(--neon-emerald);
         
         .preview {
@@ -60,7 +60,7 @@
     transition: transform var(--transition-normal);
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(0, 255, 136, 0.1);
+    border: 1px solid var(--neon-emerald-10);
     
     img {
         width: 100%;
@@ -80,7 +80,7 @@
             font-size: 4rem;
             color: var(--neon-emerald);
             opacity: 0.4;
-            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+            text-shadow: 0 0 10px var(--neon-emerald-30);
             transition: all var(--transition-normal);
         }
     }
@@ -140,31 +140,31 @@
     z-index: 2;
     
     &.status-live {
-        background: rgba(0, 255, 0, 0.2);
+        background: var(--neon-green-20);
         color: var(--neon-green);
         border: 1px solid var(--neon-green);
-        box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        box-shadow: 0 0 10px var(--neon-green-30);
     }
     
     &.status-wip {
-        background: rgba(136, 255, 0, 0.2);
+        background: var(--neon-lime-20);
         color: var(--neon-lime);
         border: 1px solid var(--neon-lime);
-        box-shadow: 0 0 10px rgba(136, 255, 0, 0.3);
+        box-shadow: 0 0 10px var(--neon-lime-30);
     }
     
     &.status-paused {
-        background: rgba(255, 0, 0, 0.2);
-        color: #ff4444;
-        border: 1px solid #ff4444;
-        box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        background: var(--red-20);
+        color: var(--red-color);
+        border: 1px solid var(--red-color);
+        box-shadow: 0 0 10px var(--red-30);
     }
     
     &.status-profitable {
-        background: rgba(0, 255, 136, 0.2);
+        background: var(--neon-emerald-20);
         color: var(--neon-emerald);
         border: 1px solid var(--neon-emerald);
-        box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        box-shadow: 0 0 10px var(--neon-emerald-30);
     }
 }
 

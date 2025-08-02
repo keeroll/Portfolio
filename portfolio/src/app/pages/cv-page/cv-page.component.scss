@@ -9,7 +9,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+        text-shadow: 0 0 30px var(--neon-emerald-50);
     }
 }
 
@@ -23,9 +23,9 @@
 .cv-preview-container {
     background: var(--bg-secondary);
     border-radius: var(--radius-xl);
-    border: 1px solid rgba(0, 255, 136, 0.1);
+    border: 1px solid var(--neon-emerald-10);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px var(--black-30);
     width: 100%;
     min-width: 800px;
     
@@ -98,7 +98,7 @@
   i {
     color: var(--neon-emerald);
     margin-bottom: 1.25rem;
-    text-shadow: 0 0 2px var(--neon-emerald), 0 0 4px var(--neon-emerald, #00ff88);
+    text-shadow: 0 0 2px var(--neon-emerald), 0 0 4px var(--neon-emerald);
     filter: none;
     animation: none;
     opacity: 0.85;
@@ -110,6 +110,6 @@
     font-size: 1.15rem;
     font-weight: 500;
     line-height: 1.5;
-    text-shadow: 0 0 2px var(--neon-emerald, #00ff88);
+    text-shadow: 0 0 2px var(--neon-emerald);
   }
 } 

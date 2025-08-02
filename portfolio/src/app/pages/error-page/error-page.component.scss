@@ -17,7 +17,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+  text-shadow: 0 0 30px var(--neon-emerald-50);
   letter-spacing: 0.01em;
 }
 
@@ -36,8 +36,8 @@
 }
 
 .error-btn {
-  background: rgba(0, 255, 136, 0.1);
-  border: 1px solid rgba(0, 255, 136, 0.3);
+  background: var(--neon-emerald-10);
+  border: 1px solid var(--neon-emerald-30);
   color: var(--neon-emerald);
   border-radius: var(--radius-md);
   padding: 0.85rem 2.25rem;
@@ -56,10 +56,10 @@
 
 .error-btn:hover,
 .error-btn:focus {
-  background: rgba(0, 255, 136, 0.2);
+  background: var(--neon-emerald-20);
   border-color: var(--neon-emerald);
   color: var(--neon-emerald);
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 0 10px var(--neon-emerald-20);
   transform: scale(1.05);
 }
 
@@ -72,10 +72,10 @@
 
 .error-btn.secondary:hover,
 .error-btn.secondary:focus {
-  background: rgba(0, 255, 136, 0.1);
+  background: var(--neon-emerald-10);
   color: var(--neon-emerald);
   border-color: var(--neon-emerald);
-  box-shadow: 0 0 6px rgba(0, 255, 136, 0.15);
+  box-shadow: 0 0 6px var(--neon-emerald-15);
 }
 
 @media (max-width: 600px) {

@@ -18,7 +18,7 @@
         color: var(--text-primary);
         border-color: var(--neon-emerald);
         box-shadow: 
-            0 8px 25px rgba(0, 255, 136, 0.3),
+            0 8px 25px var(--neon-emerald-30),
             0 0 0 1px var(--neon-emerald);
     }
 }
