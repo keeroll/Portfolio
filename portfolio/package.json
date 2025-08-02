@@ -5,7 +5,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "build:optimized": "ng build --configuration=optimized",
+    "build:prod": "ng build --configuration=production",
+    "build:dev": "ng build --configuration=development",
+    "watch": "ng build --watch --configuration development",
+    "serve:optimized": "ng serve --configuration=optimized",
+    "serve:prod": "ng serve --configuration=production",
+    "analyze": "ng build --configuration=optimized --stats-json && npx webpack-bundle-analyzer dist/portfolio/stats.json"
   },
   "private": true,
   "dependencies": {
