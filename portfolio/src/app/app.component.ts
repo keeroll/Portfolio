@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent, FooterComponent } from './core';
 import { ScrollToTopComponent } from './shared';
-import { TranslationService } from './services/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -12,5 +11,5 @@ import { TranslationService } from './services/translation.service';
   standalone: true
 })
 export class AppComponent {
-  constructor(private readonly translationService: TranslationService) { }
+  constructor() { }
 }

@@ -29,7 +29,6 @@ export class ProjectDetailsPageComponent implements OnInit {
   ) {
     effect(() => {
       const id = this.currentProjectId();
-      const lang = this.translationService.currentLang();
       if (id) {
         this.loadProject(id);
       }

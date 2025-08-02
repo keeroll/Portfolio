@@ -23,6 +23,11 @@ export class CertificatesCarouselComponent implements OnInit {
     return certs.length > 0 ? certs[idx] : '';
   });
 
+  public hasCertificates = computed(() => {
+    const certificatesAvailable = this.certificates().length > 0;
+    return certificatesAvailable && !this.loading();
+  });
+
   public pdfUrl = computed(() => `/certificates/${this.currentCertificate()}`);
 
   constructor(private certificatesService: CertificatesService) { }
