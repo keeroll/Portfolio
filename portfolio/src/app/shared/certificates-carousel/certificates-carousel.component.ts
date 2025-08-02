@@ -24,15 +24,15 @@ export class CertificatesCarouselComponent implements OnInit {
 
   public pdfUrl = computed(() => `/certificates/${this.currentCertificate()}`);
 
-  constructor(private certificatesService: CertificatesService) {}
+  constructor(private certificatesService: CertificatesService) { }
 
   public ngOnInit(): void {
     this.certificatesService.getCertificates()
-    .pipe(take(Util.DEFAULT_TAKE))
-    .subscribe((filenames: string[]) => {
-      this.certificates.set(filenames);
-      this.currentIndex.set(0);
-    });
+      .pipe(take(Util.DEFAULT_TAKE))
+      .subscribe((filenames: string[]) => {
+        this.certificates.set(filenames);
+        this.currentIndex.set(0);
+      });
   }
 
   public next(): void {

@@ -16,7 +16,6 @@
   width: 100%;
 }
 
-// Navigation Buttons
 .nav-button {
   position: absolute;
   top: 50%;
@@ -54,7 +53,6 @@
   }
 }
 
-// Certificate Display
 .certificate-display {
   flex: 1;
   display: flex;
@@ -66,7 +64,6 @@
   width: 100%;
 }
 
-// PDF Container
 .pdf-container {
   width: 100%;
   max-width: 1200px;
@@ -84,7 +81,6 @@
   }
 }
 
-// Controls
 .carousel-controls {
   display: flex;
   align-items: center;
@@ -118,7 +114,6 @@
   }
 }
 
-// Slide Indicators
 .slide-indicators {
   display: flex;
   gap: var(--spacing-sm);
@@ -145,14 +140,12 @@
   }
 }
 
-// Slide Counter
 .slide-counter {
   font-size: 0.9rem;
   color: var(--text-secondary);
   font-weight: 500;
 }
 
-// Responsive Design
 @media (max-width: 1024px) {
   .carousel-container {
     min-height: 500px;

@@ -27,7 +27,6 @@ export class ProjectDetailsPageComponent implements OnInit {
     private projectsService: ProjectsService,
     private translationService: TranslationService
   ) {
-    // Reactively reload the project when language OR ID changes
     effect(() => {
       const id = this.currentProjectId();
       const lang = this.translationService.currentLang();

@@ -11,8 +11,7 @@
     margin: 0 auto;
     padding: 0 var(--horizontal-padding);
     position: relative;
-    
-    // Subtle border glow effect
+
     &::before {
         content: '';
         position: absolute;
@@ -32,7 +31,6 @@
     }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
     .container {
         padding: 0 var(--spacing-md);

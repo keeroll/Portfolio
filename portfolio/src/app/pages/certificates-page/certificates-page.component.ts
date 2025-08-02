@@ -11,7 +11,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   standalone: true
 })
 export class CertificatesPageComponent implements OnInit {
-  constructor(private scrollPositionService: ScrollPositionService) {}
+  constructor(private scrollPositionService: ScrollPositionService) { }
 
   public ngOnInit(): void {
     this.scrollPositionService.resetPosition();

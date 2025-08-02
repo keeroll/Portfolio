@@ -28,7 +28,7 @@ export class ProjectsComponent implements OnInit {
     private projectsService: ProjectsService,
     private scrollPositionService: ScrollPositionService,
     private translationService: TranslationService
-  ) {}
+  ) { }
 
   public get hasProjects(): boolean {
     return !!this.projects && this.projects.length > 0;
@@ -54,17 +54,17 @@ export class ProjectsComponent implements OnInit {
   public trackByProject(index: number, project: Project): string {
     return project.id;
   }
-  
+
   private loadProjects(): void {
     this.projectsService.getProjects()
-    .pipe(take(Util.DEFAULT_TAKE))
-    .subscribe({
-      next: (projects) => {
-        this.projects = projects;
-      },
-      error: (error) => {
-        console.error('Error loading projects:', error);
-      }
-    });
+      .pipe(take(Util.DEFAULT_TAKE))
+      .subscribe({
+        next: (projects) => {
+          this.projects = projects;
+        },
+        error: (error) => {
+          console.error('Error loading projects:', error);
+        }
+      });
   }
 }

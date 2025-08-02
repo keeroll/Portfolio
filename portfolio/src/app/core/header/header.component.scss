@@ -23,7 +23,6 @@
     padding: 0 var(--horizontal-padding);
 }
 
-// Logo
 .logo {
     text-decoration: none;
     display: flex;
@@ -46,7 +45,6 @@
     }
 }
 
-// Navigation Links
 .nav-links {
     display: flex;
     gap: var(--spacing-lg);
@@ -97,7 +95,6 @@
     }
 }
 
-// Mobile Menu Button
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -121,7 +118,6 @@
     }
 }
 
-// Mobile Menu
 .mobile-menu {
     position: absolute;
     top: 100%;
@@ -169,7 +165,6 @@
     }
 }
 
-// Locale Selector
 .locale-selector {
     display: flex;
     gap: 0.5rem;
@@ -199,7 +194,6 @@
     }
 }
 
-// Mobile locale selector
 .mobile-locale {
     margin-top: var(--spacing-md);
     justify-content: center;
@@ -214,7 +208,6 @@
     }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
     .header-content {
         padding: 0 var(--spacing-md);

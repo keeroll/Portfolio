@@ -40,7 +40,6 @@
     }
 }
 
-// Main Content
 .project-details-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -54,7 +53,6 @@
     }
 }
 
-// Left Section
 .left-section {
     display: flex;
     flex-direction: column;
@@ -66,7 +64,6 @@
     }
 }
 
-// Media Section
 .media-section {
     .youtube-player {
         width: 100%;
@@ -135,7 +132,6 @@
     }
 }
 
-// Tags Section
 .tags-section {
     h3 {
         font-size: 1.2rem;
@@ -159,7 +155,6 @@
     }
 }
 
-// Links Section
 .links-section {
     h3 {
         font-size: 1.2rem;
@@ -216,7 +211,6 @@
     }
 }
 
-// Right Section
 .right-section {
     margin: var(--spacing-lg) var(--spacing-sm);
     
@@ -279,7 +273,6 @@
     }
 }
 
-// Loading State
 .loading-state {
     display: flex;
     flex-direction: column;
@@ -305,13 +298,11 @@
     }
 }
 
-// Animations
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
     .project-details-page {
         padding-top: calc(var(--header-height) + var(--spacing-lg));

@@ -10,8 +10,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    
-    // Subtle grid background
+
     &::before {
         content: '';
         position: absolute;
@@ -128,7 +127,6 @@
     }
 }
 
-// Status badges (inspired by pattybuilds.dev)
 .project-status {
     position: absolute;
     top: var(--spacing-md);
@@ -170,7 +168,6 @@
     }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
     .project-card {
         padding: var(--spacing-lg);

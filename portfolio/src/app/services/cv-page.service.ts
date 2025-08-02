@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 export class CvPageService {
   private readonly cvJsonUrl = '/cv/cv.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   public getCvFilename(): Observable<{ filename: string }> {
     return this.http.get<{ filename: string }>(this.cvJsonUrl);

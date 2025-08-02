@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './container.component.scss',
   standalone: true
 })
-export class ContainerComponent {
-
-}
+export class ContainerComponent { }

@@ -9,6 +9,4 @@ import { ContainerComponent, TagComponent, FadeInDirective } from '../../shared'
   styleUrl: './about.component.scss',
   standalone: true
 })
-export class AboutComponent {
-
-}
+export class AboutComponent { }

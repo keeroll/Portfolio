@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class CertificatesService {
   private certificatesUrl = '/certificates/certificates.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   public getCertificates(): Observable<string[]> {
     return this.http.get<string[]>(this.certificatesUrl);

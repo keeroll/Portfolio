@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -9,25 +9,20 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './scroll-to-top.component.html',
   styleUrl: './scroll-to-top.component.scss'
 })
-export class ScrollToTopComponent implements OnInit, OnDestroy {
+export class ScrollToTopComponent implements OnInit {
   showScrollButton = false;
-  private scrollThreshold = 300; // Show button after scrolling 300px
+  private scrollThreshold = 300;
 
   @HostListener('window:scroll', [])
-  onWindowScroll(): void {
+  public onWindowScroll(): void {
     this.showScrollButton = window.scrollY > this.scrollThreshold;
   }
 
-  ngOnInit(): void {
-    // Initial check
+  public ngOnInit(): void {
     this.showScrollButton = window.scrollY > this.scrollThreshold;
   }
 
-  ngOnDestroy(): void {
-    // Cleanup if needed
-  }
-
-  scrollToTop(): void {
+  public scrollToTop(): void {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'

@@ -5,16 +5,14 @@ import { Directive, ElementRef, OnInit, Renderer2, Input } from '@angular/core';
   standalone: true
 })
 export class FadeInDirective implements OnInit {
-  @Input() delay: number = 0;
-  @Input() duration: number = 600;
-  @Input() distance: string = '30px';
+  private distance: string = '30px';
+  private duration: number = 600;
 
-  constructor(
-    private element: ElementRef,
-    private renderer: Renderer2
-  ) {}
+  @Input() public delay: number = 0;
 
-  ngOnInit(): void {
+  constructor(private element: ElementRef, private renderer: Renderer2) { }
+
+  public ngOnInit(): void {
     // Set initial state
     this.renderer.setStyle(this.element.nativeElement, 'opacity', '0');
     this.renderer.setStyle(this.element.nativeElement, 'transform', `translateY(${this.distance})`);
@@ -28,7 +26,7 @@ export class FadeInDirective implements OnInit {
             // Animate in
             this.renderer.setStyle(this.element.nativeElement, 'opacity', '1');
             this.renderer.setStyle(this.element.nativeElement, 'transform', 'translateY(0)');
-            
+
             // Stop observing after animation
             observer.unobserve(this.element.nativeElement);
           }

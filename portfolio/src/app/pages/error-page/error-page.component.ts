@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   standalone: true
 })
 export class ErrorPageComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   public goHome(): void {
     this.router.navigate(['/']);

@@ -14,7 +14,6 @@
         padding: var(--spacing-xl) 0;
     }
 
-    // Subtle grid background effect
     &::before {
         content: '';
         position: absolute;
@@ -134,7 +133,6 @@
                 z-index: 1;
             }
 
-            // GitHub specific styling
             &.github:hover {
                 border-color: #333;
                 box-shadow: 0 10px 25px rgba(51, 51, 51, 0.4);
@@ -144,7 +142,6 @@
                 }
             }
 
-            // LinkedIn specific styling
             &.linkedin:hover {
                 border-color: #0077b5;
                 box-shadow: 0 10px 25px rgba(0, 119, 181, 0.4);
@@ -154,7 +151,6 @@
                 }
             }
 
-            // YouTube specific styling
             &.youtube:hover {
                 border-color: #ff0000;
                 box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
@@ -164,7 +160,6 @@
                 }
             }
 
-            // Email specific styling
             &.email:hover {
                 border-color: var(--neon-emerald);
                 box-shadow: 0 10px 25px rgba(0, 255, 136, 0.4);
@@ -191,7 +186,6 @@
     }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
     .about-wrapper {
         text-align: center;

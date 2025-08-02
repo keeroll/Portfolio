@@ -20,22 +20,22 @@ export class CvPageComponent implements OnInit {
   constructor(
     private scrollPositionService: ScrollPositionService,
     private cvPageService: CvPageService
-  ) {}
+  ) { }
 
   public ngOnInit(): void {
     this.scrollPositionService.resetPosition();
     window.scrollTo(0, 0);
     this.cvPageService.getCvFilename()
-    .pipe(take(Util.DEFAULT_TAKE))
-    .subscribe({
-      next: (data) => {
-        this.cvPath.set(`/cv/${data.filename}`);
-        this.cvAvailable.set(true);
-      },
-      error: () => {
-        this.cvAvailable.set(false);
-      }
-    });
+      .pipe(take(Util.DEFAULT_TAKE))
+      .subscribe({
+        next: (data) => {
+          this.cvPath.set(`/cv/${data.filename}`);
+          this.cvAvailable.set(true);
+        },
+        error: () => {
+          this.cvAvailable.set(false);
+        }
+      });
   }
 
   public onPdfError(): void {

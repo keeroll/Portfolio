@@ -5,7 +5,6 @@ import { Language } from '../enums';
 
 @Injectable({ providedIn: 'root' })
 export class TranslationService {
-    // Signal to reflect current language
     private readonly currentLangSignal = signal<string>(Language.EN);
 
     constructor(
@@ -18,7 +17,6 @@ export class TranslationService {
         const savedLang = this.getSavedLanguage();
         this.loadTranslations(savedLang);
 
-        // React to manual changes done by TranslateService
         this.translate.onLangChange.subscribe(event => {
             this.currentLangSignal.set(event.lang);
         });
@@ -48,8 +46,6 @@ export class TranslationService {
             console.log('setting locale');
             this.translate.setTranslation(lang, translations, true);
             this.translate.use(lang);
-
-            // Ensure signal is in sync even for initial load
             this.currentLangSignal.set(lang);
         });
     }

@@ -11,7 +11,7 @@ import { Language, Util } from '../enums';
 export class ProjectsService {
   // Remove the readonly projectsUrl, use a getter instead
 
-  constructor(private http: HttpClient, private translationService: TranslationService) {}
+  constructor(private http: HttpClient, private translationService: TranslationService) { }
 
   /**
    * Get the correct projects file path based on the current language
