@@ -1,3 +1,5 @@
+@use '../../../styles/utilities' as *;
+
 .back-button-container {
     position: absolute;
     top: calc(var(--header-height) + var(--spacing-md));
@@ -31,7 +33,7 @@
     &:hover {
         color: var(--neon-emerald);
         text-shadow: 0 0 8px var(--neon-emerald);
-        background: rgba(0, 255, 136, 0.05);
+        background: var(--neon-emerald-05);
         transform: translateX(-5px);
     }
     
@@ -40,7 +42,6 @@
     }
 }
 
-// Main Content
 .project-details-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -54,7 +55,6 @@
     }
 }
 
-// Left Section
 .left-section {
     display: flex;
     flex-direction: column;
@@ -66,7 +66,6 @@
     }
 }
 
-// Media Section
 .media-section {
     .youtube-player {
         width: 100%;
@@ -74,7 +73,7 @@
         border-radius: var(--radius-lg);
         overflow: hidden;
         background: var(--bg-tertiary);
-        border: 1px solid rgba(0, 255, 136, 0.1);
+        border: 1px solid var(--neon-emerald-10);
         margin-bottom: var(--spacing-md);
         
         iframe {
@@ -89,7 +88,7 @@
         border-radius: var(--radius-lg);
         overflow: hidden;
         background: var(--bg-tertiary);
-        border: 1px solid rgba(0, 255, 136, 0.1);
+        border: 1px solid var(--neon-emerald-10);
         margin-bottom: var(--spacing-md);
         
         img {
@@ -104,7 +103,7 @@
         aspect-ratio: 3/2;
         border-radius: var(--radius-lg);
         background: var(--bg-tertiary);
-        border: 1px solid rgba(0, 255, 136, 0.1);
+        border: 1px solid var(--neon-emerald-10);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -121,7 +120,7 @@
                 font-size: 6rem;
                 color: var(--neon-emerald);
                 opacity: 0.4;
-                text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+                text-shadow: 0 0 15px var(--neon-emerald-30);
                 transition: all var(--transition-normal);
             }
         }
@@ -135,7 +134,6 @@
     }
 }
 
-// Tags Section
 .tags-section {
     h3 {
         font-size: 1.2rem;
@@ -159,7 +157,6 @@
     }
 }
 
-// Links Section
 .links-section {
     h3 {
         font-size: 1.2rem;
@@ -192,7 +189,7 @@
             border-color: var(--neon-emerald);
             color: var(--text-primary);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.2);
+            box-shadow: 0 8px 25px var(--neon-emerald-20);
         }
         
         i {
@@ -201,22 +198,21 @@
         
         &.source-link:hover {
             border-color: #333;
-            box-shadow: 0 8px 25px rgba(51, 51, 51, 0.3);
+            box-shadow: 0 8px 25px var(--dark-gray-30);
         }
         
         &.live-link:hover {
             border-color: var(--neon-emerald);
-            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 8px 25px var(--neon-emerald-30);
         }
         
         &.download-link:hover {
             border-color: var(--neon-teal);
-            box-shadow: 0 8px 25px rgba(0, 204, 136, 0.3);
+            box-shadow: 0 8px 25px var(--neon-teal-30);
         }
     }
 }
 
-// Right Section
 .right-section {
     margin: var(--spacing-lg) var(--spacing-sm);
     
@@ -234,7 +230,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+            text-shadow: 0 0 30px var(--neon-emerald-50);
         }
         
         .project-description {
@@ -279,7 +275,6 @@
     }
 }
 
-// Loading State
 .loading-state {
     display: flex;
     flex-direction: column;
@@ -290,12 +285,7 @@
     min-height: 60vh;
     
     .loading-spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid rgba(0, 255, 136, 0.1);
-        border-top: 3px solid var(--neon-emerald);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
+        @extend .loading-spinner;
         margin-bottom: var(--spacing-md);
     }
     
@@ -305,13 +295,8 @@
     }
 }
 
-// Animations
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 
-// Responsive adjustments
+
 @media (max-width: 768px) {
     .project-details-page {
         padding-top: calc(var(--header-height) + var(--spacing-lg));

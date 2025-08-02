@@ -1,6 +1,6 @@
 .footer {
     background: var(--bg-primary);
-    border-top: 1px solid rgba(0, 255, 136, 0.1);
+    border-top: 1px solid var(--neon-emerald-10);
     padding: var(--spacing-2xl) 0 var(--spacing-lg);
     margin-top: auto;
 }
@@ -29,7 +29,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        text-shadow: 0 0 20px var(--neon-emerald-50);
     }
     
     .footer-description {
@@ -98,33 +98,32 @@
             border-color: var(--neon-emerald);
             color: var(--text-primary);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 255, 136, 0.2);
+            box-shadow: 0 8px 20px var(--neon-emerald-20);
         }
         
         i {
             font-size: 1.2rem;
         }
         
-        // Specific social media colors
         &:hover {
             &.social-link[aria-label="GitHub"] {
-                border-color: #333;
-                box-shadow: 0 8px 20px rgba(51, 51, 51, 0.3);
+                border-color: var(--github-color);
+                box-shadow: 0 8px 20px var(--dark-gray-30);
             }
             
             &.social-link[aria-label="LinkedIn"] {
-                border-color: #0077b5;
-                box-shadow: 0 8px 20px rgba(0, 119, 181, 0.3);
+                border-color: var(--linkedin-color);
+                box-shadow: 0 8px 20px var(--linkedin-blue-30);
             }
             
             &.social-link[aria-label="YouTube"] {
-                border-color: #ff0000;
-                box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+                border-color: var(--youtube-color);
+                box-shadow: 0 8px 20px var(--youtube-red-30);
             }
             
             &.social-link[aria-label="Email"] {
                 border-color: var(--neon-teal);
-                box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+                box-shadow: 0 8px 20px var(--neon-teal-30);
             }
         }
     }
@@ -134,7 +133,7 @@
     max-width: var(--max-content-width);
     margin: 0 auto;
     padding: var(--spacing-lg) var(--horizontal-padding) 0;
-    border-top: 1px solid rgba(0, 255, 136, 0.1);
+    border-top: 1px solid var(--neon-emerald-10);
     margin-top: var(--spacing-xl);
     
     .copyright {
@@ -145,7 +144,6 @@
     }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
     .footer {
         padding: var(--spacing-xl) 0 var(--spacing-lg);

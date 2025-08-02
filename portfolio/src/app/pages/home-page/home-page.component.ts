@@ -10,7 +10,7 @@ import { ScrollPositionService } from '../../services/scroll-position.service';
   standalone: true
 })
 export class HomePageComponent implements OnInit {
-  constructor(private scrollPositionService: ScrollPositionService) {}
+  constructor(private scrollPositionService: ScrollPositionService) { }
 
   public ngOnInit(): void {
     this.scrollPositionService.restoreScrollPosition();

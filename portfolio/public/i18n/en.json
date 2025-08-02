@@ -15,7 +15,8 @@
     "certificates": "Certificates",
     "cv": "CV",
     "connect": "Connect",
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "scrollToTop": "Scroll to Top"
   },
   "projects": {
     "title": "What I've Built",
@@ -33,15 +34,20 @@
   },
   "cv": {
     "title": "CV",
-    "pdfPreview": "CV PDF Preview"
+    "pdfPreview": "CV PDF Preview",
+    "none": "Failed to load CV or the CV is unavailable."
   },
   "certificates": {
     "prev": "Previous Certificate",
     "next": "Next Certificate",
-    "title": "Certificates & Achievements"
+    "title": "Certificates & Achievements",
+    "none": "Failed to load certificates or the certificates are unavailable."
   },
   "error": {
-    "default": "An error occurred."
+    "default": "An error occurred.",
+    "title": "Oops! Something went wrong.",
+    "goHome": "Go to Home Page",
+    "goBack": "Go Back"
   },
   "links": {
     "github": "GitHub Account",

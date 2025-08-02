@@ -1,3 +1,5 @@
+@use '../../../styles/utilities' as *;
+
 .cv-header {
     text-align: center;
     
@@ -9,7 +11,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+        text-shadow: 0 0 30px var(--neon-emerald-50);
     }
 }
 
@@ -23,9 +25,9 @@
 .cv-preview-container {
     background: var(--bg-secondary);
     border-radius: var(--radius-xl);
-    border: 1px solid rgba(0, 255, 136, 0.1);
+    border: 1px solid var(--neon-emerald-10);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px var(--black-30);
     width: 100%;
     min-width: 800px;
     
@@ -69,5 +71,45 @@
       .pdf-container {
           height: 500px;
       }
+  }
+} 
+
+.no-cv-placeholder {
+  @extend .flex-column;
+  @extend .flex-center;
+  height: 100%;
+  width: 100%;
+  min-height: 320px;
+  background: transparent;
+  border-radius: inherit;
+  box-shadow: none;
+  border: none;
+  color: var(--neon-emerald);
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  i {
+    color: var(--neon-emerald);
+    margin-bottom: 1.25rem;
+    @extend .text-shadow-emerald-small;
+    filter: none;
+    animation: none;
+    opacity: 0.85;
+  }
+
+  p {
+    color: var(--text-primary);
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.5;
+    @extend .text-shadow-emerald-small;
   }
 } 

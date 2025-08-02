@@ -4,9 +4,9 @@
     left: 0;
     right: 0;
     height: var(--header-height);
-    background: rgba(10, 10, 10, 0.95);
+    background: var(--bg-primary-95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+    border-bottom: 1px solid var(--neon-emerald-10);
     z-index: 1000;
     transition: all var(--transition-normal);
     will-change: transform;
@@ -23,7 +23,6 @@
     padding: 0 var(--horizontal-padding);
 }
 
-// Logo
 .logo {
     text-decoration: none;
     display: flex;
@@ -36,17 +35,16 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        text-shadow: 0 0 20px var(--neon-emerald-50);
         transition: all var(--transition-normal);
         
         &:hover {
-            text-shadow: 0 0 30px rgba(0, 255, 136, 0.8);
+            text-shadow: 0 0 30px var(--neon-emerald-30);
             transform: scale(1.05);
         }
     }
 }
 
-// Navigation Links
 .nav-links {
     display: flex;
     gap: var(--spacing-lg);
@@ -80,7 +78,7 @@
     
     &:hover {
         color: var(--text-primary);
-        background: rgba(0, 255, 136, 0.1);
+        background: var(--neon-emerald-10);
         
         &::before {
             width: 80%;
@@ -89,7 +87,7 @@
     
     &.active {
         color: var(--neon-emerald);
-        background: rgba(0, 255, 136, 0.15);
+        background: var(--neon-emerald-15);
         
         &::before {
             width: 80%;
@@ -97,7 +95,6 @@
     }
 }
 
-// Mobile Menu Button
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -117,19 +114,18 @@
     
     &:hover {
         color: var(--neon-emerald);
-        background: rgba(0, 255, 136, 0.1);
+        background: var(--neon-emerald-10);
     }
 }
 
-// Mobile Menu
 .mobile-menu {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(10, 10, 10, 0.98);
+    background: var(--bg-primary-98);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+    border-bottom: 1px solid var(--neon-emerald-10);
     padding: var(--spacing-lg);
     transform: translateY(-100%) translateZ(0);
     opacity: 0;
@@ -155,12 +151,12 @@
         
         &:hover {
             color: var(--text-primary);
-            background: rgba(0, 255, 136, 0.1);
+            background: var(--neon-emerald-10);
         }
         
         &.active {
             color: var(--neon-emerald);
-            background: rgba(0, 255, 136, 0.15);
+            background: var(--neon-emerald-15);
         }
         
         &:last-child {
@@ -169,7 +165,6 @@
     }
 }
 
-// Locale Selector
 .locale-selector {
     display: flex;
     gap: 0.5rem;
@@ -190,16 +185,15 @@
 
         &.active {
             color: var(--neon-emerald);
-            background: rgba(0, 255, 136, 0.12);
+            background: var(--neon-emerald-12);
         }
         &:hover:not(.active) {
             color: var(--text-primary);
-            background: rgba(0, 255, 136, 0.08);
+            background: var(--neon-emerald-08);
         }
     }
 }
 
-// Mobile locale selector
 .mobile-locale {
     margin-top: var(--spacing-md);
     justify-content: center;
@@ -214,7 +208,6 @@
     }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
     .header-content {
         padding: 0 var(--spacing-md);

@@ -1,9 +1,9 @@
 <app-container>
-    <div class="certificates-header">
-        <h1>{{ 'certificates.title' | translate }}</h1>
+    <div class="certificates-header" appFadeIn [delay]="0">
+        <h1 appFadeIn [delay]="200">{{ 'certificates.title' | translate }}</h1>
     </div>
     
-    <div class="certificates-content">
+    <div class="certificates-content" appFadeIn [delay]="400">
         <app-certificates-carousel></app-certificates-carousel>
     </div>
 </app-container> 

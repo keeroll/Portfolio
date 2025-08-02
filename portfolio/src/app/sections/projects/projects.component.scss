@@ -12,7 +12,6 @@
     }
 }
 
-// Section header styling
 .projects-header {
     text-align: center;
     margin-bottom: var(--spacing-2xl);
@@ -25,7 +24,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+        text-shadow: 0 0 30px var(--neon-teal-50);
     }
     
     p {
@@ -37,7 +36,6 @@
     }
 }
 
-// Empty state styling
 .empty-state {
     grid-column: 1 / -1;
     text-align: center;
@@ -45,8 +43,8 @@
     color: var(--text-secondary);
     font-size: 1.1rem;
     line-height: 1.6;
-    background: rgba(0, 255, 255, 0.05);
-    border: 1px solid rgba(0, 255, 255, 0.1);
+    background: var(--neon-teal-05);
+    border: 1px solid var(--neon-teal-10);
     border-radius: var(--radius-lg);
     backdrop-filter: blur(10px);
     will-change: transform;

@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgClass } from '@angular/common';
-import { TranslationService } from '../../services/translation.service';
-import { Language } from '../../enums/language.enum';
+import { TranslationService } from '../../services';
+import { Language } from '../../enums';
 import { TranslatePipe } from '@ngx-translate/core';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -14,36 +13,36 @@ import { Subscription } from 'rxjs';
   standalone: true
 })
 export class HeaderComponent {
-  isMobileMenuOpen = false;
-  currentLang: string = Language.EN;
-  private langChangeSub?: Subscription;
+  private currentLangSignal = signal<string>('');
 
-  languages = [
+  public isMobileMenuOpen = false;
+  public languages = [
     { code: Language.EN, label: 'EN' },
     { code: Language.UA, label: 'UA' },
     { code: Language.HR, label: 'HR' }
   ];
 
-  constructor(public translationService: TranslationService) {
-    this.currentLang = this.translationService.currentLang;
-    this.langChangeSub = this.translationService.onLangChange.subscribe(() => {
-      this.currentLang = this.translationService.currentLang;
+  constructor(private readonly translationService: TranslationService) {
+    this.currentLangSignal.set(this.translationService.currentLang());
+
+    effect(() => {
+      this.currentLangSignal.set(this.translationService.currentLang());
     });
   }
 
-  ngOnDestroy(): void {
-    this.langChangeSub?.unsubscribe();
-  }
-
-  switchLanguage(lang: string): void {
+  public switchLanguage(lang: string): void {
     this.translationService.switchLanguage(lang);
   }
 
-  toggleMobileMenu(): void {
+  public isLangActive(lang: string): boolean {
+    return this.currentLangSignal() === lang;
+  }
+
+  public toggleMobileMenu(): void {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
-  closeMobileMenu(): void {
+  public closeMobileMenu(): void {
     this.isMobileMenuOpen = false;
   }
 }

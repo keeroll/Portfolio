@@ -11,8 +11,7 @@
     margin: 0 auto;
     padding: 0 var(--horizontal-padding);
     position: relative;
-    
-    // Subtle border glow effect
+
     &::before {
         content: '';
         position: absolute;
@@ -23,16 +22,15 @@
         border-radius: var(--radius-xl);
         background: linear-gradient(135deg, 
             transparent 0%, 
-            rgba(0, 255, 136, 0.02) 25%, 
-            rgba(0, 255, 136, 0.05) 50%, 
-            rgba(0, 255, 136, 0.02) 75%, 
+            var(--neon-emerald-02) 25%, 
+            var(--neon-emerald-05) 50%, 
+            var(--neon-emerald-02) 75%, 
             transparent 100%);
         pointer-events: none;
         z-index: -1;
     }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
     .container {
         padding: 0 var(--spacing-md);

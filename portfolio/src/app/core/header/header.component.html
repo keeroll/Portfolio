@@ -1,5 +1,6 @@
 <header class="header">
   <div class="header-content">
+
     <!-- Logo/Home Button -->
     <a routerLink="/" class="logo" aria-label="Home">
       <span class="logo-text">keeroll</span>
@@ -29,7 +30,7 @@
     <div class="locale-selector">
       @for (lang of languages; track lang) {
         <button
-          [ngClass]="{'active': currentLang === lang.code}"
+          [ngClass]="{'active': isLangActive(lang.code)}"
           (click)="switchLanguage(lang.code)"
           class="locale-btn"
           [attr.aria-label]="lang.label + ' language'">
@@ -70,11 +71,12 @@
       (click)="closeMobileMenu()">
       {{ 'header.cv' | translate }}
     </a>
+
     <!-- Localization Selector (mobile) -->
     <div class="locale-selector mobile-locale">
       @for (lang of languages; track lang) {
         <button
-          [ngClass]="{'active': currentLang === lang.code}"
+          [ngClass]="{'active': isLangActive(lang.code)}"
           (click)="switchLanguage(lang.code); closeMobileMenu()"
           class="locale-btn"
           [attr.aria-label]="lang.label + ' language'">

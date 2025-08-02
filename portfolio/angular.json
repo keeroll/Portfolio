@@ -52,6 +52,50 @@
               ],
               "outputHashing": "all"
             },
+            "optimized": {
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "300kB",
+                  "maximumError": "600kB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                },
+                {
+                  "type": "bundle",
+                  "name": "polyfills",
+                  "maximumWarning": "50kB",
+                  "maximumError": "100kB"
+                },
+                {
+                  "type": "bundle",
+                  "name": "vendor",
+                  "maximumWarning": "200kB",
+                  "maximumError": "400kB"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,
@@ -65,6 +109,9 @@
           "configurations": {
             "production": {
               "buildTarget": "portfolio:build:production"
+            },
+            "optimized": {
+              "buildTarget": "portfolio:build:optimized"
             },
             "development": {
               "buildTarget": "portfolio:build:development"

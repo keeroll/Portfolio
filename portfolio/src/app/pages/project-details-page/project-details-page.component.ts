@@ -1,26 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, effect, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Location } from '@angular/common';
-
+import { Location, CommonModule } from '@angular/common';
 import { Project } from '../../models';
-import { ContainerComponent, TagComponent } from '../../shared';
-import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
-import { ProjectsService } from '../../services/projects.service';
+import { ContainerComponent, TagComponent, FadeInDirective, SafeUrlPipe } from '../../shared';
+import { ProjectsService, TranslationService } from '../../services';
 import { TranslatePipe } from '@ngx-translate/core';
-import { TranslationService } from '../../services/translation.service';
-import { Subscription } from 'rxjs';
+import { take } from 'rxjs';
+import { Util } from '../../enums';
 
 @Component({
   selector: 'app-project-details-page',
-  imports: [ContainerComponent, TagComponent, SafeUrlPipe, TranslatePipe],
+  imports: [CommonModule, ContainerComponent, TagComponent, SafeUrlPipe, TranslatePipe, FadeInDirective],
   templateUrl: './project-details-page.component.html',
   styleUrl: './project-details-page.component.scss',
   standalone: true
 })
 export class ProjectDetailsPageComponent implements OnInit {
-  project: Project | null = null;
-  private langChangeSub?: Subscription;
-  private currentProjectId: string | null = null;
+  private currentProjectId = signal<string | null>(null);
+
+  public projectSignal = signal<Project | null>(null);
 
   constructor(
     private route: ActivatedRoute,
@@ -28,28 +26,26 @@ export class ProjectDetailsPageComponent implements OnInit {
     private location: Location,
     private projectsService: ProjectsService,
     private translationService: TranslationService
-  ) {}
-
-  public get hasProjectLinks(): boolean {
-    return !!this.project?.sourceUrl || !!this.project?.liveUrl || !!this.project?.downloadUrl;
-  }
-
-  public ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      const projectId = params['id'];
-      this.currentProjectId = projectId;
-      this.loadProject(projectId);
-    });
-    // Subscribe to language changes
-    this.langChangeSub = this.translationService.onLangChange.subscribe(() => {
-      if (this.currentProjectId) {
-        this.loadProject(this.currentProjectId);
+  ) {
+    effect(() => {
+      const id = this.currentProjectId();
+      if (id) {
+        this.loadProject(id);
       }
     });
   }
 
-  ngOnDestroy(): void {
-    this.langChangeSub?.unsubscribe();
+  public get hasProjectLinks(): boolean {
+    const p = this.projectSignal();
+    return !!p?.sourceUrl || !!p?.liveUrl || !!p?.downloadUrl;
+  }
+
+  public ngOnInit(): void {
+    this.route.params
+      .pipe(take(Util.DEFAULT_TAKE))
+      .subscribe(params => {
+        this.currentProjectId.set(params['id']);
+      });
   }
 
   public goBack(): void {
@@ -57,22 +53,21 @@ export class ProjectDetailsPageComponent implements OnInit {
   }
 
   private loadProject(projectId: string): void {
-    this.projectsService.getProjectById(projectId).subscribe({
-      next: (project) => {
-        if (project) {
-          this.project = project;
-          // Scroll to top when project loads
-          window.scrollTo(0, 0);
-        } else {
-          // Redirect to projects page if project not found
+    this.projectsService.getProjectById(projectId)
+      .pipe(take(Util.DEFAULT_TAKE))
+      .subscribe({
+        next: (project) => {
+          if (project) {
+            this.projectSignal.set(project);
+            window.scrollTo(0, 0);
+          } else {
+            this.router.navigate(['/projects']);
+          }
+        },
+        error: (error) => {
+          console.error('Error loading project:', error);
           this.router.navigate(['/projects']);
         }
-      },
-      error: (error) => {
-        console.error('Error loading project:', error);
-        // Redirect to projects page on error
-        this.router.navigate(['/projects']);
-      }
-    });
+      });
   }
 }

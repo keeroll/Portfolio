@@ -1,17 +1,14 @@
+@use '../../../../styles/utilities' as *;
+
 .project-card {
-    background: var(--bg-secondary);
-    border-radius: var(--radius-xl);
+    @extend .card-hover;
     padding: var(--spacing-xl);
-    transition: all var(--transition-normal);
-    cursor: pointer;
     position: relative;
     overflow: hidden;
-    border: 1px solid transparent;
     height: 100%;
     display: flex;
     flex-direction: column;
-    
-    // Subtle grid background
+
     &::before {
         content: '';
         position: absolute;
@@ -19,28 +16,18 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: 
-            linear-gradient(rgba(0, 255, 136, 0.02) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 255, 136, 0.02) 1px, transparent 1px);
-        background-size: 30px 30px;
-        pointer-events: none;
+        @extend .bg-pattern-grid;
         z-index: -1;
     }
     
     &:hover {
-        transform: translateY(-8px);
-        border-color: var(--neon-emerald);
-        box-shadow: 
-            0 20px 40px rgba(0, 255, 136, 0.2),
-            0 0 0 1px var(--neon-emerald);
-        
         .preview {
             transform: scale(1.05);
         }
         
         .title {
             color: var(--neon-emerald);
-            text-shadow: 0 0 10px var(--neon-emerald);
+            @extend .text-shadow-emerald-small;
         }
         
         .description {
@@ -61,7 +48,7 @@
     transition: transform var(--transition-normal);
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(0, 255, 136, 0.1);
+    border: 1px solid var(--neon-emerald-10);
     
     img {
         width: 100%;
@@ -71,26 +58,7 @@
     }
     
     .placeholder-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        
-        i {
-            font-size: 4rem;
-            color: var(--neon-emerald);
-            opacity: 0.4;
-            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-            transition: all var(--transition-normal);
-        }
-    }
-    
-    &:hover {
-        .placeholder-icon i {
-            opacity: 0.6;
-            transform: scale(1.1);
-        }
+        @extend .placeholder-icon;
     }
 }
 
@@ -119,16 +87,11 @@
     padding-top: var(--spacing-md);
     
     app-tag {
-        transition: all var(--transition-normal);
+        @extend .hover-lift;
         margin-bottom: var(--spacing-xs);
-        
-        &:hover {
-            transform: translateY(-2px);
-        }
     }
 }
 
-// Status badges (inspired by pattybuilds.dev)
 .project-status {
     position: absolute;
     top: var(--spacing-md);
@@ -142,35 +105,22 @@
     z-index: 2;
     
     &.status-live {
-        background: rgba(0, 255, 0, 0.2);
-        color: var(--neon-green);
-        border: 1px solid var(--neon-green);
-        box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        @extend .status-live;
     }
     
     &.status-wip {
-        background: rgba(136, 255, 0, 0.2);
-        color: var(--neon-lime);
-        border: 1px solid var(--neon-lime);
-        box-shadow: 0 0 10px rgba(136, 255, 0, 0.3);
+        @extend .status-wip;
     }
     
     &.status-paused {
-        background: rgba(255, 0, 0, 0.2);
-        color: #ff4444;
-        border: 1px solid #ff4444;
-        box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        @extend .status-paused;
     }
     
     &.status-profitable {
-        background: rgba(0, 255, 136, 0.2);
-        color: var(--neon-emerald);
-        border: 1px solid var(--neon-emerald);
-        box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        @extend .status-profitable;
     }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
     .project-card {
         padding: var(--spacing-lg);

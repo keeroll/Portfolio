@@ -1,5 +1,7 @@
+@use '../../../styles/utilities' as *;
+
 .about-wrapper {
-    display: flex;
+    @extend .flex;
     flex-direction: row;
     gap: var(--spacing-2xl);
     justify-content: space-between;
@@ -14,7 +16,6 @@
         padding: var(--spacing-xl) 0;
     }
 
-    // Subtle grid background effect
     &::before {
         content: '';
         position: absolute;
@@ -22,11 +23,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: 
-            linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
-        background-size: 50px 50px;
-        pointer-events: none;
+        @extend .bg-pattern-grid-large;
         z-index: -1;
     }
 }
@@ -50,11 +47,8 @@
         font-size: clamp(2.5rem, 5vw, 4rem);
         font-weight: 800;
         margin: 0 0 var(--spacing-lg);
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+        @extend .text-gradient-primary;
+        @extend .text-shadow-emerald;
         position: relative;
         
         &::after {
@@ -87,14 +81,13 @@
     gap: var(--spacing-xl);
 
     .socials {
-        display: flex;
+        @extend .flex;
         gap: var(--spacing-lg);
         margin-bottom: var(--spacing-lg);
 
         a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @extend .flex-center;
+            @extend .interactive-element;
             width: 50px;
             height: 50px;
             border-radius: var(--radius-lg);
@@ -102,7 +95,6 @@
             border: 2px solid transparent;
             color: var(--text-secondary);
             text-decoration: none;
-            transition: all var(--transition-normal);
             position: relative;
             overflow: hidden;
 
@@ -121,8 +113,7 @@
             &:hover {
                 border-color: var(--neon-emerald);
                 color: var(--text-primary);
-                transform: translateY(-2px);
-                box-shadow: 0 10px 25px rgba(0, 255, 136, 0.3);
+                @extend .shadow-emerald-glow;
 
                 &::before {
                     left: 0;
@@ -134,40 +125,32 @@
                 z-index: 1;
             }
 
-            // GitHub specific styling
             &.github:hover {
-                border-color: #333;
-                box-shadow: 0 10px 25px rgba(51, 51, 51, 0.4);
+                @extend .social-hover-github;
                 
                 &::before {
-                    background: linear-gradient(135deg, #333, #666);
+                    background: linear-gradient(135deg, var(--github-color), var(--github-light));
                 }
             }
 
-            // LinkedIn specific styling
             &.linkedin:hover {
-                border-color: #0077b5;
-                box-shadow: 0 10px 25px rgba(0, 119, 181, 0.4);
+                @extend .social-hover-linkedin;
                 
                 &::before {
-                    background: linear-gradient(135deg, #0077b5, #00a0dc);
+                    background: linear-gradient(135deg, var(--linkedin-color), var(--linkedin-light));
                 }
             }
 
-            // YouTube specific styling
             &.youtube:hover {
-                border-color: #ff0000;
-                box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
+                @extend .social-hover-youtube;
                 
                 &::before {
-                    background: linear-gradient(135deg, #ff0000, #cc0000);
+                    background: linear-gradient(135deg, var(--youtube-color), var(--youtube-dark));
                 }
             }
 
-            // Email specific styling
             &.email:hover {
-                border-color: var(--neon-emerald);
-                box-shadow: 0 10px 25px rgba(0, 255, 136, 0.4);
+                @extend .social-hover-emerald;
                 
                 &::before {
                     background: var(--gradient-primary);
@@ -177,21 +160,15 @@
     }
 
     .tags {
-        display: flex;
-        flex-wrap: wrap;
+        @extend .flex-wrap;
         gap: var(--spacing-sm);
 
         app-tag {
-            transition: all var(--transition-normal);
-            
-            &:hover {
-                transform: translateY(-2px);
-            }
+            @extend .hover-lift;
         }
     }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
     .about-wrapper {
         text-align: center;
