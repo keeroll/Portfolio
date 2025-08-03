@@ -40,6 +40,9 @@ jobs:
     - name: Add .nojekyll file
       run: touch portfolio/dist/portfolio/browser/.nojekyll
 
+    - name: Copy 404.html into output
+      run: cp portfolio/404.html portfolio/dist/portfolio/browser/404.html
+
     - name: Upload build output
       uses: actions/upload-pages-artifact@v3
       with:
