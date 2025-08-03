@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
@@ -50,6 +50,11 @@ jobs:
         ls -la dist/portfolio/
         echo "Checking for index.html..."
         test -f dist/portfolio/index.html && echo "✅ index.html found" || echo "❌ index.html not found"
+        
+    - name: Configure Git
+      run: |
+        git config --global user.email "keeroll@users.noreply.github.com"
+        git config --global user.name "keeroll"
         
     - name: Deploy to GitHub Pages
       run: |
