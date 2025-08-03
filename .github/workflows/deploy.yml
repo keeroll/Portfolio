@@ -37,10 +37,13 @@ jobs:
         cd portfolio
         npm run build:github
 
+    - name: Add .nojekyll file
+      run: touch portfolio/dist/portfolio/browser/.nojekyll
+
     - name: Upload build output
       uses: actions/upload-pages-artifact@v3
       with:
-        path: portfolio/dist/portfolio
+        path: portfolio/dist/portfolio/browser
 
   deploy:
     needs: build
