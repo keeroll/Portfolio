@@ -4,13 +4,18 @@
 <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <script>
-        // Prevent infinite loop
-        const currentPath = window.location.pathname;
-        const redirectPath = '/Portfolio/404-redirect';
 
-        if (currentPath !== redirectPath) {
-            window.location.replace(redirectPath);
+    <!-- Handling error page redirects for GitHub Pages -->
+    <script>
+        const baseHref = '/Portfolio/';
+        const currentPath = window.location.pathname;
+
+        if (!currentPath.startsWith(baseHref)) {
+            // Edge case — not inside the app folder
+            window.location.replace(baseHref);
+        } else {
+            // Redirect to root with hash or query to preserve deep link (optional)
+            window.location.replace(baseHref);
         }
     </script>
 </head>
