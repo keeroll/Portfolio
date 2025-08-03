@@ -6,5 +6,6 @@ export const routes: Routes = [
     { path: 'projects/:id', component: ProjectDetailsPageComponent },
     { path: 'certificates', component: CertificatesPageComponent },
     { path: 'cv', component: CvPageComponent },
+    { path: 'error', component: ErrorPageComponent },
     { path: '**', component: ErrorPageComponent }
 ];

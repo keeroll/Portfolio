@@ -7,7 +7,8 @@
 
     <!-- Handling error page redirects for GitHub Pages -->
     <script>
-        const baseHref = '/Portfolio/';
+        const baseHref = '/Portfolio';
+        const errorPath = `${baseHref}/error`;
         const currentPath = window.location.pathname;
 
         if (!currentPath.startsWith(baseHref)) {
@@ -15,7 +16,7 @@
             window.location.replace(baseHref);
         } else {
             // Redirect to root with hash or query to preserve deep link (optional)
-            window.location.replace(baseHref);
+            window.location.replace(errorPath);
         }
     </script>
 </head>
