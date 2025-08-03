@@ -35,7 +35,7 @@ jobs:
     - name: Build Angular app
       run: |
         cd portfolio
-        npm run build:prod https://keeroll.github.io/portfolio/
+        npm run build:github
 
     - name: Upload build output
       uses: actions/upload-pages-artifact@v3
