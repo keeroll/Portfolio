@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+
+    <!-- Handling error page redirects for GitHub Pages -->
+    <script>
+        const baseHref = '/Portfolio/';
+        const currentPath = window.location.pathname;
+        const pathToSave = currentPath.replace(baseHref, '');
+        const alreadyRedirected = currentPath === `${baseHref}/`;
+
+        if (!alreadyRedirected) {
+            sessionStorage.setItem('redirectAfter404', `${pathToSave}${location.search}`);
+            window.location.replace(baseHref);
+        }
+    </script>
+</head>
+
+<body>
+    <p>Redirecting to error page...</p>
+</body>
+
+</html>

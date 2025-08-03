@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CertificatesService {
-  private certificatesUrl = '/certificates/certificates.json';
+  private certificatesUrl = 'certificates/certificates.json';
 
   constructor(private http: HttpClient) { }
 

@@ -41,9 +41,7 @@ export class TranslationService {
     }
 
     private loadTranslations(lang: string): void {
-        console.log('init localization loading');
-        this.http.get(`/i18n/${lang}.json`).subscribe((translations) => {
-            console.log('setting locale');
+        this.http.get(`i18n/${lang}.json`).subscribe((translations) => {
             this.translate.setTranslation(lang, translations, true);
             this.translate.use(lang);
             this.currentLangSignal.set(lang);

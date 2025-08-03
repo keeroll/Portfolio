@@ -216,8 +216,11 @@
     .logo .logo-text {
         font-size: 1.3rem;
     }
-    .locale-selector {
+
+    .locale-selector:not(.mobile-locale) {
+        display: none;
         margin-left: 0;
+
         .locale-btn {
             font-size: 0.95rem;
             padding: 0.35rem 0.7rem;

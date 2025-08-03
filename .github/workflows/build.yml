@@ -24,12 +24,7 @@ jobs:
         cd portfolio
         npm ci
         
-    - name: Build for production
+    - name: Build
       run: |
         cd portfolio
         npm run build:prod
-        
-    - name: Build for development
-      run: |
-        cd portfolio
-        npm run build:dev 

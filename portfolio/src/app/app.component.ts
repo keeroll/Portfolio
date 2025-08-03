@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent, FooterComponent } from './core';
 import { ScrollToTopComponent } from './shared';
 
@@ -10,6 +10,15 @@ import { ScrollToTopComponent } from './shared';
   styleUrl: './app.component.scss',
   standalone: true
 })
-export class AppComponent {
-  constructor() { }
+export class AppComponent implements OnInit {
+  constructor(private router: Router) { }
+
+  // workaround for GitHub pages 404 routing
+  public ngOnInit(): void {
+    const storedRedirect = sessionStorage.getItem('redirectAfter404');
+    if (storedRedirect) {
+      sessionStorage.removeItem('redirectAfter404');
+      this.router.navigateByUrl(storedRedirect);
+    }
+  }
 }

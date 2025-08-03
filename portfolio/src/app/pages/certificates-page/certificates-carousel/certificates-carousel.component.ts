@@ -28,7 +28,7 @@ export class CertificatesCarouselComponent implements OnInit {
     return certificatesAvailable && !this.loading();
   });
 
-  public pdfUrl = computed(() => `/certificates/${this.currentCertificate()}`);
+  public pdfUrl = computed(() => `certificates/${this.currentCertificate()}`);
 
   constructor(private certificatesService: CertificatesService) { }
 

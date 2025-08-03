@@ -29,7 +29,7 @@ export class CvPageComponent implements OnInit {
       .pipe(take(Util.DEFAULT_TAKE))
       .subscribe({
         next: (data) => {
-          this.cvPath.set(`/cv/${data.filename}`);
+          this.cvPath.set(`cv/${data.filename}`);
           this.cvAvailable.set(true);
         },
         error: () => {
