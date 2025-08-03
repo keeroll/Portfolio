@@ -1,8 +1,8 @@
 [
   {
     "id": "portfolio-app",
-    "title": "Portfolio App",
-    "description": "Angular portfolio with localization, certificates, and CV. Designed with a retrowave aesthetic.",
+    "title": "Aplikacija za portfelj",
+    "description": "Angular portfolio s lokalizacijom, certifikatima i životopisom. Dizajniran s retrowave estetikom.",
     "image": "",
     "tags": [
       "Angular",
@@ -18,23 +18,23 @@
     "downloadUrl": "",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "Portfolio web app created using Angular 20. It showcases projects, certificates, and includes my CV in multiple languages. The site is styled with a retrowave-inspired theme and is fully responsive."
+        "title": "Pregled",
+        "content": "Web aplikacija za portfolio izrađena pomoću Angulara 20. Prikazuje projekte, certifikate i uključuje moj životopis na više jezika. Stranica je stilizirana s retrowave temom i potpuno je responzivna."
       },
       {
-        "title": "Key Features",
-        "content": "Supports internationalization (i18n) with multiple language options, responsive layout for different devices, modular and scalable architecture, and smooth visual transitions."
+        "title": "Ključne značajke",
+        "content": "Podržava internacionalizaciju (i18n) s više jezičnih opcija, responzivnim izgledom za različite uređaje, modularnom i skalabilnom arhitekturom te glatkim vizualnim prijelazima."
       },
       {
-        "title": "Technical Stack",
-        "content": "Angular 20, TypeScript, SCSS, Angular Router, modern CSS (Flexbox, Grid). Built using Angular best practices for production-ready deployment."
+        "title": "Tehnički stog",
+        "content": "Angular 20, TypeScript, SCSS, Angular Router, moderni CSS (Flexbox, Grid). Izrađen korištenjem najboljih Angular praksi za produkcijsko spremno raspoređivanje."
       }
     ]
   },
   {
     "id": "clickoin",
     "title": "Clickoin",
-    "description": "Clicker game with skins, rare drops, and Steam features. Built in Unity with full gamedev cycle.",
+    "description": "Kliker igra sa skinovima, rijetkim predmetima i Steam značajkama. Izgrađeno u Unityju s punim ciklusom razvoja igre.",
     "image": "project-img/clickoin.jpg",
     "tags": [
       "Unity",
@@ -51,19 +51,19 @@
     "downloadUrl": "",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "Clickoin is a casual clicker game built with Unity where players earn coins, unlock skins, and receive time-based or achievement-based drops. Features include custom rarity logic, offline-safe drops, and full Steam integration."
+        "title": "Pregled",
+        "content": "Clickoin je ležerna kliker igra izgrađena s Unity u kojoj igrači zarađuju novčiće, otključavaju skinove i dobivaju predmete temeljene na vremenu ili postignućima. Značajke uključuju prilagođenu logiku rijetkosti, predmete sigurne za offline korištenje i potpunu integraciju sa Steam."
       },
       {
-        "title": "Development Process",
-        "content": "I worked on game design, programming, and testing. Implemented Steam Cloud, Achievements, Inventory, and secure save encryption. Game loop iterated based on player feedback during playtests."
+        "title": "Proces razvoja",
+        "content": "Radio sam na dizajnu igara, programiranju i testiranju. Implementirao sam Steam Cloud, postignuća, inventar i sigurno šifriranje spremanja. Petlja igre iterirala se na temelju povratnih informacija igrača tijekom testiranja igre."
       }
     ]
   },
   {
     "id": "barcode-scanner",
-    "title": "Barcode Scanner",
-    "description": "Angular-based PWA to scan barcodes via Honeywell Captuvo on iOS using Cordova.",
+    "title": "Skener barkodova",
+    "description": "PWA baziran na Angularu za skeniranje barkodova putem Honeywell Captuvo na iOS-u koristeći Cordovu.",
     "image": "",
     "tags": [
       "Angular",
@@ -79,19 +79,19 @@
     "downloadUrl": "",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "This PWA was a prototype project created to explore integration between Angular/Ionic and Honeywell Captuvo barcode scanners on iOS using Cordova plugins."
+        "title": "Pregled",
+        "content": "Ovaj PWA bio je prototipni projekt stvoren za istraživanje integracije između Angular/Ionic i Honeywell Captuvo skenera barkodova na iOS-u pomoću Cordova dodataka."
       },
       {
-        "title": "Technical Insights",
-        "content": "Implemented basic scanner detection and data retrieval, explored plugin interface options, and tested real-time scanning capabilities with external hardware."
+        "title": "Tehnički uvidi",
+        "content": "Implementirao osnovno otkrivanje skenera i dohvaćanje podataka, istražio opcije sučelja dodataka i testirao mogućnosti skeniranja u stvarnom vremenu s vanjskim hardverom."
       }
     ]
   },
   {
     "id": "ukraine-weather-app",
-    "title": "Ukraine Weather App",
-    "description": "Simple Angular 7 app using OpenWeather API with SVG map to show conditions across Ukraine.",
+    "title": "Aplikacija za vremensku prognozu u Ukrajini",
+    "description": "Jednostavna Angular 7 aplikacija koja koristi OpenWeather API s SVG kartom za prikaz uvjeta diljem Ukrajine.",
     "image": "project-img/ukraine-weather-app.jpg",
     "tags": [
       "Angular",
@@ -106,19 +106,19 @@
     "downloadUrl": "",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "A single-page Angular application displaying current weather conditions across cities in Ukraine. Built with Angular 7 and integrated with OpenWeatherMap API."
+        "title": "Pregled",
+        "content": "Jednostranična Angular aplikacija koja prikazuje trenutne vremenske uvjete u gradovima u Ukrajini. Izrađena s Angularom 7 i integrirana s OpenWeatherMap API-jem."
       },
       {
-        "title": "Key Features",
-        "content": "Data visualization on an interactive SVG map of Ukraine, API consumption with HTTP Client."
+        "title": "Ključne značajke",
+        "content": "Vizualizacija podataka na interaktivnoj SVG karti Ukrajine, korištenje API-ja s HTTP klijentom."
       }
     ]
   },
   {
     "id": "simple-smart-house",
-    "title": "IoT Smart House",
-    "description": "Arduino-based IoT home system with sensors and Blynk mobile app integration.",
+    "title": "IoT pametna kuća",
+    "description": "Kućni IoT sustav baziran na Arduinu sa senzorima i integracijom mobilne aplikacije Blynk.",
     "image": "project-img/simple-smart-house.jpg",
     "tags": [
       "IoT",
@@ -133,19 +133,19 @@
     "downloadUrl": "",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "My first IoT project built around Arduino Uno and various sensors to simulate a smart home. Used Blynk mobile app for remote control and monitoring."
+        "title": "Pregled",
+        "content": "Moj prvi IoT projekt izgrađen je oko Arduina Uno i raznih senzora za simulaciju pametnog doma. Koristio sam mobilnu aplikaciju Blynk za daljinsko upravljanje i nadzor."
       },
       {
-        "title": "Hardware & Features",
-        "content": "Included sensors: DHT11, RFID (RC522), infrared motion (HC-SR501), light sensor (LDR), and a servomotor. Used LEDs and resistors for interaction with lighting and movement logic."
+        "title": "Hardver i značajke",
+        "content": "Uključeni senzori: DHT11, RFID (RC522), infracrveni senzor pokreta (HC-SR501), senzor svjetla (LDR) i servomotor. Korištene su LED diode i otpornici za interakciju s rasvjetom i logikom kretanja."
       }
     ]
   },
   {
     "id": "time-travel-unity",
-    "title": "Time Travel Unity Game",
-    "description": "Unity 5 prototype game exploring time travel mechanics and puzzle interaction.",
+    "title": "Igra Unity putovanja kroz vrijeme",
+    "description": "Prototip igre Unity 5 koja istražuje mehaniku putovanja kroz vrijeme i interakciju slagalica.",
     "image": "project-img/time-travel-unity.jpg",
     "tags": [
       "Unity",
@@ -159,19 +159,19 @@
     "downloadUrl": "https://github.com/keeroll/Time_Travel_Unity5/releases/tag/v0.0.1",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "Experimental Unity 5 game focused on simulating time travel. I tested various mechanics and effects for manipulating time within puzzles."
+        "title": "Pregled",
+        "content": "Eksperimentalna Unity 5 igra usmjerena na simulaciju putovanja kroz vrijeme. Testirao sam razne mehanike i efekte za manipuliranje vremenom unutar zagonetki."
       },
       {
-        "title": "Development Highlights",
-        "content": "Used free 3D assets to prototype basic gameplay. Implemented time-rewind mechanics and visual distortion to reflect time shifts."
+        "title": "Najvažniji događaji u razvoju",
+        "content": "Korišteni su besplatni 3D resursi za izradu prototipa osnovne igre. Implementirana je mehanika premotavanja vremena i vizualna distorzija kako bi se odrazili vremenski pomaci."
       }
     ]
   },
   {
     "id": "little-rts-game",
-    "title": "Little RTS Game",
-    "description": "Real-time strategy game built in Unity 5 as a test task for Enixan, featuring strategic gameplay mechanics.",
+    "title": "Mala RTS igra",
+    "description": "Strateška igra u stvarnom vremenu izgrađena u Unityju 5 kao testni zadatak za Enixan, sa strateškom mehanikom igranja.",
     "image": "project-img/little-rts-game.jpg",
     "tags": [
       "Unity",
@@ -185,19 +185,19 @@
     "downloadUrl": "https://github.com/keeroll/Little_RTS_Game_Unity5/releases/tag/v.0.0.1",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "A real-time strategy game developed as a test task for Enixan. I didn't get a job back then :)"
+        "title": "Pregled",
+        "content": "Strateška igra u stvarnom vremenu razvijena kao testni zadatak za Enixan. Tada nisam dobio posao :)"
       },
       {
-        "title": "Technical Features",
-        "content": "Built with Unity 5, featuring grid for building, UI system to select different building types."
+        "title": "Tehničke značajke",
+        "content": "Izgrađeno s Unityjem 5, s mrežom za gradnju i UI sustavom za odabir različitih vrsta zgrada."
       }
     ]
   },
   {
     "id": "fnaf-style-game",
-    "title": "FNaF-Style Horror Game",
-    "description": "Unity 5 horror game inspired by Five Nights at Freddy’s. Built following tutorials.",
+    "title": "Horor igra u stilu FNaF-a",
+    "description": "Horor igra u Unityju 5 inspirirana igrom Five Nights at Freddy's. Izrađena prema tutorijalima.",
     "image": "project-img/fnaf-style-game.jpg",
     "tags": [
       "Unity",
@@ -212,19 +212,19 @@
     "downloadUrl": "https://github.com/keeroll/old-unity-projects/releases/tag/fnaf-build",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "This project was inspired by the mechanics of FNaF and used primarily as a learning exercise to understand Unity’s camera system, scene management, and AI pathfinding."
+        "title": "Pregled",
+        "content": "Ovaj projekt inspiriran je mehanikom FNaF-a i prvenstveno je korišten kao vježba učenja za razumijevanje Unityjevog sustava kamera, upravljanja scenama i pronalaženja puta pomoću umjetne inteligencije."
       },
       {
-        "title": "Key Features",
-        "content": "Implemented basic AI that roams the environment based on a grid-based pathfinding system, camera switching logic for a security room simulation, and tension-building audio and light control."
+        "title": "Ključne značajke",
+        "content": "Implementirana je osnovna umjetna inteligencija koja luta okolinom na temelju sustava za pronalaženje puta temeljenog na mreži, logika prebacivanja kamera za simulaciju sigurnosne sobe te kontrola zvuka i svjetla koja stvara napetost."
       }
     ]
   },
   {
     "id": "solar-system-unity",
-    "title": "Unity Solar System Explorer",
-    "description": "An interactive 3D solar system simulation created in Unity 5, allowing free camera movement and orbiting planets.",
+    "title": "Istraživač Sunčevog sustava Unity",
+    "description": "Interaktivna 3D simulacija Sunčevog sustava stvorena u Unityju 5, koja omogućuje slobodno kretanje kamere i kruženje planeta.",
     "image": "project-img/solar-system-unity.jpg",
     "tags": [
       "Unity",
@@ -239,19 +239,19 @@
     "downloadUrl": "https://github.com/keeroll/old-unity-projects/releases/tag/solar-system-build",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "Built as a space simulation sandbox where players can freely explore a simplified solar system with orbiting planets and rotation systems."
+        "title": "Pregled",
+        "content": "Izgrađen kao pješčanik za simulaciju svemira gdje igrači mogu slobodno istraživati pojednostavljeni Sunčev sustav s planetima u orbiti i sustavima rotacije."
       },
       {
-        "title": "Implementation Details",
-        "content": "Used Unity's transform system to simulate orbital rotation, added basic camera control to fly through space, and styled planets with public domain textures."
+        "title": "Detalji implementacije",
+        "content": "Korišten je Unity sustav transformacije za simulaciju orbitalne rotacije, dodano osnovno upravljanje kamerom za let kroz svemir i stilizirani planeti s teksturama javne domene."
       }
     ]
   },
   {
     "id": "atm-system",
-    "title": "ATM System",
-    "description": "ATM management system built with C# WinForms and MS SQL Server for banking operations.",
+    "title": "Bankomatski sustav",
+    "description": "Sustav za upravljanje bankomatima izgrađen s C# WinForms i MS SQL Serverom za bankarske operacije.",
     "image": "project-img/atm-system.jpg",
     "tags": [
       "C#",
@@ -266,19 +266,19 @@
     "downloadUrl": "",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "ATM management system that simulates real banking operations including account management, transactions, and security features."
+        "title": "Pregled",
+        "content": "Sustav za upravljanje bankomatima koji simulira stvarne bankarske operacije, uključujući upravljanje računima, transakcije i sigurnosne značajke."
       },
       {
-        "title": "Technical Implementation",
-        "content": "Built with C# WinForms for the user interface and MS SQL Server for data persistence. Features include user authentication, transaction processing, account management, and detailed reporting."
+        "title": "Tehnička implementacija",
+        "content": "Izrađeno s C# WinForms za korisničko sučelje i MS SQL Serverom za pohranu podataka. Značajke uključuju autentifikaciju korisnika, obradu transakcija, upravljanje računima i detaljno izvještavanje."
       }
     ]
   },
   {
     "id": "student-exams-db",
-    "title": "Student Exams Score DB",
-    "description": "Database management system for tracking student exam scores using C# WinForms and MS SQL Server.",
+    "title": "Baza podataka o rezultatima studentskih ispita",
+    "description": "Sustav za upravljanje bazama podataka za praćenje rezultata studentskih ispita korištenjem C# WinForms i MS SQL Servera.",
     "image": "project-img/student-exams-db.jpg",
     "tags": [
       "C#",
@@ -293,19 +293,19 @@
     "downloadUrl": "",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "A database management system designed for educational institutions to track and manage student exam scores and academic performance."
+        "title": "Pregled",
+        "content": "Sustav za upravljanje bazama podataka dizajniran za obrazovne ustanove za praćenje i upravljanje rezultatima ispita i akademskim uspjehom studenata."
       },
       {
-        "title": "Features",
-        "content": "Student registration, exam score tracking, grade calculation, performance analytics, and detailed reporting. Built with C# WinForms and MS SQL Server for robust data management."
+        "title": "Značajke",
+        "content": "Registracija studenata, praćenje rezultata ispita, izračun ocjena, analitika učinka i detaljno izvještavanje. Izrađeno s C# WinForms i MS SQL Serverom za robusno upravljanje podacima."
       }
     ]
   },
   {
     "id": "text-formatter",
-    "title": "Text Formatter",
-    "description": "C# WPF application for text formatting and manipulation with a modern desktop interface.",
+    "title": "Alat za formatiranje teksta",
+    "description": "C# WPF aplikacija za formatiranje i manipulaciju tekstom s modernim desktop sučeljem.",
     "image": "",
     "tags": [
       "C#",
@@ -319,12 +319,12 @@
     "downloadUrl": "",
     "detailedDescription": [
       {
-        "title": "Overview",
-        "content": "A desktop application built with C# WPF that provides advanced text formatting and manipulation capabilities."
+        "title": "Pregled",
+        "content": "Desktop aplikacija izgrađena s C# WPF-om koja pruža napredne mogućnosti formatiranja i manipulacije tekstom."
       },
       {
-        "title": "Key Features",
-        "content": "Text case conversion, formatting options, find and replace functionality, syntax highlighting, and export capabilities. Built with MVVM pattern for maintainable code architecture."
+        "title": "Ključne značajke",
+        "content": "Pretvorba velikih i malih slova u tekstu, opcije formatiranja, funkcija pronalaženja i zamjene, isticanje sintakse i mogućnosti izvoza. Izrađeno s MVVM uzorkom za održivu arhitekturu koda."
       }
     ]
   }
