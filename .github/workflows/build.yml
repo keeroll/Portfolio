@@ -1,0 +1,35 @@
+name: Build
+
+on:
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js 22 LTS
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+        cache-dependency-path: portfolio/package-lock.json
+        
+    - name: Install dependencies
+      run: |
+        cd portfolio
+        npm ci
+        
+    - name: Build for production
+      run: |
+        cd portfolio
+        npm run build:prod
+        
+    - name: Build for development
+      run: |
+        cd portfolio
+        npm run build:dev 
