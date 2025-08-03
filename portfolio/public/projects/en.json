@@ -197,7 +197,7 @@
   {
     "id": "fnaf-style-game",
     "title": "FNaF-Style Horror Game",
-    "description": "Unity 5 horror game inspired by Five Nights at Freddy’s. Built following tutorials.",
+    "description": "Unity 5 horror game inspired by Five Nights at Freddy's. Built following tutorials.",
     "image": "project-img/fnaf-style-game.jpg",
     "tags": [
       "Unity",
@@ -213,7 +213,7 @@
     "detailedDescription": [
       {
         "title": "Overview",
-        "content": "This project was inspired by the mechanics of FNaF and used primarily as a learning exercise to understand Unity’s camera system, scene management, and AI pathfinding."
+        "content": "This project was inspired by the mechanics of FNaF and used primarily as a learning exercise to understand Unity's camera system, scene management, and AI pathfinding."
       },
       {
         "title": "Key Features",
