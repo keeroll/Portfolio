@@ -1,0 +1,58 @@
+{
+  "about": {
+    "title": "Što ima! Ja sam",
+    "description": "Viši softverski inženjer strastven u izradi raznolikih projekata i isprobavanju novih ideja."
+  },
+  "header": {
+    "home": "Početna stranica",
+    "certificates": "Certifikati",
+    "cv": "CV"
+  },
+  "footer": {
+    "description": "Stvaranje kul stvari",
+    "quickLinks": "Brze poveznice",
+    "home": "Početna stranica",
+    "certificates": "Certifikati",
+    "cv": "CV",
+    "connect": "Poveži se",
+    "copyright": "Sva prava pridržana.",
+    "scrollToTop": "Pomakni se na vrh"
+  },
+  "projects": {
+    "title": "Što sam Stvorio",
+    "subtitle": "Istražite moje projekte, postignuća i kreativne pothvate. Svaki projekt predstavlja jedinstven izazov i iskustvo učenja.",
+    "technologies": "Korištene tehnologije",
+    "empty": "Nije pronađen nijedan projekt. Došlo je do pogreške. Pokušajte osvježiti stranicu.",
+    "sourceCode": "Izvorni kod",
+    "demo": "Demo",
+    "download": "Preuzmi",
+    "projectLinks": "Linkovi projekta"
+  },
+  "projectDetails": {
+    "back": "Nazad",
+    "loading": "Učitavanje detalja projekta..."
+  },
+  "cv": {
+    "title": "CV",
+    "pdfPreview": "Pregled PDF-a životopisa",
+    "none": "Učitavanje životopisa nije uspjelo ili životopis nije dostupan."
+  },
+  "certificates": {
+    "prev": "Prethodni certifikat",
+    "next": "Sljedeći certifikat",
+    "title": "Certifikati i postignuća",
+    "none": "Učitavanje certifikata nije uspjelo ili certifikati nisu dostupni."
+  },
+  "error": {
+    "default": "Došlo je do pogreške.",
+    "title": "Ups! Nešto je pošlo po zlu.",
+    "goHome": "Idi na početnu stranicu",
+    "goBack": "Natrag"
+  },
+  "links": {
+    "github": "GitHub račun",
+    "linkedin": "LinkedIn račun",
+    "youtube": "YouTube kanal",
+    "personalEmail": "E-pošta"
+  }
+}
