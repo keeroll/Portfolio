@@ -13,7 +13,7 @@ export class ProjectsService {
 
   private get projectsUrl(): string {
     const lang = this.translationService.currentLangValue || Language.EN;
-    return `/projects/${lang}.json`;
+    return `projects/${lang}.json`;
   }
 
   public getProjects(): Observable<Project[]> {

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class CvPageService {
-  private readonly cvJsonUrl = '/cv/cv.json';
+  private readonly cvJsonUrl = 'cv/cv.json';
 
   constructor(private http: HttpClient) { }
 
