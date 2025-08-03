@@ -3,7 +3,7 @@
     "id": "portfolio-app",
     "title": "Portfolio App",
     "description": "Angular portfolio with localization, certificates, and CV. Designed with a retrowave aesthetic.",
-    "image": "",
+    "image": "project-img/portfolio-app.png",
     "tags": [
       "Angular",
       "TypeScript",
@@ -12,7 +12,7 @@
       "Localization",
       "Retrowave"
     ],
-    "youtubeUrl": "",
+    "youtubeUrl": "https://www.youtube.com/embed/TOW_K5YT-bk?si=ck2dOQaDH3ywU1hq",
     "sourceUrl": "https://github.com/keeroll/Portfolio",
     "liveUrl": "",
     "downloadUrl": "",
