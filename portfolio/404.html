@@ -4,10 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=/Portfolio/404-redirect" />
     <meta http-equiv="refresh" content="0; URL='/Portfolio/404-redirect'" />
     <script>
-        // JS fallback in case meta refresh fails
-        window.location.replace('/Portfolio/404-redirect');
+        // Prevent infinite loop
+        const currentPath = window.location.pathname;
+        const redirectPath = '/Portfolio/404-redirect';
+
+        if (currentPath !== redirectPath) {
+            window.location.replace(redirectPath);
+        }
     </script>
 </head>
 
