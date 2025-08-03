@@ -7,14 +7,14 @@
 
     <!-- Handling error page redirects for GitHub Pages -->
     <script>
-        const baseHref = '/Portfolio';
+        const baseHref = '/Portfolio/';
         const currentPath = window.location.pathname;
-
+        const pathToSave = currentPath.replace(baseHref, '');
         const alreadyRedirected = currentPath === `${baseHref}/`;
 
         if (!alreadyRedirected) {
             sessionStorage.setItem('redirectAfter404', currentPath + location.search);
-            window.location.replace(`${baseHref}/`);
+            window.location.replace(baseHref);
         }
     </script>
 </head>

@@ -16,8 +16,4 @@ export class ErrorPageComponent {
   public goHome(): void {
     this.router.navigate(['/']);
   }
-
-  public goBack(): void {
-    window.history.back();
-  }
 }
