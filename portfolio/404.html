@@ -13,7 +13,7 @@
         const alreadyRedirected = currentPath === `${baseHref}/`;
 
         if (!alreadyRedirected) {
-            sessionStorage.setItem('redirectAfter404', currentPath + location.search);
+            sessionStorage.setItem('redirectAfter404', `${pathToSave}${location.search}`);
             window.location.replace(baseHref);
         }
     </script>
