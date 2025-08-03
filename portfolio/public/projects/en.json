@@ -16,7 +16,7 @@
         },
         {
           "title": "Key Features",
-          "content": "Supports internationalization (i18n) with multiple language options, responsive layout for all devices, modular and scalable architecture, and smooth visual transitions."
+          "content": "Supports internationalization (i18n) with multiple language options, responsive layout for different devices, modular and scalable architecture, and smooth visual transitions."
         },
         {
           "title": "Technical Stack",
@@ -83,13 +83,13 @@
           },
           {
             "title": "Key Features",
-            "content": "Data visualization on an interactive SVG map of Ukraine, API consumption with HTTPClient."
+            "content": "Data visualization on an interactive SVG map of Ukraine, API consumption with HTTP Client."
           }
         ]
       },
     {
       "id": "simple-smart-house",
-      "title": "Simple Smart House",
+      "title": "IoT Smart House",
       "description": "Arduino-based IoT home system with sensors and Blynk mobile app integration.",
       "image": "project-img/simple-smart-house.jpg",
       "tags": ["IoT", "Arduino", "C++", "Smart Home", "Blynk"],
@@ -146,7 +146,7 @@
         },
         {
           "title": "Technical Features",
-          "content": "Built with Unity 5, featuring grid for building, UI system to select different building types. Demonstrates good game development fundamentals."
+          "content": "Built with Unity 5, featuring grid for building, UI system to select different building types."
         }
       ]
     },
