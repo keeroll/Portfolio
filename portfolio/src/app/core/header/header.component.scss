@@ -217,7 +217,7 @@
         font-size: 1.3rem;
     }
 
-    .locale-selector {
+    .locale-selector:not(.mobile-locale) {
         display: none;
         margin-left: 0;
 
