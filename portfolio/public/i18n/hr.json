@@ -35,8 +35,7 @@
   },
   "certificates": {
     "prev": "Prethodni certifikat",
-    "next": "Sljedeći certifikat",
-    "none": "Učitavanje certifikata nije uspjelo ili certifikati nisu dostupni."
+    "next": "Sljedeći certifikat"
   },
   "error": {
     "default": "Došlo je do pogreške.",

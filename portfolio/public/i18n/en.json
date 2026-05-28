@@ -35,8 +35,7 @@
   },
   "certificates": {
     "prev": "Previous Certificate",
-    "next": "Next Certificate",
-    "none": "Failed to load certificates or the certificates are unavailable."
+    "next": "Next Certificate"
   },
   "error": {
     "default": "An error occurred.",
