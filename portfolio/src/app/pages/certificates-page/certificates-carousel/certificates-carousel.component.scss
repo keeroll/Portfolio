@@ -1,7 +1,7 @@
 @use '../../../../styles/utilities' as *;
 
 .certificates-carousel {
-  width: 100%;
+  width: 50vw;
   margin: 0 auto;
   background: var(--bg-secondary);
   border-radius: var(--radius-xl);
@@ -9,8 +9,6 @@
   overflow: hidden;
   box-shadow: 0 10px 30px var(--black-30);
 }
-
-
 
 .carousel-container {
   position: relative;
@@ -64,7 +62,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 80px;
-  height: 100%;
+  height: 70vh;
   width: 100%;
 }
 

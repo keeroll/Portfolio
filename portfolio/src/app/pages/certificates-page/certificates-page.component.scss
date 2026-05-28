@@ -19,14 +19,14 @@
     justify-content: center;
     align-items: center;
     
-    @media (max-width: 1024px) {
-        min-height: 600px;
-    }
+    // @media (max-width: 1024px) {
+    //     min-height: 600px;
+    // }
     
-    @media (max-width: 768px) {
-        min-height: 500px;
-        padding: var(--spacing-md) 0;
-    }
+    // @media (max-width: 768px) {
+    //     min-height: 500px;
+    //     padding: var(--spacing-md) 0;
+    // }
 }
 
 app-certificates-carousel {
