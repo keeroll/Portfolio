@@ -1,3 +1,29 @@
-<div class="certificates-content" appFadeIn [delay]="400">
-    <app-certificates-carousel></app-certificates-carousel>
+<div class="certificates-carousel" appFadeIn [delay]="400">
+  <div class="carousel-container">
+    <!-- Previous Button -->
+    <button class="nav-button prev-button" (click)="previous()" title="{{ 'certificates.prev' | translate }}">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Certificate PDF Display -->
+    <div class="certificate-display">
+      <div class="pdf-container">
+        <iframe [src]="pdfUrl() | safe" class="pdf-viewer" title="Certificate PDF" frameborder="0">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Next Button -->
+    <button class="nav-button next-button" (click)="next()" title="{{ 'certificates.next' | translate }}">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Controls -->
+  <div class="carousel-controls">
+    <!-- Slide Counter -->
+    <div class="slide-counter">
+      {{ currentIndex() + 1 }} / {{ certificates().length }}
+    </div>
+  </div>
 </div>
