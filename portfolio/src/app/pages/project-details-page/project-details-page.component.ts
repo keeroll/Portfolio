@@ -1,6 +1,6 @@
 import { Component, OnInit, effect, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Location, CommonModule } from '@angular/common';
+import { Location } from '@angular/common';
 import { Project } from '../../models';
 import { ContainerComponent, TagComponent, FadeInDirective, SafeUrlPipe } from '../../shared';
 import { ProjectsService, TranslationService } from '../../services';
@@ -10,7 +10,7 @@ import { Util } from '../../enums';
 
 @Component({
   selector: 'app-project-details-page',
-  imports: [CommonModule, ContainerComponent, TagComponent, SafeUrlPipe, TranslatePipe, FadeInDirective],
+  imports: [ContainerComponent, TagComponent, SafeUrlPipe, TranslatePipe, FadeInDirective],
   templateUrl: './project-details-page.component.html',
   styleUrl: './project-details-page.component.scss',
   standalone: true

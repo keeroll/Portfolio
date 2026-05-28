@@ -30,14 +30,12 @@
     "loading": "Loading project details..."
   },
   "cv": {
-    "title": "CV",
     "pdfPreview": "CV PDF Preview",
     "none": "Failed to load CV or the CV is unavailable."
   },
   "certificates": {
     "prev": "Previous Certificate",
     "next": "Next Certificate",
-    "title": "Certificates & Achievements",
     "none": "Failed to load certificates or the certificates are unavailable."
   },
   "error": {

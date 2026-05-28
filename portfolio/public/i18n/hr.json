@@ -30,14 +30,12 @@
     "loading": "Učitavanje detalja projekta..."
   },
   "cv": {
-    "title": "CV",
     "pdfPreview": "Pregled PDF-a životopisa",
     "none": "Učitavanje životopisa nije uspjelo ili životopis nije dostupan."
   },
   "certificates": {
     "prev": "Prethodni certifikat",
     "next": "Sljedeći certifikat",
-    "title": "Certifikati i postignuća",
     "none": "Učitavanje certifikata nije uspjelo ili certifikati nisu dostupni."
   },
   "error": {
