@@ -11,6 +11,6 @@ export class CertificatesService {
   constructor(private http: HttpClient) { }
 
   public getCertificates(): Observable<string[]> {
-    return this.http.get<string[]>(this.certificatesUrl);
+    return this.http.get<string[]>(`${this.certificatesUrl}?t=${Date.now()}`);
   }
 } 
