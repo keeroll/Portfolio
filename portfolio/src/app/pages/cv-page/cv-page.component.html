@@ -1,26 +1,16 @@
-<app-container>
-    <div class="cv-header" appFadeIn [delay]="0">
-        <h1 appFadeIn [delay]="200">{{ 'cv.title' | translate }}</h1>
-    </div>
-    
-    <div class="cv-content" appFadeIn [delay]="400">
-        <div class="cv-preview-container" appFadeIn [delay]="600">
-            @if (cvAvailable()) {
-                <div class="pdf-container">
-                    <iframe 
-                        [src]="cvPath()! | safe"
-                        class="cv-pdf-viewer"
-                        title="{{ 'cv.pdfPreview' | translate }}"
-                        frameborder="0"
-                        (error)="onPdfError()">
-                    </iframe>
-                </div>
-            } @else {
-                <div class="no-cv-placeholder">
-                    <i class="fas fa-exclamation-triangle fa-4x"></i>
-                    <p>{{ 'cv.none' | translate }}</p>
-                </div>
-            }
+<div class="cv-content" appFadeIn [delay]="400">
+    <div class="cv-preview-container" appFadeIn [delay]="600">
+        @if (cvAvailable()) {
+        <div class="pdf-container">
+            <iframe [src]="cvPath()! | safe" class="cv-pdf-viewer" title="{{ 'cv.pdfPreview' | translate }}"
+                frameborder="0" (error)="onPdfError()">
+            </iframe>
         </div>
+        } @else {
+        <div class="no-cv-placeholder">
+            <i class="fas fa-exclamation-triangle fa-4x"></i>
+            <p>{{ 'cv.none' | translate }}</p>
+        </div>
+        }
     </div>
-</app-container> 
+</div>
